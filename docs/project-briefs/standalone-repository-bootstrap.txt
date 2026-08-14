@@ -1,0 +1,225 @@
+ALAYA CRAFTS WEBSITE — STANDALONE REPOSITORY BOOTSTRAP
+
+We now have an approved low-fidelity homepage study for the Alaya Crafts website.
+
+Before continuing any website design or implementation work, create a dedicated standalone repository for the Alaya Crafts public website so all subsequent website slices have a proper architectural home.
+
+This turn is repository/bootstrap work only.
+
+Do not begin the next UX/design slice.
+Do not redesign the low-fidelity study.
+Do not materially revise the approved information architecture or visual direction.
+Do not add speculative website functionality.
+
+SOURCE MATERIAL
+
+Use the existing approved Alaya Crafts homepage low-fidelity study as the current design source of truth:
+
+alaya-crafts-homepage-low-fidelity.html
+
+The study already establishes:
+
+- the homepage narrative sequence
+- desktop and mobile composition
+- the Capability Landscape visual language
+- Capability Intelligence / CIE explanation
+- CIE Professional positioning
+- Teams / Organizations / Collective Intelligence maturity relationships
+- human Contact path
+- section-specific design rationale
+- hierarchy, density, interaction, desktop/mobile, and landscape-state annotations
+
+Preserve it as a design artifact rather than treating it as disposable prototype code.
+
+REPOSITORY
+
+Create a new standalone repository named:
+
+alaya-crafts-website
+
+It should be a sibling of CIE Professional, not a folder within the CIE Professional repository.
+
+The conceptual ownership boundary is:
+
+Alaya Crafts
+├── alaya-crafts-website
+├── cie-professional
+└── future Alaya products/capabilities
+
+The website represents Alaya Crafts itself.
+
+CIE Professional is one expression within the wider Alaya capability landscape and should therefore not own the corporate/public website.
+
+BOOTSTRAP OBJECTIVES
+
+1. Create the standalone repository.
+
+2. Establish a clean, minimal project structure appropriate for continued UX/design work and eventual website implementation.
+
+3. Preserve the approved low-fidelity homepage study inside the repository as a design reference.
+
+4. Preserve its design rationale, particularly the annotations for:
+   - Composition
+   - Hierarchy
+   - Density
+   - Interaction
+   - Desktop
+   - Mobile
+   - Landscape state
+
+   These are design decisions, not prototype debris.
+
+5. Establish an obvious location for future:
+   - design studies
+   - design-system work
+   - website content/copy
+   - architecture/decision records if needed
+   - implementation source
+   - public assets
+
+Keep the structure proportionate. Do not manufacture an enterprise architecture for a small public website.
+
+6. Add a concise README explaining:
+   - what the repository owns
+   - its relationship to Alaya Crafts
+   - its relationship to CIE Professional
+   - the status of the current low-fidelity study
+   - that future website design and implementation work belongs here
+
+7. Add appropriate baseline repository hygiene such as .gitignore and any minimal configuration required by the chosen implementation foundation.
+
+TECHNOLOGY
+
+Use the simplest modern web foundation that supports the design direction and can evolve into the production Alaya Crafts site.
+
+Favor:
+
+- semantic HTML
+- accessibility
+- responsive behavior
+- excellent typography
+- restrained client-side JavaScript
+- strong performance
+- maintainability
+- easy deployment
+
+Do not introduce a heavy application architecture merely because CIE Professional uses one.
+
+The public Alaya website and CIE Professional have different jobs.
+
+If a framework is selected, document briefly why it is appropriate before establishing it.
+
+DESIGN ARTIFACT
+
+Keep the existing low-fidelity study intact enough that we can continue opening it and understanding the approved composition.
+
+Do not silently convert the study into production code.
+
+The production implementation will emerge from later design slices.
+
+If useful, place it somewhere similar to:
+
+design/
+  studies/
+    homepage-low-fidelity.html
+
+and preserve supporting design rationale nearby.
+
+Do not mechanically follow this exact directory structure if a cleaner one emerges. The important thing is preservation and clear ownership.
+
+COPY SYNCHRONIZATION
+
+There is one known synchronization item in the current low-fidelity study.
+
+The Origin section currently contains an earlier version.
+
+The currently approved Origin language is:
+
+"The ideas behind Alaya emerged through more than two decades of work across technology, engineering, leadership, product thinking, organizational systems, knowledge, and execution. Across that work, one thread kept resurfacing: capability endured beyond the systems, roles, and technologies around it."
+
+Record this as the current approved copy.
+
+Do not use this bootstrap turn as an opportunity for broader copy editing.
+
+IMPORTANT CONCEPTUAL BOUNDARIES
+
+Preserve these existing decisions:
+
+Capability is the enduring asset.
+Knowledge preserves it.
+Technology extends it.
+
+The Capability Landscape is broader than Alaya's products.
+
+Do not turn the Capability Landscape into a product architecture diagram.
+
+Capability Intelligence is the concept.
+
+Capability Intelligence Engine (CIE) is the technology Alaya is building to make that understanding usable.
+
+CIE Professional is the concrete present expression for individuals.
+
+Teams and Organizations represent other scales/directions of the same capability landscape.
+
+Collective Intelligence is a future possibility, not a currently promised product.
+
+Do not reintroduce MCI / Market Capability Engine into the homepage during this bootstrap. The current Collective Intelligence framing intentionally leaves that future space open.
+
+The website should continue distinguishing what exists today, what is emerging, and what is merely possible.
+
+CONTACT
+
+Preserve the existing human-contact principle:
+
+Visitors should be able to contact Alaya directly.
+
+The experience should make clear that the message reaches a person.
+
+Do not introduce a chatbot or AI contact intermediary.
+
+DOCUMENTATION
+
+Capture enough context that another designer or engineer entering this repository later can understand:
+
+- what Alaya Crafts is trying to communicate
+- why the homepage is structured as a conceptual journey rather than a conventional consulting-company landing page
+- why the Capability Landscape matters
+- why product maturity is intentionally asymmetric
+- why CIE needs to be explained rather than presented as an unexplained acronym
+- why the design avoids conventional service-card / conversion-funnel patterns
+
+Do not duplicate the entire low-fidelity annotation set unnecessarily if it can simply be preserved alongside the study.
+
+GIT / CHANGE CONTROL
+
+Create and initialize the repository.
+
+Do not commit or push unless explicitly instructed to do so.
+
+Do not modify the CIE Professional repository except where absolutely necessary to establish the sibling repository, and ideally it should require no CIE Professional changes at all.
+
+STOP CONDITION
+
+Stop after the standalone repository has been successfully bootstrapped and the existing design material has been preserved within it.
+
+Report:
+
+1. repository location
+2. chosen technical foundation and brief rationale
+3. directory structure created
+4. exact files created/copied
+5. where the low-fidelity study now lives
+6. where design rationale is preserved
+7. where approved website copy is recorded
+8. any decisions made during bootstrap
+9. any unresolved decisions that should wait for the next design slice
+10. git status
+
+Explicitly confirm:
+
+- no next design slice was started
+- CIE Professional was not modified
+- nothing was committed
+- nothing was pushed
+
+Then stop.

@@ -1,0 +1,335 @@
+<div id="alaya-homepage-study">
+  <style>
+    #alaya-homepage-study {
+      --alaya-paper: #f3efe4;
+      --alaya-paper-deep: #e9e1d1;
+      --alaya-ink: #242720;
+      --alaya-fog: #6d7067;
+      --alaya-pine: #284a3b;
+      --alaya-forest: #6f8870;
+      --alaya-amber: #a5753c;
+      --alaya-rule: rgba(36, 39, 32, .22);
+      color: light-dark(#242720, #ece7da);
+      font-family: Montserrat, system-ui, sans-serif;
+    }
+    #alaya-homepage-study * { box-sizing: border-box; }
+    #alaya-homepage-study .study-tools { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; margin-bottom:16px; }
+    #alaya-homepage-study .study-tools > div { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+    #alaya-homepage-study .study-shell { display:grid; grid-template-columns:minmax(0, 1fr) 260px; gap:18px; align-items:start; }
+    #alaya-homepage-study .viewport-stage { min-width:0; overflow:hidden; }
+    #alaya-homepage-study .viewport-wrap { transform-origin:top left; }
+    #alaya-homepage-study .site-viewport {
+      background:var(--alaya-paper); color:var(--alaya-ink); border:1px solid var(--border);
+      overflow:hidden; width:100%; box-shadow:0 8px 28px rgba(25,29,24,.08);
+    }
+    #alaya-homepage-study .site-viewport.is-mobile { width:390px; max-width:100%; margin-inline:auto; }
+    #alaya-homepage-study .site-viewport.is-desktop { width:100%; }
+    #alaya-homepage-study .site-head { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:20px 4.5%; border-bottom:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .wordmark { font-family:"Cormorant Garamond", Georgia, serif; font-size:19px; font-weight:500; letter-spacing:.02em; }
+    #alaya-homepage-study .site-nav { display:flex; gap:20px; color:var(--alaya-fog); font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
+    #alaya-homepage-study .site-nav span:last-child { color:var(--alaya-pine); cursor:pointer; }
+    #alaya-homepage-study .home-section { position:relative; padding:64px 7%; border-bottom:1px solid rgba(36,39,32,.11); cursor:pointer; outline-offset:-3px; }
+    #alaya-homepage-study .home-section:hover::after,
+    #alaya-homepage-study .home-section.is-active::after { content:""; position:absolute; inset:6px; border:1px solid var(--alaya-amber); pointer-events:none; }
+    #alaya-homepage-study .section-index { color:var(--alaya-amber); font-size:9px; letter-spacing:.16em; text-transform:uppercase; }
+    #alaya-homepage-study .display { max-width:720px; margin:18px 0 0; font-family:"Cormorant Garamond", Georgia, serif; font-size:clamp(36px, 6vw, 78px); line-height:.96; font-weight:400; }
+    #alaya-homepage-study .headline { max-width:650px; margin:16px 0 0; font-family:"Cormorant Garamond", Georgia, serif; font-size:clamp(28px, 4vw, 54px); line-height:1.05; font-weight:400; }
+    #alaya-homepage-study .lede { max-width:580px; margin:18px 0 0; color:var(--alaya-fog); font-size:14px; line-height:1.65; }
+    #alaya-homepage-study .quiet-links { display:flex; flex-wrap:wrap; gap:22px; margin-top:28px; font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
+    #alaya-homepage-study .quiet-links span { border-bottom:1px solid currentColor; padding-bottom:4px; }
+    #alaya-homepage-study .trace-field { position:absolute; inset:auto -2% 0 35%; height:58%; pointer-events:none; opacity:.75; }
+    #alaya-homepage-study .trace { position:absolute; left:0; right:0; border:1px solid var(--alaya-forest); border-left-color:transparent; border-right-color:transparent; border-radius:52% 41% 0 0; }
+    #alaya-homepage-study .trace.one { height:54%; bottom:-20%; transform:rotate(-3deg); }
+    #alaya-homepage-study .trace.two { height:38%; bottom:-18%; transform:rotate(2deg); opacity:.5; }
+    #alaya-homepage-study .hero { min-height:480px; display:flex; flex-direction:column; justify-content:center; }
+    #alaya-homepage-study .hero .lede { max-width:520px; color:var(--alaya-ink); font-size:16px; }
+    #alaya-homepage-study .observation-grid { display:grid; grid-template-columns:1fr 1fr; gap:12%; margin-top:36px; }
+    #alaya-homepage-study .observation-grid div { padding-top:18px; border-top:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .observation-grid strong { display:block; font-family:"Cormorant Garamond", Georgia, serif; font-size:24px; font-weight:400; }
+    #alaya-homepage-study .observation-grid p { color:var(--alaya-fog); font-size:12px; line-height:1.6; }
+    #alaya-homepage-study .thesis-stack { margin-top:26px; }
+    #alaya-homepage-study .thesis-line { padding:20px 0; border-top:1px solid var(--alaya-rule); font-family:"Cormorant Garamond", Georgia, serif; font-size:clamp(28px, 4.2vw, 56px); line-height:1; }
+    #alaya-homepage-study .thesis-line:nth-child(2) { margin-left:8%; color:var(--alaya-pine); }
+    #alaya-homepage-study .thesis-line:nth-child(3) { margin-left:16%; color:var(--alaya-amber); }
+    #alaya-homepage-study .crafts-strip { display:flex; align-items:flex-end; gap:0; margin-top:38px; }
+    #alaya-homepage-study .craft { flex:1; min-width:0; padding:18px 10px; border-top:1px solid var(--alaya-rule); color:var(--alaya-fog); font-size:10px; text-align:center; }
+    #alaya-homepage-study .craft:first-child { color:var(--alaya-pine); border-top:3px solid var(--alaya-pine); }
+    #alaya-homepage-study .craft-arrow { color:var(--alaya-amber); padding-bottom:18px; }
+    #alaya-homepage-study .practice-detail { max-width:540px; margin:24px auto 0; text-align:center; color:var(--alaya-fog); font-family:"Cormorant Garamond", Georgia, serif; font-size:22px; }
+    #alaya-homepage-study .landscape-field { position:relative; min-height:360px; margin-top:30px; border-top:1px solid var(--alaya-rule); overflow:hidden; }
+    #alaya-homepage-study .layer { position:absolute; left:-8%; width:116%; border-radius:48% 52% 0 0; border-top:1px solid; }
+    #alaya-homepage-study .layer.a { height:58%; bottom:-22%; border-color:var(--alaya-pine); background:rgba(40,74,59,.07); transform:rotate(-2deg); }
+    #alaya-homepage-study .layer.b { height:46%; bottom:-16%; border-color:var(--alaya-forest); background:rgba(111,136,112,.07); transform:rotate(3deg); }
+    #alaya-homepage-study .layer.c { height:33%; bottom:-9%; border-color:var(--alaya-amber); background:rgba(165,117,60,.06); transform:rotate(-4deg); }
+    #alaya-homepage-study .field-note { position:absolute; max-width:180px; font-size:10px; line-height:1.45; }
+    #alaya-homepage-study .field-note.capability { left:6%; top:22%; }
+    #alaya-homepage-study .field-note.knowledge { left:36%; top:42%; color:var(--alaya-pine); }
+    #alaya-homepage-study .field-note.technology { right:7%; top:30%; color:var(--alaya-amber); }
+    #alaya-homepage-study .field-note.intelligence { right:25%; bottom:12%; color:var(--alaya-fog); }
+    #alaya-homepage-study .maturity-field { display:grid; grid-template-columns:1.4fr .8fr; gap:8%; margin-top:34px; align-items:end; }
+    #alaya-homepage-study .present-expression { min-height:250px; padding:26px; border:1px solid var(--alaya-pine); background:rgba(40,74,59,.045); }
+    #alaya-homepage-study .present-expression strong { display:block; margin-top:44px; font-family:"Cormorant Garamond", Georgia, serif; font-size:34px; font-weight:400; }
+    #alaya-homepage-study .future-field { display:grid; gap:30px; padding-bottom:18px; }
+    #alaya-homepage-study .future-field div { padding-top:14px; border-top:1px solid var(--alaya-rule); color:var(--alaya-fog); font-size:11px; }
+    #alaya-homepage-study .cie-definition { display:grid; grid-template-columns:.85fr 1.15fr; gap:8%; margin-top:32px; padding-bottom:44px; border-bottom:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .cie-definition-copy p { margin:0 0 16px; color:var(--alaya-fog); font-size:13px; line-height:1.65; }
+    #alaya-homepage-study .scale-headline { max-width:620px; margin:46px 0 0; font-family:"Cormorant Garamond", Georgia, serif; font-size:clamp(26px, 3.4vw, 44px); line-height:1.05; font-weight:400; }
+    #alaya-homepage-study .product-glimpse { display:grid; grid-template-columns:.85fr 1.15fr; gap:8%; margin-top:34px; align-items:center; }
+    #alaya-homepage-study .product-sheet { min-height:290px; padding:32px; background:#eee7d8; border:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .product-sheet .mini-line { height:1px; background:var(--alaya-rule); margin:18px 0; }
+    #alaya-homepage-study .product-sheet .mini-landscape { height:110px; margin-top:30px; border-bottom:1px solid var(--alaya-pine); border-radius:40% 60% 0 0; background:linear-gradient(140deg, rgba(40,74,59,.03), rgba(165,117,60,.11)); }
+    #alaya-homepage-study .conditions { margin-top:32px; }
+    #alaya-homepage-study .condition { display:grid; grid-template-columns:26px 1fr; gap:18px; padding:18px 0; border-top:1px solid var(--alaya-rule); font-family:"Cormorant Garamond", Georgia, serif; font-size:22px; }
+    #alaya-homepage-study .condition span:first-child { color:var(--alaya-amber); font-family:Montserrat, sans-serif; font-size:10px; }
+    #alaya-homepage-study .origin { display:grid; grid-template-columns:.5fr 1.5fr; gap:10%; }
+    #alaya-homepage-study .origin .lede { margin-top:0; font-family:"Cormorant Garamond", Georgia, serif; font-size:24px; color:var(--alaya-ink); }
+    #alaya-homepage-study .epilogue { min-height:430px; display:flex; flex-direction:column; justify-content:center; text-align:center; }
+    #alaya-homepage-study .epilogue-words { display:flex; flex-wrap:wrap; justify-content:center; gap:12px 28px; margin:28px auto 10px; color:var(--alaya-fog); font-family:"Cormorant Garamond", Georgia, serif; font-size:24px; }
+    #alaya-homepage-study .open-paths { display:grid; grid-template-columns:repeat(3, 1fr); margin-top:38px; border-top:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .open-paths div { min-height:130px; padding:22px; border-right:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .open-paths div:last-child { border-right:0; }
+    #alaya-homepage-study .open-paths strong { font-family:"Cormorant Garamond", Georgia, serif; font-size:22px; font-weight:400; }
+    #alaya-homepage-study .site-foot { display:flex; justify-content:space-between; padding:24px 7%; color:var(--alaya-fog); font-size:9px; text-transform:uppercase; letter-spacing:.1em; }
+    #alaya-homepage-study .contact-invitation { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 7%; border-top:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .contact-invitation p { margin:0; color:var(--alaya-fog); font-family:"Cormorant Garamond", Georgia, serif; font-size:18px; }
+    #alaya-homepage-study .contact-link { border:0; border-bottom:1px solid currentColor; padding:0 0 4px; background:transparent; color:var(--alaya-pine); font:500 10px Montserrat, sans-serif; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
+    #alaya-homepage-study .contact-page { display:none; min-height:680px; padding:74px 12%; background:var(--alaya-paper); }
+    #alaya-homepage-study .contact-page.is-visible { display:block; }
+    #alaya-homepage-study .contact-page .contact-copy { max-width:650px; margin-top:70px; }
+    #alaya-homepage-study .contact-page .contact-human { margin-top:54px; padding-top:22px; border-top:1px solid var(--alaya-rule); color:var(--alaya-fog); font-size:12px; }
+    #alaya-homepage-study .contact-page .contact-human strong { display:block; margin-bottom:8px; color:var(--alaya-ink); font-family:"Cormorant Garamond", Georgia, serif; font-size:24px; font-weight:400; }
+    #alaya-homepage-study .inspector { position:sticky; top:0; }
+    #alaya-homepage-study .inspector h3 { margin-bottom:8px; }
+    #alaya-homepage-study .inspector dl { margin:16px 0 0; }
+    #alaya-homepage-study .inspector dt { margin-top:14px; color:var(--muted-foreground); font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
+    #alaya-homepage-study .inspector dd { margin:4px 0 0; font-size:12px; line-height:1.45; }
+    #alaya-homepage-study .mobile-nav { display:none; }
+    #alaya-homepage-study .site-viewport.is-mobile .site-head { padding:16px 20px; }
+    #alaya-homepage-study .site-viewport.is-mobile .site-nav { display:none; }
+    #alaya-homepage-study .site-viewport.is-mobile .mobile-nav { display:block; font-size:10px; text-transform:uppercase; }
+    #alaya-homepage-study .site-viewport.is-mobile .home-section { padding:54px 24px; }
+    #alaya-homepage-study .site-viewport.is-mobile .hero { min-height:500px; justify-content:flex-start; padding-top:88px; }
+    #alaya-homepage-study .site-viewport.is-mobile .display { font-size:48px; }
+    #alaya-homepage-study .site-viewport.is-mobile .headline { font-size:38px; }
+    #alaya-homepage-study .site-viewport.is-mobile .trace-field { inset:auto -20% 0 18%; height:40%; }
+    #alaya-homepage-study .site-viewport.is-mobile .observation-grid,
+    #alaya-homepage-study .site-viewport.is-mobile .maturity-field,
+    #alaya-homepage-study .site-viewport.is-mobile .product-glimpse,
+    #alaya-homepage-study .site-viewport.is-mobile .origin,
+    #alaya-homepage-study .site-viewport.is-mobile .cie-definition { grid-template-columns:1fr; gap:28px; }
+    #alaya-homepage-study .site-viewport.is-mobile .thesis-line { font-size:34px; margin-left:0; }
+    #alaya-homepage-study .site-viewport.is-mobile .thesis-line:nth-child(2) { padding-left:14px; }
+    #alaya-homepage-study .site-viewport.is-mobile .thesis-line:nth-child(3) { padding-left:28px; }
+    #alaya-homepage-study .site-viewport.is-mobile .crafts-strip { display:grid; grid-template-columns:1fr auto; }
+    #alaya-homepage-study .site-viewport.is-mobile .craft { text-align:left; padding:12px 4px; }
+    #alaya-homepage-study .site-viewport.is-mobile .craft-arrow { padding:12px; }
+    #alaya-homepage-study .site-viewport.is-mobile .landscape-field { min-height:410px; }
+    #alaya-homepage-study .site-viewport.is-mobile .field-note.capability { left:2%; top:18%; }
+    #alaya-homepage-study .site-viewport.is-mobile .field-note.knowledge { left:28%; top:40%; }
+    #alaya-homepage-study .site-viewport.is-mobile .field-note.technology { right:2%; top:58%; }
+    #alaya-homepage-study .site-viewport.is-mobile .field-note.intelligence { right:16%; bottom:7%; }
+    #alaya-homepage-study .site-viewport.is-mobile .present-expression { min-height:220px; }
+    #alaya-homepage-study .site-viewport.is-mobile .product-glimpse > div:first-child { order:2; }
+    #alaya-homepage-study .site-viewport.is-mobile .product-sheet { min-height:240px; }
+    #alaya-homepage-study .site-viewport.is-mobile .condition { font-size:19px; }
+    #alaya-homepage-study .site-viewport.is-mobile .epilogue { min-height:520px; }
+    #alaya-homepage-study .site-viewport.is-mobile .open-paths { grid-template-columns:1fr; }
+    #alaya-homepage-study .site-viewport.is-mobile .open-paths div { border-right:0; border-bottom:1px solid var(--alaya-rule); min-height:100px; }
+    #alaya-homepage-study .site-viewport.is-mobile .site-foot { display:grid; gap:10px; padding:24px; }
+    #alaya-homepage-study .site-viewport.is-mobile .contact-invitation { display:grid; padding:24px; }
+    #alaya-homepage-study .site-viewport.is-mobile .contact-link { justify-self:start; }
+    #alaya-homepage-study .site-viewport.is-mobile .contact-page { min-height:600px; padding:54px 24px; }
+    #alaya-homepage-study .site-viewport.is-mobile .contact-page .contact-copy { margin-top:70px; }
+    @media (max-width: 820px) {
+      #alaya-homepage-study .study-shell { grid-template-columns:1fr; }
+      #alaya-homepage-study .inspector { position:static; }
+    }
+  </style>
+
+  <div class="study-tools">
+    <div>
+      <button class="btn btn-primary" type="button" data-view="desktop" aria-pressed="true">Desktop study</button>
+      <button class="btn" type="button" data-view="mobile" aria-pressed="false">Mobile study</button>
+    </div>
+    <div class="text-small text-muted">Select any numbered section to inspect its design intent.</div>
+  </div>
+
+  <div class="study-shell">
+    <div class="viewport-stage">
+      <div class="site-viewport is-desktop" aria-label="Low-fidelity Alaya Crafts homepage composition">
+        <header class="site-head">
+          <div class="wordmark">Alaya Crafts</div>
+          <nav class="site-nav" aria-label="Study navigation"><span>The Alaya Idea</span><span>CIE Professional</span><span>For Organizations</span><span>Ideas</span><span data-contact-open>Contact</span></nav>
+          <div class="mobile-nav">Explore</div>
+        </header>
+
+        <section class="home-section hero is-active" data-section="curiosity">
+          <span class="section-index">01 — Curiosity</span>
+          <h1 class="display">Everything starts with curiosity.</h1>
+          <p class="lede">Capability is the enduring asset within people and organizations.</p>
+          <div class="quiet-links"><span>Explore the idea</span><span>Meet CIE Professional</span></div>
+          <div class="trace-field" aria-hidden="true"><div class="trace one"></div></div>
+        </section>
+
+        <section class="home-section" data-section="observation">
+          <span class="section-index">02 — Observation</span>
+          <h2 class="headline">Much of the value we create is easy to lose and difficult to carry forward.</h2>
+          <div class="observation-grid">
+            <div><strong>People</strong><p>Only experience, learning, decisions, evidence, and contribution together can reflect your professional life.</p></div>
+            <div><strong>Organizations</strong><p>Knowledge and capability dilute across roles, teams, systems, projects, and moments of change.</p></div>
+          </div>
+          <div class="trace-field" aria-hidden="true"><div class="trace one"></div><div class="trace two"></div></div>
+        </section>
+
+        <section class="home-section" data-section="thesis">
+          <span class="section-index">03 — Thesis</span>
+          <div class="thesis-stack">
+            <div class="thesis-line">Capability is the enduring asset.</div>
+            <div class="thesis-line">Knowledge preserves it.</div>
+            <div class="thesis-line">Technology extends it.</div>
+          </div>
+        </section>
+
+        <section class="home-section" data-section="practice">
+          <span class="section-index">04 — Practice</span>
+          <h2 class="headline">Capability stays alive through practice.</h2>
+          <div class="crafts-strip" aria-label="Capability practice">
+            <div class="craft">Curiosity</div><div class="craft-arrow">→</div><div class="craft">Understanding</div><div class="craft-arrow">→</div><div class="craft">Learning</div><div class="craft-arrow">→</div><div class="craft">Contribution</div><div class="craft-arrow">→</div><div class="craft">Reflection</div>
+          </div>
+          <p class="practice-detail">Curiosity opens a question. Each practice enhances capability and opens a new question.</p>
+        </section>
+
+        <section class="home-section" data-section="landscape">
+          <span class="section-index">05 — The Living Field</span>
+          <h2 class="headline">Capability becomes visible and actionable.</h2>
+          <p class="lede">Knowledge, technology, intelligence, and practice help reveal, connect, and cultivate a shared capability landscape.</p>
+          <div class="landscape-field" aria-label="Conceptual capability landscape">
+            <div class="layer a"></div><div class="layer b"></div><div class="layer c"></div>
+            <div class="field-note capability">Capability<br><small>the terrain</small></div>
+            <div class="field-note knowledge">Knowledge<br><small>definition and memory</small></div>
+            <div class="field-note technology">Technology<br><small>connection and use</small></div>
+            <div class="field-note intelligence">Intelligence<br><small>relationships becoming visible</small></div>
+          </div>
+        </section>
+
+        <section class="home-section" data-section="forms">
+          <span class="section-index">06 — Where the idea is taking form</span>
+          <div class="cie-definition">
+            <h2 class="headline">Capability Intelligence Engine <span style="white-space:nowrap">(CIE)</span></h2>
+            <div class="cie-definition-copy">
+              <p>A way of making capability understandable through the knowledge, evidence, experiences, and relationships that give it shape. When capability becomes visible, its relationships can become understandable.</p>
+              <p>Alaya calls this <strong>Capability Intelligence</strong>: understanding capability through the knowledge, evidence, experience, objectives, and relationships that surround it.</p>
+              <p>The <strong>Capability Intelligence Engine (CIE)</strong> is the technology Alaya is building to make that understanding usable.</p>
+            </div>
+          </div>
+          <h3 class="scale-headline">One landscape. Different scales and ways of understanding it.</h3>
+          <div class="maturity-field">
+            <div class="present-expression"><span class="section-index">Living expression today</span><strong>CIE Professional</strong><p class="lede">A place for a person to begin understanding the capability their work has created.</p></div>
+            <div class="future-field"><div><b>Teams</b><br>an emerging direction</div><div><b>Organizations</b><br>a broader scale with practical work today</div><div><b>Collective Intelligence</b><br>A future possibility: learning from patterns across capability landscapes while preserving the distinction between individual knowledge and collective insight.</div></div>
+          </div>
+        </section>
+
+        <section class="home-section" data-section="cie">
+          <span class="section-index">07 — CIE Professional</span>
+          <div class="product-glimpse">
+            <div><h2 class="headline">Understand the capability your work has cultivated.</h2><p class="lede">Build an evidence-grounded understanding of your professional capability, and let it grow with your experience, objectives, reflection, and contribution.</p><div class="quiet-links"><span>Explore CIE Professional</span></div></div>
+            <div class="product-sheet" aria-label="Abstract product glimpse"><span class="section-index">Your understanding</span><div class="mini-line"></div><p class="lede">A recurring theme is beginning to emerge from the work you’ve brought into view.</p><div class="mini-landscape"></div></div>
+          </div>
+        </section>
+
+        <section class="home-section" data-section="organizations">
+          <span class="section-index">08 — Organizations</span>
+          <h2 class="headline">Capability connects strategy to the work that carries it.</h2>
+          <p class="lede">Understanding capability changes how people and organizations can think about what comes next: what they can already pursue, what they can draw upon, and what they may need to cultivate.</p>
+          <div class="conditions"><div class="condition"><span>01</span><div>Where does strategy lose coherence as it becomes work?</div></div><div class="condition"><span>02</span><div>What knowledge disappears between teams or systems?</div></div><div class="condition"><span>03</span><div>What capability already exists but remains fragmented or difficult to reuse?</div></div></div>
+        </section>
+
+        <section class="home-section" data-section="origin">
+          <div class="origin"><span class="section-index">09 — Origin</span><p class="lede">The ideas behind Alaya emerged through more than two decades of work across technology, engineering, leadership, product thinking, organizational systems, knowledge, and execution. Across that work, one thread kept resurfacing: capability endured beyond the systems, roles, and technologies around it.</p></div>
+        </section>
+
+        <section class="home-section epilogue" data-section="epilogue">
+          <span class="section-index">10 — Epilogue</span>
+          <div class="epilogue-words"><span>Curiosity.</span><span>Understanding.</span><span>Learning.</span><span>Contribution.</span><span>Reflection.</span></div>
+          <p class="lede" style="margin-inline:auto">These are the crafts.</p>
+          <h2 class="headline" style="margin-inline:auto">Technology evolves. Crafts endure.</h2>
+        </section>
+
+        <section class="home-section" data-section="paths">
+          <span class="section-index">11 — Open paths</span>
+          <div class="contact-invitation"><p>If something here connects with a question you’re exploring, start a conversation.</p><button class="contact-link" type="button" data-contact-open>Write to Alaya</button></div>
+          <div class="open-paths"><div><strong>Explore CIE Professional</strong></div><div><strong>For Organizations</strong></div><div><strong>Follow the Ideas</strong></div></div>
+        </section>
+        <footer class="site-foot"><span>Alaya Crafts</span><span>The Alaya Idea · CIE Professional · Organizations · Contact</span><span>Capability is the enduring asset.</span></footer>
+
+        <section class="contact-page" aria-label="Contact page study">
+          <button class="contact-link" type="button" data-contact-close>← Back to Alaya Crafts</button>
+          <div class="contact-copy">
+            <span class="section-index">Contact</span>
+            <h2 class="display">Start a conversation.</h2>
+            <p class="lede">Alaya is an evolving body of work. If something here connects with a question you’re exploring, an idea you’re developing, or work you’re trying to understand, you can reach us directly.</p>
+            <div class="contact-human"><strong>Write to Alaya</strong>Your message will be read and answered by a person.</div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <aside class="inspector card" aria-live="polite">
+      <span class="viz-badge" id="section-number">01</span>
+      <h3 id="section-title">Curiosity</h3>
+      <dl>
+        <dt>Composition</dt><dd id="section-layout"></dd>
+        <dt>Hierarchy</dt><dd id="section-hierarchy"></dd>
+        <dt>Density</dt><dd id="section-density"></dd>
+        <dt>Interaction</dt><dd id="section-interaction"></dd>
+        <dt>Desktop</dt><dd id="section-desktop"></dd>
+        <dt>Mobile</dt><dd id="section-mobile"></dd>
+        <dt>Landscape state</dt><dd id="section-landscape"></dd>
+      </dl>
+    </aside>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById('alaya-homepage-study');
+      const viewport = root.querySelector('.site-viewport');
+      const details = {
+        curiosity:{n:'01',title:'Curiosity',layout:'A sparse first viewport with one dominant thought, one grounding sentence, and two quiet paths.',hierarchy:'Poetic opening first; plain-spoken worldview immediately beneath it.',density:'Very low. The emptiness is part of the argument.',interaction:'Links remain understated; the trace responds only through subtle local movement in a later polished pass.',desktop:'Large editorial scale with the trace entering from the lower right.',mobile:'The grounding sentence arrives without requiring a long scroll; the trace occupies less of the field.',landscape:'Almost absent: one partial contour suggests something not yet understood.'},
+        observation:{n:'02',title:'Observation',layout:'A shared editorial field connects people and organizations without segment cards.',hierarchy:'One observation, then two related contexts.',density:'Low to medium; enough examples to make capability concrete.',interaction:'None required. Reading carries the section.',desktop:'Parallel columns reveal the shared condition.',mobile:'The two contexts stack with a continuous rule so they remain related.',landscape:'A second trace appears. Accumulation begins but remains ambiguous.'},
+        thesis:{n:'03',title:'Thesis',layout:'Three statements accumulate vertically with staggered alignment.',hierarchy:'Capability dominates; knowledge and technology remain supporting relationships.',density:'Very low and intentionally emphatic.',interaction:'No interaction. This is the conceptual center of gravity.',desktop:'Staggering creates spatial relationship without an arrow diagram.',mobile:'Indentation replaces wide spatial offsets; all three statements stay legible.',landscape:'The traces begin to read as definition rather than decoration.'},
+        practice:{n:'04',title:'Practice',layout:'A single recurring sequence, followed by one selected-practice explanation.',hierarchy:'The five Crafts are peers; the active craft gains quiet emphasis.',density:'Medium when selected detail is included.',interaction:'User-controlled selection only; keyboard and touch viable, no autoplay or progress semantics.',desktop:'Horizontal sequence supports recurrence.',mobile:'Becomes a vertical cadence rather than a crushed circular diagram.',landscape:'The field can subtly change state as practices are explored; capability is cultivable.'},
+        landscape:{n:'05',title:'The Living Field',layout:'A wide relational field with layered strata and sparse annotations.',hierarchy:'Capability is terrain; knowledge, technology, and intelligence are relational layers—not equal feature blocks.',density:'Medium visually, low textually.',interaction:'Later refinement may reveal concise explanations on focus; essential meaning remains visible.',desktop:'Spatial separation allows relationships to be felt before they are read.',mobile:'Annotations recompose down the field while the layers retain one connected body.',landscape:'Now legible as a capability landscape. This is the metaphor’s explicit stress test.'},
+        forms:{n:'06',title:'Where the idea is taking form',layout:'CIE is defined first in plain language, followed by one substantial present expression and smaller outward directions.',hierarchy:'Capability Intelligence establishes the concept; CIE names the technology; CIE Professional is concrete; Teams, Organizations, and Collective Intelligence remain intentionally unequal.',density:'Medium to high. The definition carries necessary explanatory weight before the maturity field.',interaction:'Maturity labels can reveal fuller context, but nothing behaves like a product catalogue.',desktop:'Two-column definition leads into an asymmetric field that communicates maturity without status badges.',mobile:'The CIE definition stacks before the concrete expression; emerging directions follow as a quieter continuation.',landscape:'The field gains an intellectual model, then widens outward from what exists rather than dividing into product peaks.'},
+        cie:{n:'07',title:'CIE Professional',layout:'Editorial product story paired with an abstract, inspectable glimpse of the experience.',hierarchy:'The human outcome leads; the product glimpse supports it.',density:'Medium; one paragraph, one doorway, one quiet product moment.',interaction:'The product glimpse may later respond to focus, but is not a fake dashboard demo.',desktop:'Two unequal columns create family resemblance without copying the application shell.',mobile:'Product glimpse appears first, then explanatory copy, making the section concrete early.',landscape:'The visitor moves from viewing the shared landscape to imagining an individual understanding within it.'},
+        organizations:{n:'08',title:'Organizations',layout:'One practical thesis followed by organizational questions rather than service cards.',hierarchy:'Strategy-to-execution entry first; capability relationship second; questions third.',density:'Medium to high, but broken into readable conditions.',interaction:'Questions may become editorial links only when real engagement paths exist.',desktop:'Long rules create an expanded organizational field.',mobile:'Questions stack naturally and preserve the inquiry-led tone.',landscape:'Scale widens to relationships among people, systems, knowledge, and work.'},
+        origin:{n:'09',title:'Origin',layout:'A small marginal label beside one editorial provenance passage.',hierarchy:'The idea remains central; experience establishes where it came from.',density:'Low.',interaction:'A quiet link to the fuller Alaya idea may follow later.',desktop:'Marginalia treatment keeps the section human but not heroic.',mobile:'The label and passage stack; no portrait or credential wall is introduced.',landscape:'No new visual layer. The pause prevents the metaphor from becoming relentless.'},
+        epilogue:{n:'10',title:'Epilogue / Crafts',layout:'Centered return to the five words, then the closing statement.',hierarchy:'“These are the crafts” resolves the name; the enduring line closes the argument.',density:'Very low.',interaction:'None required.',desktop:'The accumulated field can remain present but quiet behind ample paper.',mobile:'Extra vertical breathing room keeps the ending earned rather than abrupt.',landscape:'Richer than at entry but not louder; accumulated understanding creates depth.'},
+        paths:{n:'11',title:'Open paths',layout:'Three equal destinations only at the end, after maturity and meaning are understood.',hierarchy:'No default conversion path; visitors choose by relevance.',density:'Low.',interaction:'Each destination is a descriptive link, not a sales CTA.',desktop:'Three adjacent paths create agency without a conversion banner.',mobile:'Paths stack as a calm reading list.',landscape:'The landscape stops accumulating. The visitor chooses where to enter it next.'}
+      };
+      function show(key) {
+        const d = details[key]; if (!d) return;
+        root.querySelectorAll('.home-section').forEach(s => s.classList.toggle('is-active', s.dataset.section === key));
+        root.querySelector('#section-number').textContent = d.n;
+        root.querySelector('#section-title').textContent = d.title;
+        ['layout','hierarchy','density','interaction','desktop','mobile','landscape'].forEach(k => root.querySelector('#section-'+k).textContent = d[k]);
+      }
+      root.querySelectorAll('.home-section').forEach(section => section.addEventListener('click', () => show(section.dataset.section)));
+      root.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => {
+        const mobile = button.dataset.view === 'mobile';
+        viewport.classList.toggle('is-mobile', mobile); viewport.classList.toggle('is-desktop', !mobile);
+        root.querySelectorAll('[data-view]').forEach(b => { const active = b === button; b.setAttribute('aria-pressed', String(active)); b.classList.toggle('btn-primary', active); });
+      }));
+      root.querySelectorAll('[data-contact-open]').forEach(trigger => trigger.addEventListener('click', () => {
+        root.querySelectorAll('.home-section, .contact-invitation, .site-foot').forEach(el => el.style.display = 'none');
+        root.querySelector('.contact-page').classList.add('is-visible');
+        viewport.scrollIntoView({behavior:'smooth', block:'start'});
+      }));
+      root.querySelectorAll('[data-contact-close]').forEach(trigger => trigger.addEventListener('click', () => {
+        root.querySelector('.contact-page').classList.remove('is-visible');
+        root.querySelectorAll('.home-section, .contact-invitation, .site-foot').forEach(el => el.style.display = '');
+        viewport.scrollIntoView({behavior:'smooth', block:'start'});
+      }));
+      show('curiosity');
+    })();
+  </script>
+</div>
