@@ -1,0 +1,1546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Alaya Homepage Polished Study</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Alaya Homepage Polished Study" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Alaya Homepage Polished Study&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+    [aria-pressed=&quot;true&quot;],
+    [aria-selected=&quot;true&quot;],
+    .is-selected
+  ) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;alaya-homepage-study&quot;&gt;
+  &lt;style&gt;
+    #alaya-homepage-study {
+      --alaya-paper: #f3efe4;
+      --alaya-paper-deep: #e9e1d1;
+      --alaya-ink: #242720;
+      --alaya-fog: #6d7067;
+      --alaya-pine: #284a3b;
+      --alaya-forest: #6f8870;
+      --alaya-amber: #a5753c;
+      --alaya-rule: rgba(36, 39, 32, .22);
+      color: light-dark(#242720, #ece7da);
+      font-family: Montserrat, system-ui, sans-serif;
+    }
+    #alaya-homepage-study * { box-sizing: border-box; }
+    #alaya-homepage-study .study-tools { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; margin-bottom:16px; }
+    #alaya-homepage-study .study-tools &gt; div { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+    #alaya-homepage-study .study-shell { display:grid; grid-template-columns:minmax(0, 1fr) 260px; gap:18px; align-items:start; }
+    #alaya-homepage-study .viewport-stage { min-width:0; overflow:hidden; }
+    #alaya-homepage-study .viewport-wrap { transform-origin:top left; }
+    #alaya-homepage-study .site-viewport {
+      background:var(--alaya-paper); color:var(--alaya-ink); border:1px solid var(--border);
+      overflow:hidden; width:100%; box-shadow:0 8px 28px rgba(25,29,24,.08);
+    }
+    #alaya-homepage-study .site-viewport.is-mobile { width:390px; max-width:100%; margin-inline:auto; }
+    #alaya-homepage-study .site-viewport.is-desktop { width:100%; }
+    #alaya-homepage-study .site-head { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:20px 4.5%; border-bottom:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .wordmark { font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:19px; font-weight:500; letter-spacing:.02em; }
+    #alaya-homepage-study .site-nav { display:flex; gap:20px; color:var(--alaya-fog); font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
+    #alaya-homepage-study .site-nav span:last-child { color:var(--alaya-pine); cursor:pointer; }
+    #alaya-homepage-study .home-section { position:relative; padding:64px 7%; border-bottom:1px solid rgba(36,39,32,.11); cursor:pointer; outline-offset:-3px; }
+    #alaya-homepage-study .home-section:hover::after,
+    #alaya-homepage-study .home-section.is-active::after { content:&quot;&quot;; position:absolute; inset:6px; border:1px solid var(--alaya-amber); pointer-events:none; }
+    #alaya-homepage-study .section-index { color:var(--alaya-amber); font-size:9px; letter-spacing:.16em; text-transform:uppercase; }
+    #alaya-homepage-study .display { max-width:720px; margin:18px 0 0; font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:clamp(36px, 6vw, 78px); line-height:.96; font-weight:400; }
+    #alaya-homepage-study .headline { max-width:650px; margin:16px 0 0; font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:clamp(28px, 4vw, 54px); line-height:1.05; font-weight:400; }
+    #alaya-homepage-study .lede { max-width:580px; margin:18px 0 0; color:var(--alaya-fog); font-size:14px; line-height:1.65; }
+    #alaya-homepage-study .quiet-links { display:flex; flex-wrap:wrap; gap:22px; margin-top:28px; font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
+    #alaya-homepage-study .quiet-links span { border-bottom:1px solid currentColor; padding-bottom:4px; }
+    #alaya-homepage-study .trace-field { position:absolute; inset:auto -2% 0 35%; height:58%; pointer-events:none; opacity:.75; }
+    #alaya-homepage-study .trace { position:absolute; left:0; right:0; border:1px solid var(--alaya-forest); border-left-color:transparent; border-right-color:transparent; border-radius:52% 41% 0 0; }
+    #alaya-homepage-study .trace.one { height:54%; bottom:-20%; transform:rotate(-3deg); }
+    #alaya-homepage-study .trace.two { height:38%; bottom:-18%; transform:rotate(2deg); opacity:.5; }
+    #alaya-homepage-study .hero { min-height:480px; display:flex; flex-direction:column; justify-content:center; }
+    #alaya-homepage-study .hero .lede { max-width:520px; color:var(--alaya-ink); font-size:16px; }
+    #alaya-homepage-study .observation-grid { display:grid; grid-template-columns:1fr 1fr; gap:12%; margin-top:36px; }
+    #alaya-homepage-study .observation-grid div { padding-top:18px; border-top:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .observation-grid strong { display:block; font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:24px; font-weight:400; }
+    #alaya-homepage-study .observation-grid p { color:var(--alaya-fog); font-size:12px; line-height:1.6; }
+    #alaya-homepage-study .thesis-stack { margin-top:26px; }
+    #alaya-homepage-study .thesis-line { padding:20px 0; border-top:1px solid var(--alaya-rule); font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:clamp(28px, 4.2vw, 56px); line-height:1; }
+    #alaya-homepage-study .thesis-line:nth-child(2) { margin-left:8%; color:var(--alaya-pine); }
+    #alaya-homepage-study .thesis-line:nth-child(3) { margin-left:16%; color:var(--alaya-amber); }
+    #alaya-homepage-study .crafts-strip { display:flex; align-items:flex-end; gap:0; margin-top:38px; }
+    #alaya-homepage-study .craft { flex:1; min-width:0; padding:18px 10px; border-top:1px solid var(--alaya-rule); color:var(--alaya-fog); font-size:10px; text-align:center; }
+    #alaya-homepage-study .craft:first-child { color:var(--alaya-pine); border-top:3px solid var(--alaya-pine); }
+    #alaya-homepage-study .craft-arrow { color:var(--alaya-amber); padding-bottom:18px; }
+    #alaya-homepage-study .practice-detail { max-width:540px; margin:24px auto 0; text-align:center; color:var(--alaya-fog); font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:22px; }
+    #alaya-homepage-study .landscape-field { position:relative; min-height:360px; margin-top:30px; border-top:1px solid var(--alaya-rule); overflow:hidden; }
+    #alaya-homepage-study .layer { position:absolute; left:-8%; width:116%; border-radius:48% 52% 0 0; border-top:1px solid; }
+    #alaya-homepage-study .layer.a { height:58%; bottom:-22%; border-color:var(--alaya-pine); background:rgba(40,74,59,.07); transform:rotate(-2deg); }
+    #alaya-homepage-study .layer.b { height:46%; bottom:-16%; border-color:var(--alaya-forest); background:rgba(111,136,112,.07); transform:rotate(3deg); }
+    #alaya-homepage-study .layer.c { height:33%; bottom:-9%; border-color:var(--alaya-amber); background:rgba(165,117,60,.06); transform:rotate(-4deg); }
+    #alaya-homepage-study .field-note { position:absolute; max-width:180px; font-size:10px; line-height:1.45; }
+    #alaya-homepage-study .field-note.capability { left:6%; top:22%; }
+    #alaya-homepage-study .field-note.knowledge { left:36%; top:42%; color:var(--alaya-pine); }
+    #alaya-homepage-study .field-note.technology { right:7%; top:30%; color:var(--alaya-amber); }
+    #alaya-homepage-study .field-note.intelligence { right:25%; bottom:12%; color:var(--alaya-fog); }
+    #alaya-homepage-study .maturity-field { display:grid; grid-template-columns:1.4fr .8fr; gap:8%; margin-top:34px; align-items:end; }
+    #alaya-homepage-study .present-expression { min-height:250px; padding:26px; border:1px solid var(--alaya-pine); background:rgba(40,74,59,.045); }
+    #alaya-homepage-study .present-expression strong { display:block; margin-top:44px; font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:34px; font-weight:400; }
+    #alaya-homepage-study .future-field { display:grid; gap:30px; padding-bottom:18px; }
+    #alaya-homepage-study .future-field div { padding-top:14px; border-top:1px solid var(--alaya-rule); color:var(--alaya-fog); font-size:11px; }
+    #alaya-homepage-study .cie-definition { display:grid; grid-template-columns:.85fr 1.15fr; gap:8%; margin-top:32px; padding-bottom:44px; border-bottom:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .cie-definition-copy p { margin:0 0 16px; color:var(--alaya-fog); font-size:13px; line-height:1.65; }
+    #alaya-homepage-study .scale-headline { max-width:620px; margin:46px 0 0; font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:clamp(26px, 3.4vw, 44px); line-height:1.05; font-weight:400; }
+    #alaya-homepage-study .product-glimpse { display:grid; grid-template-columns:.85fr 1.15fr; gap:8%; margin-top:34px; align-items:center; }
+    #alaya-homepage-study .product-sheet { min-height:290px; padding:32px; background:#eee7d8; border:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .product-sheet .mini-line { height:1px; background:var(--alaya-rule); margin:18px 0; }
+    #alaya-homepage-study .product-sheet .mini-landscape { height:110px; margin-top:30px; border-bottom:1px solid var(--alaya-pine); border-radius:40% 60% 0 0; background:linear-gradient(140deg, rgba(40,74,59,.03), rgba(165,117,60,.11)); }
+    #alaya-homepage-study .conditions { margin-top:32px; }
+    #alaya-homepage-study .condition { display:grid; grid-template-columns:26px 1fr; gap:18px; padding:18px 0; border-top:1px solid var(--alaya-rule); font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:22px; }
+    #alaya-homepage-study .condition span:first-child { color:var(--alaya-amber); font-family:Montserrat, sans-serif; font-size:10px; }
+    #alaya-homepage-study .origin { display:grid; grid-template-columns:.5fr 1.5fr; gap:10%; }
+    #alaya-homepage-study .origin .lede { margin-top:0; font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:24px; color:var(--alaya-ink); }
+    #alaya-homepage-study .epilogue { min-height:430px; display:flex; flex-direction:column; justify-content:center; text-align:center; }
+    #alaya-homepage-study .epilogue-words { display:flex; flex-wrap:wrap; justify-content:center; gap:12px 28px; margin:28px auto 10px; color:var(--alaya-fog); font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:24px; }
+    #alaya-homepage-study .open-paths { display:grid; grid-template-columns:repeat(3, 1fr); margin-top:38px; border-top:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .open-paths div { min-height:130px; padding:22px; border-right:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .open-paths div:last-child { border-right:0; }
+    #alaya-homepage-study .open-paths strong { font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:22px; font-weight:400; }
+    #alaya-homepage-study .site-foot { display:flex; justify-content:space-between; padding:24px 7%; color:var(--alaya-fog); font-size:9px; text-transform:uppercase; letter-spacing:.1em; }
+    #alaya-homepage-study .contact-invitation { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 7%; border-top:1px solid var(--alaya-rule); }
+    #alaya-homepage-study .contact-invitation p { margin:0; color:var(--alaya-fog); font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:18px; }
+    #alaya-homepage-study .contact-link { border:0; border-bottom:1px solid currentColor; padding:0 0 4px; background:transparent; color:var(--alaya-pine); font:500 10px Montserrat, sans-serif; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
+    #alaya-homepage-study .contact-page { display:none; min-height:680px; padding:74px 12%; background:var(--alaya-paper); }
+    #alaya-homepage-study .contact-page.is-visible { display:block; }
+    #alaya-homepage-study .contact-page .contact-copy { max-width:650px; margin-top:70px; }
+    #alaya-homepage-study .contact-page .contact-human { margin-top:54px; padding-top:22px; border-top:1px solid var(--alaya-rule); color:var(--alaya-fog); font-size:12px; }
+    #alaya-homepage-study .contact-page .contact-human strong { display:block; margin-bottom:8px; color:var(--alaya-ink); font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:24px; font-weight:400; }
+    #alaya-homepage-study .inspector { position:sticky; top:0; }
+    #alaya-homepage-study .inspector h3 { margin-bottom:8px; }
+    #alaya-homepage-study .inspector dl { margin:16px 0 0; }
+    #alaya-homepage-study .inspector dt { margin-top:14px; color:var(--muted-foreground); font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
+    #alaya-homepage-study .inspector dd { margin:4px 0 0; font-size:12px; line-height:1.45; }
+    #alaya-homepage-study .mobile-nav { display:none; }
+    #alaya-homepage-study .site-viewport.is-mobile .site-head { padding:16px 20px; }
+    #alaya-homepage-study .site-viewport.is-mobile .site-nav { display:none; }
+    #alaya-homepage-study .site-viewport.is-mobile .mobile-nav { display:block; font-size:10px; text-transform:uppercase; }
+    #alaya-homepage-study .site-viewport.is-mobile .home-section { padding:54px 24px; }
+    #alaya-homepage-study .site-viewport.is-mobile .hero { min-height:500px; justify-content:flex-start; padding-top:88px; }
+    #alaya-homepage-study .site-viewport.is-mobile .display { font-size:48px; }
+    #alaya-homepage-study .site-viewport.is-mobile .headline { font-size:38px; }
+    #alaya-homepage-study .site-viewport.is-mobile .trace-field { inset:auto -20% 0 18%; height:40%; }
+    #alaya-homepage-study .site-viewport.is-mobile .observation-grid,
+    #alaya-homepage-study .site-viewport.is-mobile .maturity-field,
+    #alaya-homepage-study .site-viewport.is-mobile .product-glimpse,
+    #alaya-homepage-study .site-viewport.is-mobile .origin,
+    #alaya-homepage-study .site-viewport.is-mobile .cie-definition { grid-template-columns:1fr; gap:28px; }
+    #alaya-homepage-study .site-viewport.is-mobile .thesis-line { font-size:34px; margin-left:0; }
+    #alaya-homepage-study .site-viewport.is-mobile .thesis-line:nth-child(2) { padding-left:14px; }
+    #alaya-homepage-study .site-viewport.is-mobile .thesis-line:nth-child(3) { padding-left:28px; }
+    #alaya-homepage-study .site-viewport.is-mobile .crafts-strip { display:grid; grid-template-columns:1fr auto; }
+    #alaya-homepage-study .site-viewport.is-mobile .craft { text-align:left; padding:12px 4px; }
+    #alaya-homepage-study .site-viewport.is-mobile .craft-arrow { padding:12px; }
+    #alaya-homepage-study .site-viewport.is-mobile .landscape-field { min-height:410px; }
+    #alaya-homepage-study .site-viewport.is-mobile .field-note.capability { left:2%; top:18%; }
+    #alaya-homepage-study .site-viewport.is-mobile .field-note.knowledge { left:28%; top:40%; }
+    #alaya-homepage-study .site-viewport.is-mobile .field-note.technology { right:2%; top:58%; }
+    #alaya-homepage-study .site-viewport.is-mobile .field-note.intelligence { right:16%; bottom:7%; }
+    #alaya-homepage-study .site-viewport.is-mobile .present-expression { min-height:220px; }
+    #alaya-homepage-study .site-viewport.is-mobile .product-glimpse &gt; div:first-child { order:2; }
+    #alaya-homepage-study .site-viewport.is-mobile .product-sheet { min-height:240px; }
+    #alaya-homepage-study .site-viewport.is-mobile .condition { font-size:19px; }
+    #alaya-homepage-study .site-viewport.is-mobile .epilogue { min-height:520px; }
+    #alaya-homepage-study .site-viewport.is-mobile .open-paths { grid-template-columns:1fr; }
+    #alaya-homepage-study .site-viewport.is-mobile .open-paths div { border-right:0; border-bottom:1px solid var(--alaya-rule); min-height:100px; }
+    #alaya-homepage-study .site-viewport.is-mobile .site-foot { display:grid; gap:10px; padding:24px; }
+    #alaya-homepage-study .site-viewport.is-mobile .contact-invitation { display:grid; padding:24px; }
+    #alaya-homepage-study .site-viewport.is-mobile .contact-link { justify-self:start; }
+    #alaya-homepage-study .site-viewport.is-mobile .contact-page { min-height:600px; padding:54px 24px; }
+    #alaya-homepage-study .site-viewport.is-mobile .contact-page .contact-copy { margin-top:70px; }
+    @media (max-width: 820px) {
+      #alaya-homepage-study .study-shell { grid-template-columns:1fr; }
+      #alaya-homepage-study .inspector { position:static; }
+    }
+  &lt;/style&gt;
+
+  &lt;style&gt;
+    @import url(&#x27;https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&amp;family=Montserrat:wght@400;500&amp;display=swap&#x27;);
+    #alaya-homepage-study .site-viewport {
+      background:
+        radial-gradient(circle at 18% 6%, rgba(255,255,255,.52), transparent 31%),
+        radial-gradient(circle at 82% 40%, rgba(111,136,112,.055), transparent 26%),
+        var(--alaya-paper);
+      border:1px solid rgba(36,39,32,.12);
+      box-shadow:0 24px 70px rgba(36,39,32,.12);
+      overflow-x:clip;
+    }
+    #alaya-homepage-study .site-head { padding-block:26px; background:rgba(243,239,228,.88); backdrop-filter:blur(12px); }
+    #alaya-homepage-study .wordmark { font-size:24px; letter-spacing:.04em; }
+    #alaya-homepage-study .site-nav { gap:26px; font-size:9px; }
+    #alaya-homepage-study .home-section { padding-block:92px; border-bottom-color:rgba(36,39,32,.08); }
+    #alaya-homepage-study .home-section:hover::after,
+    #alaya-homepage-study .home-section.is-active::after { border-color:rgba(165,117,60,.36); inset:10px; }
+    #alaya-homepage-study .section-index { font-size:8px; color:var(--alaya-amber); }
+    #alaya-homepage-study .hero { min-height:680px; padding-top:126px; }
+    #alaya-homepage-study .hero .display { max-width:820px; font-size:clamp(62px, 8.5vw, 112px); line-height:1.04; letter-spacing:-.035em; }
+    #alaya-homepage-study .hero .lede { max-width:560px; margin-top:32px; font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:26px; line-height:1.35; }
+    #alaya-homepage-study .quiet-links { margin-top:42px; gap:30px; }
+    #alaya-homepage-study .trace-field { right:0; overflow:hidden; opacity:.9; }
+    #alaya-homepage-study .trace { border-color:rgba(40,74,59,.55); }
+    #alaya-homepage-study .trace.one { box-shadow:0 -24px 80px rgba(111,136,112,.05); }
+    #alaya-homepage-study .observation-grid { margin-top:64px; }
+    #alaya-homepage-study .observation-grid strong { font-size:34px; line-height:1.18; }
+    #alaya-homepage-study .observation-grid p { max-width:380px; font-size:13px; }
+    #alaya-homepage-study .thesis-stack { margin-block:28px; }
+    #alaya-homepage-study .headline { line-height:1.1; }
+    #alaya-homepage-study .thesis-line { padding-block:30px; font-size:clamp(42px, 6vw, 78px); line-height:1.08; letter-spacing:-.025em; }
+    #alaya-homepage-study .crafts-strip { margin-top:62px; }
+    #alaya-homepage-study .craft { padding-block:24px; letter-spacing:.08em; }
+    #alaya-homepage-study .practice-detail { margin-top:46px; font-size:28px; line-height:1.35; }
+    #alaya-homepage-study .landscape-field { min-height:500px; margin-top:54px; border-top-color:rgba(36,39,32,.16); }
+    #alaya-homepage-study .landscape-field .layer { left:0; width:100%; }
+    #alaya-homepage-study .layer { filter:blur(.15px); }
+    #alaya-homepage-study .layer.a { background:linear-gradient(170deg, rgba(40,74,59,.02), rgba(40,74,59,.13)); box-shadow:0 -45px 90px rgba(40,74,59,.045); }
+    #alaya-homepage-study .layer.b { background:linear-gradient(170deg, rgba(111,136,112,.015), rgba(111,136,112,.1)); }
+    #alaya-homepage-study .layer.c { background:linear-gradient(170deg, rgba(165,117,60,.015), rgba(165,117,60,.1)); }
+    #alaya-homepage-study .field-note { font-size:11px; letter-spacing:.025em; }
+    #alaya-homepage-study .cie-definition { padding-block:22px 64px; }
+    #alaya-homepage-study .cie-definition-copy p { font-size:14px; }
+    #alaya-homepage-study .maturity-field { margin-top:54px; }
+    #alaya-homepage-study .present-expression { min-height:330px; padding:38px; background:linear-gradient(145deg, rgba(40,74,59,.03), rgba(40,74,59,.085)); }
+    #alaya-homepage-study .present-expression strong { margin-top:70px; font-size:48px; line-height:1.14; }
+    #alaya-homepage-study .future-field { gap:38px; }
+    #alaya-homepage-study .future-field div { font-size:12px; line-height:1.6; }
+    #alaya-homepage-study .product-sheet { min-height:390px; padding:44px; background:linear-gradient(155deg, #f0eadf, #e8dfcd); box-shadow:0 18px 50px rgba(36,39,32,.08); }
+    #alaya-homepage-study .product-sheet .mini-landscape { height:150px; background:linear-gradient(145deg, rgba(40,74,59,.025), rgba(111,136,112,.08) 55%, rgba(165,117,60,.13)); }
+    #alaya-homepage-study .condition { padding-block:24px; font-size:27px; line-height:1.25; }
+    #alaya-homepage-study .origin .lede { font-size:30px; line-height:1.4; }
+    #alaya-homepage-study .epilogue { min-height:580px; }
+    #alaya-homepage-study .epilogue-words { gap:18px 36px; font-size:30px; line-height:1.25; }
+    #alaya-homepage-study .open-paths div { min-height:170px; padding:32px; transition:background-color 180ms ease; }
+    #alaya-homepage-study .open-paths div:hover { background:rgba(40,74,59,.045); }
+    #alaya-homepage-study .open-paths strong { font-size:27px; line-height:1.25; }
+    #alaya-homepage-study .contact-invitation { margin-bottom:36px; padding-inline:0; }
+    #alaya-homepage-study .contact-invitation p { font-size:23px; line-height:1.4; }
+    #alaya-homepage-study .site-foot { padding-block:34px; }
+    #alaya-homepage-study .contact-page { min-height:760px; background:radial-gradient(circle at 72% 40%, rgba(111,136,112,.08), transparent 30%), var(--alaya-paper); }
+    #alaya-homepage-study .site-viewport.is-mobile .home-section { padding-block:72px; }
+    #alaya-homepage-study .site-viewport.is-mobile .hero { min-height:620px; padding-top:100px; }
+    #alaya-homepage-study .site-viewport.is-mobile .hero .display { font-size:56px; line-height:1.08; letter-spacing:-.025em; }
+    #alaya-homepage-study .site-viewport.is-mobile .hero .lede { font-size:23px; }
+    #alaya-homepage-study .site-viewport.is-mobile .headline,
+    #alaya-homepage-study .site-viewport.is-mobile .scale-headline { line-height:1.14; letter-spacing:-.015em; }
+    #alaya-homepage-study .site-viewport.is-mobile .observation-grid strong,
+    #alaya-homepage-study .site-viewport.is-mobile .present-expression strong { line-height:1.18; }
+    #alaya-homepage-study .site-viewport.is-mobile .trace-field { left:18%; right:0; width:auto; }
+    #alaya-homepage-study .site-viewport.is-mobile .landscape-field { min-height:470px; }
+    #alaya-homepage-study .site-viewport.is-mobile .landscape-field .layer { left:0; width:100%; }
+    #alaya-homepage-study .site-viewport.is-mobile .contact-invitation { padding-inline:0; }
+    @media (prefers-reduced-motion:reduce) { #alaya-homepage-study * { scroll-behavior:auto !important; transition:none !important; } }
+  &lt;/style&gt;
+
+  &lt;div class=&quot;study-tools&quot;&gt;
+    &lt;div&gt;
+      &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-view=&quot;desktop&quot; aria-pressed=&quot;true&quot;&gt;Desktop study&lt;/button&gt;
+      &lt;button class=&quot;btn&quot; type=&quot;button&quot; data-view=&quot;mobile&quot; aria-pressed=&quot;false&quot;&gt;Mobile study&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;text-small text-muted&quot;&gt;Select any numbered section to inspect its design intent.&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;study-shell&quot;&gt;
+    &lt;div class=&quot;viewport-stage&quot;&gt;
+      &lt;div class=&quot;site-viewport is-desktop&quot; aria-label=&quot;Low-fidelity Alaya Crafts homepage composition&quot;&gt;
+        &lt;header class=&quot;site-head&quot;&gt;
+          &lt;div class=&quot;wordmark&quot;&gt;Alaya Crafts&lt;/div&gt;
+          &lt;nav class=&quot;site-nav&quot; aria-label=&quot;Study navigation&quot;&gt;&lt;span&gt;The Alaya Idea&lt;/span&gt;&lt;span&gt;CIE Professional&lt;/span&gt;&lt;span&gt;For Organizations&lt;/span&gt;&lt;span&gt;Ideas&lt;/span&gt;&lt;span data-contact-open&gt;Contact&lt;/span&gt;&lt;/nav&gt;
+          &lt;div class=&quot;mobile-nav&quot;&gt;Explore&lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;section class=&quot;home-section hero is-active&quot; data-section=&quot;curiosity&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;01 — Curiosity&lt;/span&gt;
+          &lt;h1 class=&quot;display&quot;&gt;Everything starts with curiosity.&lt;/h1&gt;
+          &lt;p class=&quot;lede&quot;&gt;Capability is the enduring asset within people and organizations.&lt;/p&gt;
+          &lt;div class=&quot;quiet-links&quot;&gt;&lt;span&gt;Explore the idea&lt;/span&gt;&lt;span&gt;Meet CIE Professional&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;trace-field&quot; aria-hidden=&quot;true&quot;&gt;&lt;div class=&quot;trace one&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section&quot; data-section=&quot;observation&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;02 — Observation&lt;/span&gt;
+          &lt;h2 class=&quot;headline&quot;&gt;Much of the value we create is easy to lose and difficult to carry forward.&lt;/h2&gt;
+          &lt;div class=&quot;observation-grid&quot;&gt;
+            &lt;div&gt;&lt;strong&gt;People&lt;/strong&gt;&lt;p&gt;Only experience, learning, decisions, evidence, and contribution together can reflect your professional life.&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;strong&gt;Organizations&lt;/strong&gt;&lt;p&gt;Knowledge and capability dilute across roles, teams, systems, projects, and moments of change.&lt;/p&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;trace-field&quot; aria-hidden=&quot;true&quot;&gt;&lt;div class=&quot;trace one&quot;&gt;&lt;/div&gt;&lt;div class=&quot;trace two&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section&quot; data-section=&quot;thesis&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;03 — Thesis&lt;/span&gt;
+          &lt;div class=&quot;thesis-stack&quot;&gt;
+            &lt;div class=&quot;thesis-line&quot;&gt;Capability is the enduring asset.&lt;/div&gt;
+            &lt;div class=&quot;thesis-line&quot;&gt;Knowledge preserves it.&lt;/div&gt;
+            &lt;div class=&quot;thesis-line&quot;&gt;Technology extends it.&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section&quot; data-section=&quot;practice&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;04 — Practice&lt;/span&gt;
+          &lt;h2 class=&quot;headline&quot;&gt;Capability stays alive through practice.&lt;/h2&gt;
+          &lt;div class=&quot;crafts-strip&quot; aria-label=&quot;Capability practice&quot;&gt;
+            &lt;div class=&quot;craft&quot;&gt;Curiosity&lt;/div&gt;&lt;div class=&quot;craft-arrow&quot;&gt;→&lt;/div&gt;&lt;div class=&quot;craft&quot;&gt;Understanding&lt;/div&gt;&lt;div class=&quot;craft-arrow&quot;&gt;→&lt;/div&gt;&lt;div class=&quot;craft&quot;&gt;Learning&lt;/div&gt;&lt;div class=&quot;craft-arrow&quot;&gt;→&lt;/div&gt;&lt;div class=&quot;craft&quot;&gt;Contribution&lt;/div&gt;&lt;div class=&quot;craft-arrow&quot;&gt;→&lt;/div&gt;&lt;div class=&quot;craft&quot;&gt;Reflection&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p class=&quot;practice-detail&quot;&gt;Curiosity opens a question. Each practice enhances capability and opens a new question.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section&quot; data-section=&quot;landscape&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;05 — The Living Field&lt;/span&gt;
+          &lt;h2 class=&quot;headline&quot;&gt;Capability becomes visible and actionable.&lt;/h2&gt;
+          &lt;p class=&quot;lede&quot;&gt;Knowledge, technology, intelligence, and practice help reveal, connect, and cultivate a shared capability landscape.&lt;/p&gt;
+          &lt;div class=&quot;landscape-field&quot; aria-label=&quot;Conceptual capability landscape&quot;&gt;
+            &lt;div class=&quot;layer a&quot;&gt;&lt;/div&gt;&lt;div class=&quot;layer b&quot;&gt;&lt;/div&gt;&lt;div class=&quot;layer c&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;field-note capability&quot;&gt;Capability&lt;br&gt;&lt;small&gt;the terrain&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;field-note knowledge&quot;&gt;Knowledge&lt;br&gt;&lt;small&gt;definition and memory&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;field-note technology&quot;&gt;Technology&lt;br&gt;&lt;small&gt;connection and use&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;field-note intelligence&quot;&gt;Intelligence&lt;br&gt;&lt;small&gt;relationships becoming visible&lt;/small&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section&quot; data-section=&quot;forms&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;06 — Where the idea is taking form&lt;/span&gt;
+          &lt;div class=&quot;cie-definition&quot;&gt;
+            &lt;h2 class=&quot;headline&quot;&gt;Capability Intelligence Engine &lt;span style=&quot;white-space:nowrap&quot;&gt;(CIE)&lt;/span&gt;&lt;/h2&gt;
+            &lt;div class=&quot;cie-definition-copy&quot;&gt;
+              &lt;p&gt;A way of making capability understandable through the knowledge, evidence, experiences, and relationships that give it shape. When capability becomes visible, its relationships can become understandable.&lt;/p&gt;
+              &lt;p&gt;Alaya calls this &lt;strong&gt;Capability Intelligence&lt;/strong&gt;: understanding capability through the knowledge, evidence, experience, objectives, and relationships that surround it.&lt;/p&gt;
+              &lt;p&gt;The &lt;strong&gt;Capability Intelligence Engine (CIE)&lt;/strong&gt; is the technology Alaya is building to make that understanding usable.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;h3 class=&quot;scale-headline&quot;&gt;One landscape. Different scales and ways of understanding it.&lt;/h3&gt;
+          &lt;div class=&quot;maturity-field&quot;&gt;
+            &lt;div class=&quot;present-expression&quot;&gt;&lt;span class=&quot;section-index&quot;&gt;Living expression today&lt;/span&gt;&lt;strong&gt;CIE Professional&lt;/strong&gt;&lt;p class=&quot;lede&quot;&gt;A place for a person to begin understanding the capability their work has created.&lt;/p&gt;&lt;/div&gt;
+            &lt;div class=&quot;future-field&quot;&gt;&lt;div&gt;&lt;b&gt;Teams&lt;/b&gt;&lt;br&gt;an emerging direction&lt;/div&gt;&lt;div&gt;&lt;b&gt;Organizations&lt;/b&gt;&lt;br&gt;a broader scale with practical work today&lt;/div&gt;&lt;div&gt;&lt;b&gt;Collective Intelligence&lt;/b&gt;&lt;br&gt;A future possibility: learning from patterns across capability landscapes while preserving the distinction between individual knowledge and collective insight.&lt;/div&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section&quot; data-section=&quot;cie&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;07 — CIE Professional&lt;/span&gt;
+          &lt;div class=&quot;product-glimpse&quot;&gt;
+            &lt;div&gt;&lt;h2 class=&quot;headline&quot;&gt;Understand the capability your work has cultivated.&lt;/h2&gt;&lt;p class=&quot;lede&quot;&gt;Build an evidence-grounded understanding of your professional capability, and let it grow with your experience, objectives, reflection, and contribution.&lt;/p&gt;&lt;div class=&quot;quiet-links&quot;&gt;&lt;span&gt;Explore CIE Professional&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class=&quot;product-sheet&quot; aria-label=&quot;Abstract product glimpse&quot;&gt;&lt;span class=&quot;section-index&quot;&gt;Your understanding&lt;/span&gt;&lt;div class=&quot;mini-line&quot;&gt;&lt;/div&gt;&lt;p class=&quot;lede&quot;&gt;A recurring theme is beginning to emerge from the work you’ve brought into view.&lt;/p&gt;&lt;div class=&quot;mini-landscape&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section&quot; data-section=&quot;organizations&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;08 — Organizations&lt;/span&gt;
+          &lt;h2 class=&quot;headline&quot;&gt;Capability connects strategy to the work that carries it.&lt;/h2&gt;
+          &lt;p class=&quot;lede&quot;&gt;Understanding capability changes how people and organizations can think about what comes next: what they can already pursue, what they can draw upon, and what they may need to cultivate.&lt;/p&gt;
+          &lt;div class=&quot;conditions&quot;&gt;&lt;div class=&quot;condition&quot;&gt;&lt;span&gt;01&lt;/span&gt;&lt;div&gt;Where does strategy lose coherence as it becomes work?&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;condition&quot;&gt;&lt;span&gt;02&lt;/span&gt;&lt;div&gt;What knowledge disappears between teams or systems?&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;condition&quot;&gt;&lt;span&gt;03&lt;/span&gt;&lt;div&gt;What capability already exists but remains fragmented or difficult to reuse?&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section&quot; data-section=&quot;origin&quot;&gt;
+          &lt;div class=&quot;origin&quot;&gt;&lt;span class=&quot;section-index&quot;&gt;09 — Origin&lt;/span&gt;&lt;p class=&quot;lede&quot;&gt;The ideas behind Alaya emerged through more than two decades of work across technology, engineering, leadership, product thinking, organizational systems, knowledge, and execution. Across that work, one thread kept resurfacing: capability endured beyond the systems, roles, and technologies around it.&lt;/p&gt;&lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section epilogue&quot; data-section=&quot;epilogue&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;10 — Epilogue&lt;/span&gt;
+          &lt;div class=&quot;epilogue-words&quot;&gt;&lt;span&gt;Curiosity.&lt;/span&gt;&lt;span&gt;Understanding.&lt;/span&gt;&lt;span&gt;Learning.&lt;/span&gt;&lt;span&gt;Contribution.&lt;/span&gt;&lt;span&gt;Reflection.&lt;/span&gt;&lt;/div&gt;
+          &lt;p class=&quot;lede&quot; style=&quot;margin-inline:auto&quot;&gt;These are the crafts.&lt;/p&gt;
+          &lt;h2 class=&quot;headline&quot; style=&quot;margin-inline:auto&quot;&gt;Technology evolves. Crafts endure.&lt;/h2&gt;
+        &lt;/section&gt;
+
+        &lt;section class=&quot;home-section&quot; data-section=&quot;paths&quot;&gt;
+          &lt;span class=&quot;section-index&quot;&gt;11 — Open paths&lt;/span&gt;
+          &lt;div class=&quot;contact-invitation&quot;&gt;&lt;p&gt;If something here connects with a question you’re exploring, start a conversation.&lt;/p&gt;&lt;button class=&quot;contact-link&quot; type=&quot;button&quot; data-contact-open&gt;Write to Alaya&lt;/button&gt;&lt;/div&gt;
+          &lt;div class=&quot;open-paths&quot;&gt;&lt;div&gt;&lt;strong&gt;Explore CIE Professional&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;For Organizations&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Follow the Ideas&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/section&gt;
+        &lt;footer class=&quot;site-foot&quot;&gt;&lt;span&gt;Alaya Crafts&lt;/span&gt;&lt;span&gt;The Alaya Idea · CIE Professional · Organizations · Contact&lt;/span&gt;&lt;span&gt;Capability is the enduring asset.&lt;/span&gt;&lt;/footer&gt;
+
+        &lt;section class=&quot;contact-page&quot; aria-label=&quot;Contact page study&quot;&gt;
+          &lt;button class=&quot;contact-link&quot; type=&quot;button&quot; data-contact-close&gt;← Back to Alaya Crafts&lt;/button&gt;
+          &lt;div class=&quot;contact-copy&quot;&gt;
+            &lt;span class=&quot;section-index&quot;&gt;Contact&lt;/span&gt;
+            &lt;h2 class=&quot;display&quot;&gt;Start a conversation.&lt;/h2&gt;
+            &lt;p class=&quot;lede&quot;&gt;Alaya is an evolving body of work. If something here connects with a question you’re exploring, an idea you’re developing, or work you’re trying to understand, you can reach us directly.&lt;/p&gt;
+            &lt;div class=&quot;contact-human&quot;&gt;&lt;strong&gt;Write to Alaya&lt;/strong&gt;Your message will be read and answered by a person.&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;aside class=&quot;inspector card&quot; aria-live=&quot;polite&quot;&gt;
+      &lt;span class=&quot;viz-badge&quot; id=&quot;section-number&quot;&gt;01&lt;/span&gt;
+      &lt;h3 id=&quot;section-title&quot;&gt;Curiosity&lt;/h3&gt;
+      &lt;dl&gt;
+        &lt;dt&gt;Composition&lt;/dt&gt;&lt;dd id=&quot;section-layout&quot;&gt;&lt;/dd&gt;
+        &lt;dt&gt;Hierarchy&lt;/dt&gt;&lt;dd id=&quot;section-hierarchy&quot;&gt;&lt;/dd&gt;
+        &lt;dt&gt;Density&lt;/dt&gt;&lt;dd id=&quot;section-density&quot;&gt;&lt;/dd&gt;
+        &lt;dt&gt;Interaction&lt;/dt&gt;&lt;dd id=&quot;section-interaction&quot;&gt;&lt;/dd&gt;
+        &lt;dt&gt;Desktop&lt;/dt&gt;&lt;dd id=&quot;section-desktop&quot;&gt;&lt;/dd&gt;
+        &lt;dt&gt;Mobile&lt;/dt&gt;&lt;dd id=&quot;section-mobile&quot;&gt;&lt;/dd&gt;
+        &lt;dt&gt;Landscape state&lt;/dt&gt;&lt;dd id=&quot;section-landscape&quot;&gt;&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/aside&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    (() =&gt; {
+      const root = document.getElementById(&#x27;alaya-homepage-study&#x27;);
+      const viewport = root.querySelector(&#x27;.site-viewport&#x27;);
+      const details = {
+        curiosity:{n:&#x27;01&#x27;,title:&#x27;Curiosity&#x27;,layout:&#x27;A sparse first viewport with one dominant thought, one grounding sentence, and two quiet paths.&#x27;,hierarchy:&#x27;Poetic opening first; plain-spoken worldview immediately beneath it.&#x27;,density:&#x27;Very low. The emptiness is part of the argument.&#x27;,interaction:&#x27;Links remain understated; the trace responds only through subtle local movement in a later polished pass.&#x27;,desktop:&#x27;Large editorial scale with the trace entering from the lower right.&#x27;,mobile:&#x27;The grounding sentence arrives without requiring a long scroll; the trace occupies less of the field.&#x27;,landscape:&#x27;Almost absent: one partial contour suggests something not yet understood.&#x27;},
+        observation:{n:&#x27;02&#x27;,title:&#x27;Observation&#x27;,layout:&#x27;A shared editorial field connects people and organizations without segment cards.&#x27;,hierarchy:&#x27;One observation, then two related contexts.&#x27;,density:&#x27;Low to medium; enough examples to make capability concrete.&#x27;,interaction:&#x27;None required. Reading carries the section.&#x27;,desktop:&#x27;Parallel columns reveal the shared condition.&#x27;,mobile:&#x27;The two contexts stack with a continuous rule so they remain related.&#x27;,landscape:&#x27;A second trace appears. Accumulation begins but remains ambiguous.&#x27;},
+        thesis:{n:&#x27;03&#x27;,title:&#x27;Thesis&#x27;,layout:&#x27;Three statements accumulate vertically with staggered alignment.&#x27;,hierarchy:&#x27;Capability dominates; knowledge and technology remain supporting relationships.&#x27;,density:&#x27;Very low and intentionally emphatic.&#x27;,interaction:&#x27;No interaction. This is the conceptual center of gravity.&#x27;,desktop:&#x27;Staggering creates spatial relationship without an arrow diagram.&#x27;,mobile:&#x27;Indentation replaces wide spatial offsets; all three statements stay legible.&#x27;,landscape:&#x27;The traces begin to read as definition rather than decoration.&#x27;},
+        practice:{n:&#x27;04&#x27;,title:&#x27;Practice&#x27;,layout:&#x27;A single recurring sequence, followed by one selected-practice explanation.&#x27;,hierarchy:&#x27;The five Crafts are peers; the active craft gains quiet emphasis.&#x27;,density:&#x27;Medium when selected detail is included.&#x27;,interaction:&#x27;User-controlled selection only; keyboard and touch viable, no autoplay or progress semantics.&#x27;,desktop:&#x27;Horizontal sequence supports recurrence.&#x27;,mobile:&#x27;Becomes a vertical cadence rather than a crushed circular diagram.&#x27;,landscape:&#x27;The field can subtly change state as practices are explored; capability is cultivable.&#x27;},
+        landscape:{n:&#x27;05&#x27;,title:&#x27;The Living Field&#x27;,layout:&#x27;A wide relational field with layered strata and sparse annotations.&#x27;,hierarchy:&#x27;Capability is terrain; knowledge, technology, and intelligence are relational layers—not equal feature blocks.&#x27;,density:&#x27;Medium visually, low textually.&#x27;,interaction:&#x27;Later refinement may reveal concise explanations on focus; essential meaning remains visible.&#x27;,desktop:&#x27;Spatial separation allows relationships to be felt before they are read.&#x27;,mobile:&#x27;Annotations recompose down the field while the layers retain one connected body.&#x27;,landscape:&#x27;Now legible as a capability landscape. This is the metaphor’s explicit stress test.&#x27;},
+        forms:{n:&#x27;06&#x27;,title:&#x27;Where the idea is taking form&#x27;,layout:&#x27;CIE is defined first in plain language, followed by one substantial present expression and smaller outward directions.&#x27;,hierarchy:&#x27;Capability Intelligence establishes the concept; CIE names the technology; CIE Professional is concrete; Teams, Organizations, and Collective Intelligence remain intentionally unequal.&#x27;,density:&#x27;Medium to high. The definition carries necessary explanatory weight before the maturity field.&#x27;,interaction:&#x27;Maturity labels can reveal fuller context, but nothing behaves like a product catalogue.&#x27;,desktop:&#x27;Two-column definition leads into an asymmetric field that communicates maturity without status badges.&#x27;,mobile:&#x27;The CIE definition stacks before the concrete expression; emerging directions follow as a quieter continuation.&#x27;,landscape:&#x27;The field gains an intellectual model, then widens outward from what exists rather than dividing into product peaks.&#x27;},
+        cie:{n:&#x27;07&#x27;,title:&#x27;CIE Professional&#x27;,layout:&#x27;Editorial product story paired with an abstract, inspectable glimpse of the experience.&#x27;,hierarchy:&#x27;The human outcome leads; the product glimpse supports it.&#x27;,density:&#x27;Medium; one paragraph, one doorway, one quiet product moment.&#x27;,interaction:&#x27;The product glimpse may later respond to focus, but is not a fake dashboard demo.&#x27;,desktop:&#x27;Two unequal columns create family resemblance without copying the application shell.&#x27;,mobile:&#x27;Product glimpse appears first, then explanatory copy, making the section concrete early.&#x27;,landscape:&#x27;The visitor moves from viewing the shared landscape to imagining an individual understanding within it.&#x27;},
+        organizations:{n:&#x27;08&#x27;,title:&#x27;Organizations&#x27;,layout:&#x27;One practical thesis followed by organizational questions rather than service cards.&#x27;,hierarchy:&#x27;Strategy-to-execution entry first; capability relationship second; questions third.&#x27;,density:&#x27;Medium to high, but broken into readable conditions.&#x27;,interaction:&#x27;Questions may become editorial links only when real engagement paths exist.&#x27;,desktop:&#x27;Long rules create an expanded organizational field.&#x27;,mobile:&#x27;Questions stack naturally and preserve the inquiry-led tone.&#x27;,landscape:&#x27;Scale widens to relationships among people, systems, knowledge, and work.&#x27;},
+        origin:{n:&#x27;09&#x27;,title:&#x27;Origin&#x27;,layout:&#x27;A small marginal label beside one editorial provenance passage.&#x27;,hierarchy:&#x27;The idea remains central; experience establishes where it came from.&#x27;,density:&#x27;Low.&#x27;,interaction:&#x27;A quiet link to the fuller Alaya idea may follow later.&#x27;,desktop:&#x27;Marginalia treatment keeps the section human but not heroic.&#x27;,mobile:&#x27;The label and passage stack; no portrait or credential wall is introduced.&#x27;,landscape:&#x27;No new visual layer. The pause prevents the metaphor from becoming relentless.&#x27;},
+        epilogue:{n:&#x27;10&#x27;,title:&#x27;Epilogue / Crafts&#x27;,layout:&#x27;Centered return to the five words, then the closing statement.&#x27;,hierarchy:&#x27;“These are the crafts” resolves the name; the enduring line closes the argument.&#x27;,density:&#x27;Very low.&#x27;,interaction:&#x27;None required.&#x27;,desktop:&#x27;The accumulated field can remain present but quiet behind ample paper.&#x27;,mobile:&#x27;Extra vertical breathing room keeps the ending earned rather than abrupt.&#x27;,landscape:&#x27;Richer than at entry but not louder; accumulated understanding creates depth.&#x27;},
+        paths:{n:&#x27;11&#x27;,title:&#x27;Open paths&#x27;,layout:&#x27;Three equal destinations only at the end, after maturity and meaning are understood.&#x27;,hierarchy:&#x27;No default conversion path; visitors choose by relevance.&#x27;,density:&#x27;Low.&#x27;,interaction:&#x27;Each destination is a descriptive link, not a sales CTA.&#x27;,desktop:&#x27;Three adjacent paths create agency without a conversion banner.&#x27;,mobile:&#x27;Paths stack as a calm reading list.&#x27;,landscape:&#x27;The landscape stops accumulating. The visitor chooses where to enter it next.&#x27;}
+      };
+      function show(key) {
+        const d = details[key]; if (!d) return;
+        root.querySelectorAll(&#x27;.home-section&#x27;).forEach(s =&gt; s.classList.toggle(&#x27;is-active&#x27;, s.dataset.section === key));
+        root.querySelector(&#x27;#section-number&#x27;).textContent = d.n;
+        root.querySelector(&#x27;#section-title&#x27;).textContent = d.title;
+        [&#x27;layout&#x27;,&#x27;hierarchy&#x27;,&#x27;density&#x27;,&#x27;interaction&#x27;,&#x27;desktop&#x27;,&#x27;mobile&#x27;,&#x27;landscape&#x27;].forEach(k =&gt; root.querySelector(&#x27;#section-&#x27;+k).textContent = d[k]);
+      }
+      root.querySelectorAll(&#x27;.home-section&#x27;).forEach(section =&gt; section.addEventListener(&#x27;click&#x27;, () =&gt; show(section.dataset.section)));
+      root.querySelectorAll(&#x27;[data-view]&#x27;).forEach(button =&gt; button.addEventListener(&#x27;click&#x27;, () =&gt; {
+        const mobile = button.dataset.view === &#x27;mobile&#x27;;
+        viewport.classList.toggle(&#x27;is-mobile&#x27;, mobile); viewport.classList.toggle(&#x27;is-desktop&#x27;, !mobile);
+        root.querySelectorAll(&#x27;[data-view]&#x27;).forEach(b =&gt; { const active = b === button; b.setAttribute(&#x27;aria-pressed&#x27;, String(active)); b.classList.toggle(&#x27;btn-primary&#x27;, active); });
+      }));
+      root.querySelectorAll(&#x27;[data-contact-open]&#x27;).forEach(trigger =&gt; trigger.addEventListener(&#x27;click&#x27;, () =&gt; {
+        root.querySelectorAll(&#x27;.home-section, .contact-invitation, .site-foot&#x27;).forEach(el =&gt; el.style.display = &#x27;none&#x27;);
+        root.querySelector(&#x27;.contact-page&#x27;).classList.add(&#x27;is-visible&#x27;);
+        viewport.scrollIntoView({behavior:&#x27;smooth&#x27;, block:&#x27;start&#x27;});
+      }));
+      root.querySelectorAll(&#x27;[data-contact-close]&#x27;).forEach(trigger =&gt; trigger.addEventListener(&#x27;click&#x27;, () =&gt; {
+        root.querySelector(&#x27;.contact-page&#x27;).classList.remove(&#x27;is-visible&#x27;);
+        root.querySelectorAll(&#x27;.home-section, .contact-invitation, .site-foot&#x27;).forEach(el =&gt; el.style.display = &#x27;&#x27;);
+        viewport.scrollIntoView({behavior:&#x27;smooth&#x27;, block:&#x27;start&#x27;});
+      }));
+      show(&#x27;curiosity&#x27;);
+    })();
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handleLeave = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>
