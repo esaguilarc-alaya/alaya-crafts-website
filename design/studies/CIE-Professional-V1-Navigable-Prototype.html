@@ -1,0 +1,1439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Cie Professional V1 Vertical Slice</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Cie Professional V1 Vertical Slice" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Cie Professional V1 Vertical Slice&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+    [aria-pressed=&quot;true&quot;],
+    [aria-selected=&quot;true&quot;],
+    .is-selected
+  ) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;cie-v1-slice&quot;&gt;
+  &lt;style&gt;
+    #cie-v1-slice {
+      --cie-bg:#FAF8F3; --cie-paper:#FFFDF8; --cie-ink:#3A3833; --cie-soft:#6B6860;
+      --cie-pine:#5F6F5B; --cie-forest:#7A8A75; --cie-fog:#9A968C; --cie-rule:#DEDACD;
+      --cie-rule-strong:#C7C2B3; --cie-amber:#AD8A55; --cie-amber-soft:#D9C8A6;
+      color:var(--cie-ink); font-family:Montserrat,-apple-system,sans-serif; width:100%;
+    }
+    #cie-v1-slice * { box-sizing:border-box; }
+    #cie-v1-slice button { font:inherit; }
+    #cie-v1-slice .cie-window { background:var(--cie-bg); border:1px solid var(--cie-rule); min-height:680px; overflow:hidden; }
+    #cie-v1-slice .cie-topbar { height:66px; display:flex; align-items:center; justify-content:space-between; padding:0 30px; border-bottom:1px solid var(--cie-rule); background:var(--cie-paper); }
+    #cie-v1-slice .cie-brand { display:flex; align-items:center; gap:12px; border:0; background:transparent; color:var(--cie-ink); cursor:pointer; font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:21px; font-weight:500; padding:0; }
+    #cie-v1-slice .cie-mark { width:25px; height:18px; position:relative; }
+    #cie-v1-slice .cie-mark:before,#cie-v1-slice .cie-mark:after { content:&quot;&quot;; position:absolute; bottom:2px; width:17px; height:12px; border-left:1px solid var(--cie-pine); border-top:1px solid var(--cie-pine); transform:rotate(45deg) skew(-7deg,-7deg); }
+    #cie-v1-slice .cie-mark:before { left:1px; }
+    #cie-v1-slice .cie-mark:after { left:8px; height:9px; opacity:.55; }
+    #cie-v1-slice .cie-account { display:flex; align-items:center; gap:9px; border:0; background:transparent; color:var(--cie-soft); font-size:11px; cursor:pointer; padding:7px 0; }
+    #cie-v1-slice .cie-account-mark { width:27px; height:27px; border:1px solid var(--cie-rule-strong); border-radius:50%; display:grid; place-items:center; color:var(--cie-pine); font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:14px; }
+    #cie-v1-slice .cie-account-arrow { color:var(--cie-fog); font-size:9px; }
+    #cie-v1-slice .cie-stage { min-height:530px; padding:46px 7vw 52px; position:relative; }
+    #cie-v1-slice .cie-eyebrow { font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--cie-forest); }
+    #cie-v1-slice .cie-eyebrow:after { content:&quot;&quot;; display:block; width:26px; height:1px; background:var(--cie-forest); margin-top:8px; }
+    #cie-v1-slice h1,#cie-v1-slice h2,#cie-v1-slice h3 { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-weight:500; margin:0; color:var(--cie-ink); }
+    #cie-v1-slice h1 { font-size:clamp(37px,5vw,58px); line-height:1.04; margin-top:24px; }
+    #cie-v1-slice h2 { font-size:clamp(28px,3.5vw,42px); line-height:1.12; }
+    #cie-v1-slice h3 { font-size:22px; }
+    #cie-v1-slice p { color:var(--cie-soft); font-size:14px; font-weight:300; line-height:1.7; margin:0; }
+    #cie-v1-slice .cie-lead { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-style:italic; font-size:20px; color:var(--cie-soft); max-width:610px; margin-top:18px; }
+    #cie-v1-slice .cie-columns { display:grid; grid-template-columns:1.05fr .95fr; gap:54px; align-items:start; }
+    #cie-v1-slice .cie-options { margin-top:38px; border-top:1px solid var(--cie-rule); max-width:620px; }
+    #cie-v1-slice .cie-option { width:100%; display:flex; justify-content:space-between; align-items:center; text-align:left; padding:20px 2px; border:0; border-bottom:1px solid var(--cie-rule); background:transparent; color:var(--cie-ink); cursor:pointer; }
+    #cie-v1-slice .cie-option strong { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:20px; font-weight:500; }
+    #cie-v1-slice .cie-option small { display:block; color:var(--cie-fog); font-size:11px; margin-top:3px; }
+    #cie-v1-slice .cie-arrow { color:var(--cie-amber); font-size:19px; }
+    #cie-v1-slice .cie-paper { background:var(--cie-paper); border:1px solid var(--cie-rule); padding:28px; }
+    #cie-v1-slice .cie-thread { max-width:690px; margin:0 auto; }
+    #cie-v1-slice .cie-conversation-context { display:flex; align-items:center; gap:13px; padding:11px 0 14px; margin-bottom:29px; border-bottom:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-conversation-context &gt; span { color:var(--cie-fog); font-size:9px; letter-spacing:.13em; text-transform:uppercase; }
+    #cie-v1-slice .cie-conversation-context strong { color:var(--cie-pine); font-size:11px; font-weight:600; }
+    #cie-v1-slice .cie-conversation-context small { color:var(--cie-fog); font-size:10px; margin-left:auto; }
+    #cie-v1-slice .cie-cie-line { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:23px; line-height:1.45; margin-bottom:27px; }
+    #cie-v1-slice .cie-user-line { margin:0 0 28px auto; max-width:560px; padding:16px 19px; border-left:2px solid var(--cie-amber-soft); background:var(--cie-paper); color:var(--cie-soft); font-size:13px; line-height:1.65; }
+    #cie-v1-slice .cie-input { margin-top:28px; min-height:66px; border:1px solid var(--cie-rule-strong); background:var(--cie-paper); padding:19px; color:var(--cie-fog); font-size:13px; display:flex; justify-content:space-between; align-items:center; }
+    #cie-v1-slice .cie-input em { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:17px; }
+    #cie-v1-slice .cie-send { color:var(--cie-pine); font-size:11px; font-weight:600; letter-spacing:.1em; }
+    #cie-v1-slice .cie-hearing { border-left:1px solid var(--cie-amber); padding-left:27px; }
+    #cie-v1-slice .cie-fact { padding:15px 0; border-bottom:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-fact:last-child { border-bottom:0; }
+    #cie-v1-slice .cie-fact label { display:block; color:var(--cie-fog); text-transform:uppercase; letter-spacing:.13em; font-size:9px; margin-bottom:5px; }
+    #cie-v1-slice .cie-fact span { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:18px; }
+    #cie-v1-slice .cie-grammar { display:grid; gap:1px; background:var(--cie-rule); border:1px solid var(--cie-rule); margin-top:26px; }
+    #cie-v1-slice .cie-grammar &gt; div { background:var(--cie-paper); padding:20px 23px; }
+    #cie-v1-slice .cie-grammar label { color:var(--cie-forest); text-transform:uppercase; letter-spacing:.17em; font-size:9px; font-weight:600; }
+    #cie-v1-slice .cie-grammar p { color:var(--cie-ink); margin-top:7px; }
+    #cie-v1-slice .cie-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:24px; }
+    #cie-v1-slice .cie-actions button { padding:10px 15px; border:1px solid var(--cie-rule-strong); background:transparent; color:var(--cie-soft); cursor:pointer; }
+    #cie-v1-slice .cie-actions button.primary { background:var(--cie-pine); border-color:var(--cie-pine); color:var(--cie-paper); }
+    #cie-v1-slice .cie-tabs { display:flex; gap:22px; border-bottom:1px solid var(--cie-rule); margin:25px 0 31px; overflow:auto; }
+    #cie-v1-slice .cie-tab { padding:11px 0; white-space:nowrap; font-size:11px; color:var(--cie-fog); }
+    #cie-v1-slice .cie-tab.active { color:var(--cie-pine); border-bottom:1px solid var(--cie-pine); font-weight:600; }
+    #cie-v1-slice .cie-work { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    #cie-v1-slice .cie-work article { background:var(--cie-paper); border-top:1px solid var(--cie-pine); padding:20px; }
+    #cie-v1-slice .cie-work small,#cie-v1-slice .cie-meta { color:var(--cie-fog); font-size:10px; text-transform:uppercase; letter-spacing:.1em; }
+    #cie-v1-slice .cie-work h3 { margin:8px 0; }
+    #cie-v1-slice .cie-journey { border-top:1px solid var(--cie-rule-strong); }
+    #cie-v1-slice .cie-journey-item { display:grid; grid-template-columns:160px 1fr; gap:24px; padding:17px 0; border-bottom:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-journey-company { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:18px; line-height:1.2; }
+    #cie-v1-slice .cie-journey-date { color:var(--cie-fog); font-size:9px; letter-spacing:.12em; margin-top:5px; }
+    #cie-v1-slice .cie-journey-kicker { color:var(--cie-amber); font-size:9px; letter-spacing:.27em; text-transform:uppercase; margin-bottom:5px; }
+    #cie-v1-slice .cie-journey-role { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:17px; color:var(--cie-ink); line-height:1.35; }
+    #cie-v1-slice .cie-journey-copy { font-size:11px; line-height:1.6; margin-top:5px; }
+    #cie-v1-slice .cie-directions { display:grid; grid-template-columns:1fr 1fr; gap:17px; }
+    #cie-v1-slice .cie-direction { background:var(--cie-paper); border-top:2px solid var(--cie-pine); padding:22px 23px; }
+    #cie-v1-slice .cie-direction.emerging { border-top-color:var(--cie-amber); }
+    #cie-v1-slice .cie-direction-state { color:var(--cie-fog); font-size:9px; letter-spacing:.14em; text-transform:uppercase; }
+    #cie-v1-slice .cie-direction h3 { font-size:22px; margin:9px 0 7px; }
+    #cie-v1-slice .cie-direction p { font-size:11px; line-height:1.6; }
+    #cie-v1-slice .cie-direction-parts { margin-top:18px; border-top:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-direction-part { padding:11px 0; border-bottom:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-direction-part label { display:block; color:var(--cie-forest); font-size:8px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; margin-bottom:4px; }
+    #cie-v1-slice .cie-direction-part span { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:16px; line-height:1.35; }
+    #cie-v1-slice .cie-growth-reflection { display:flex; justify-content:space-between; align-items:center; gap:24px; margin-top:18px; padding:15px 0; border-top:1px solid var(--cie-rule-strong); }
+    #cie-v1-slice .cie-growth-reflection strong { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:18px; font-weight:500; }
+    #cie-v1-slice .cie-growth-reflection small { display:block; color:var(--cie-fog); margin-top:3px; }
+    #cie-v1-slice .cie-review-list { border-top:1px solid var(--cie-rule-strong); }
+    #cie-v1-slice .cie-review-item { display:grid; grid-template-columns:125px 1fr auto; gap:22px; align-items:center; padding:19px 0; border-bottom:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-review-kind { color:var(--cie-forest); font-size:9px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; }
+    #cie-v1-slice .cie-review-content strong { display:block; font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:18px; font-weight:500; line-height:1.35; }
+    #cie-v1-slice .cie-review-content small { display:block; color:var(--cie-fog); font-size:10px; margin-top:5px; }
+    #cie-v1-slice .cie-review-actions { display:flex; gap:8px; }
+    #cie-v1-slice .cie-review-actions button { white-space:nowrap; padding:9px 12px; border:1px solid var(--cie-rule-strong); background:transparent; color:var(--cie-soft); cursor:pointer; }
+    #cie-v1-slice .cie-review-actions button.primary { background:var(--cie-pine); border-color:var(--cie-pine); color:var(--cie-paper); }
+    #cie-v1-slice .cie-opportunity-entry { max-width:720px; margin:0 auto; }
+    #cie-v1-slice .cie-source-fields { margin-top:27px; border-top:1px solid var(--cie-rule-strong); }
+    #cie-v1-slice .cie-source-field { padding:17px 0; border-bottom:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-source-field label { display:block; color:var(--cie-forest); font-size:9px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; margin-bottom:8px; }
+    #cie-v1-slice .cie-source-field input,#cie-v1-slice .cie-source-field textarea { width:100%; border:1px solid var(--cie-rule-strong); background:var(--cie-paper); color:var(--cie-ink); padding:13px 14px; font:inherit; font-size:12px; }
+    #cie-v1-slice .cie-source-field textarea { min-height:105px; resize:vertical; }
+    #cie-v1-slice .cie-or { color:var(--cie-fog); font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-style:italic; margin:-7px 0 -8px; text-align:center; }
+    #cie-v1-slice .cie-next-representation { max-width:720px; margin:0 auto; padding-top:28px; border-top:1px solid var(--cie-pine); }
+    #cie-v1-slice .cie-context-line { display:flex; gap:18px; flex-wrap:wrap; margin-top:24px; padding:13px 0; border-top:1px solid var(--cie-rule); border-bottom:1px solid var(--cie-rule); color:var(--cie-fog); font-size:10px; }
+    #cie-v1-slice .cie-cover-choice { margin-top:20px; padding-top:16px; border-top:1px solid var(--cie-rule-strong); display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    #cie-v1-slice .cie-cover-choice strong { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:18px; font-weight:500; }
+    #cie-v1-slice .cie-account-sections { max-width:720px; border-top:1px solid var(--cie-rule-strong); }
+    #cie-v1-slice .cie-account-section { display:grid; grid-template-columns:145px 1fr; gap:25px; padding:20px 0; border-bottom:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-account-section &gt; label { color:var(--cie-forest); font-size:9px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; padding-top:10px; }
+    #cie-v1-slice .cie-account-fields { display:grid; gap:12px; }
+    #cie-v1-slice .cie-account-field { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:42px; padding:9px 0; border-bottom:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-account-field:last-child { border-bottom:0; }
+    #cie-v1-slice .cie-account-field strong { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:17px; font-weight:500; }
+    #cie-v1-slice .cie-account-field small { display:block; color:var(--cie-fog); font-size:10px; margin-top:3px; }
+    #cie-v1-slice .cie-account-field button { padding:9px 12px; border:1px solid var(--cie-rule-strong); background:transparent; color:var(--cie-soft); cursor:pointer; white-space:nowrap; }
+    #cie-v1-slice .cie-account-field button:disabled { color:var(--cie-fog); cursor:default; opacity:.65; }
+    #cie-v1-slice .cie-future { color:var(--cie-amber); font-size:9px; letter-spacing:.12em; text-transform:uppercase; }
+    #cie-v1-slice .cie-landscape { height:310px; position:relative; margin:12px auto 0; max-width:620px; }
+    #cie-v1-slice .cie-landscape-art { width:100%; height:100%; overflow:visible; }
+    #cie-v1-slice .cie-landscape-art path { fill:none; stroke:var(--cie-rule-strong); stroke-width:1.1; }
+    #cie-v1-slice .cie-landscape-art path.grounded { stroke:var(--cie-amber); stroke-width:1.7; }
+    #cie-v1-slice .cie-landscape-art circle { fill:var(--cie-paper); stroke:var(--cie-pine); stroke-width:1.3; }
+    #cie-v1-slice .cie-landscape-art circle.emerging { stroke:var(--cie-amber); stroke-dasharray:4 4; }
+    #cie-v1-slice .cie-landscape-art text { fill:var(--cie-ink); font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:15px; text-anchor:middle; }
+    #cie-v1-slice .cie-landscape-art text.detail { fill:var(--cie-fog); font-family:Montserrat,sans-serif; font-size:8px; letter-spacing:.06em; }
+    #cie-v1-slice .cie-share-landscape { position:absolute; right:0; top:7px; color:var(--cie-forest); font-size:10px; letter-spacing:.08em; }
+    #cie-v1-slice .cie-today-head { display:flex; justify-content:space-between; align-items:end; gap:24px; }
+    #cie-v1-slice .cie-today-head p { max-width:410px; text-align:right; }
+    #cie-v1-slice .cie-home-landscape { height:245px; max-width:720px; margin:4px auto 0; }
+    #cie-v1-slice .cie-home-paths { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:7px; }
+    #cie-v1-slice .cie-home-path { text-align:left; border:1px solid var(--cie-rule-strong); border-top:2px solid var(--cie-pine); background:var(--cie-paper); padding:20px 22px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; color:var(--cie-ink); }
+    #cie-v1-slice .cie-home-path strong { display:block; font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:22px; font-weight:500; }
+    #cie-v1-slice .cie-home-path small { display:block; color:var(--cie-fog); font-size:10px; margin-top:4px; }
+    #cie-v1-slice .cie-begin-anywhere { margin-top:17px; padding-top:14px; border-top:1px solid var(--cie-rule); display:flex; justify-content:space-between; gap:20px; align-items:center; }
+    #cie-v1-slice .cie-begin-anywhere strong { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:17px; font-weight:500; }
+    #cie-v1-slice .cie-begin-anywhere span { color:var(--cie-fog); font-size:10px; }
+    #cie-v1-slice .cie-contour { position:absolute; border:1px solid var(--cie-rule-strong); border-radius:50%; left:50%; top:50%; transform:translate(-50%,-50%); }
+    #cie-v1-slice .cie-contour.c1 { width:88%; height:82%; opacity:.5; }
+    #cie-v1-slice .cie-contour.c2 { width:63%; height:60%; opacity:.7; }
+    #cie-v1-slice .cie-contour.c3 { width:37%; height:35%; }
+    #cie-v1-slice .cie-node { position:absolute; transform:translate(-50%,-50%); min-width:105px; text-align:center; padding:10px 13px; border-radius:50%; border:1px solid var(--cie-pine); background:var(--cie-paper); font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:15px; }
+    #cie-v1-slice .cie-node em { display:block; font-family:Montserrat,sans-serif; font-style:normal; font-size:8px; letter-spacing:.08em; color:var(--cie-fog); margin-top:3px; }
+    #cie-v1-slice .cie-node.warm { background:#f2eadb; border-color:var(--cie-amber); }
+    #cie-v1-slice .cie-node.n1 { left:27%; top:35%; } #cie-v1-slice .cie-node.n2 { left:65%; top:28%; }
+    #cie-v1-slice .cie-node.n3 { left:52%; top:67%; } #cie-v1-slice .cie-node.n4 { left:80%; top:67%; border-style:dashed; }
+    #cie-v1-slice .cie-identity { max-width:720px; border-top:1px solid var(--cie-pine); padding-top:27px; }
+    #cie-v1-slice .cie-quote { font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:28px; line-height:1.42; }
+    #cie-v1-slice .cie-chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:22px; }
+    #cie-v1-slice .cie-chip { border:1px solid var(--cie-rule-strong); padding:8px 11px; border-radius:999px; color:var(--cie-soft); font-size:10px; }
+    #cie-v1-slice .cie-match { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:25px; }
+    #cie-v1-slice .cie-match section { background:var(--cie-paper); padding:22px; border-top:2px solid var(--cie-pine); }
+    #cie-v1-slice .cie-match section.unknown { border-top-color:var(--cie-amber); }
+    #cie-v1-slice .cie-match h3 { margin:7px 0; }
+    #cie-v1-slice .cie-preview { max-width:690px; margin:0 auto; background:var(--cie-paper); border:1px solid var(--cie-rule); padding:38px; }
+    #cie-v1-slice .cie-preview .cie-rule { height:1px; background:var(--cie-rule); margin:23px 0; }
+    #cie-v1-slice .cie-support-list { margin-top:17px; border-top:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-support-item { display:grid; grid-template-columns:22px 1fr auto; gap:12px; align-items:start; padding:14px 0; border-bottom:1px solid var(--cie-rule); }
+    #cie-v1-slice .cie-support-check { width:15px; height:15px; margin-top:3px; background:var(--cie-pine); color:var(--cie-paper); font-size:10px; text-align:center; line-height:15px; }
+    #cie-v1-slice .cie-support-item strong { display:block; font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:17px; font-weight:500; }
+    #cie-v1-slice .cie-support-item small { display:block; color:var(--cie-fog); font-size:10px; margin-top:3px; }
+    #cie-v1-slice .cie-support-fit { color:var(--cie-forest); font-size:9px; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; padding-top:3px; }
+    #cie-v1-slice .cie-trace { color:var(--cie-forest); font-size:10px; margin-top:16px; }
+    #cie-v1-slice .cie-controls { min-height:88px; border-top:1px solid var(--cie-rule); background:var(--cie-paper); display:grid; grid-template-columns:190px 95px 1fr 95px; gap:10px; align-items:center; padding:12px 24px; }
+    #cie-v1-slice .cie-controls button { border:0; background:transparent; color:var(--cie-pine); cursor:pointer; font-size:12px; }
+    #cie-v1-slice .cie-controls button:disabled { color:var(--cie-rule-strong); cursor:default; }
+    #cie-v1-slice .cie-scenario { width:100%; border:1px solid var(--cie-rule-strong); background:var(--cie-bg); color:var(--cie-soft); padding:9px 10px; font:inherit; font-size:10px; }
+    #cie-v1-slice .cie-progress { text-align:center; }
+    #cie-v1-slice .cie-progress strong { display:block; font-family:&#x27;Cormorant Garamond&#x27;,Georgia,serif; font-size:17px; font-weight:500; }
+    #cie-v1-slice .cie-progress span { display:block; color:var(--cie-fog); font-size:9px; letter-spacing:.13em; text-transform:uppercase; margin-top:3px; }
+    #cie-v1-slice .cie-dots { display:flex; justify-content:center; gap:6px; margin-bottom:7px; }
+    #cie-v1-slice .cie-dot { width:6px; height:6px; border:0; border-radius:50%; background:var(--cie-rule-strong); padding:0; cursor:pointer; }
+    #cie-v1-slice .cie-dot.active { background:var(--cie-amber); }
+    @media(max-width:700px){
+      #cie-v1-slice .cie-window{min-height:720px} #cie-v1-slice .cie-topbar{padding:0 17px}
+      #cie-v1-slice .cie-stage{padding:34px 22px 42px}.cie-columns,.cie-match{grid-template-columns:1fr!important;gap:24px!important}
+      #cie-v1-slice .cie-work,#cie-v1-slice .cie-home-paths{grid-template-columns:1fr}.cie-controls{grid-template-columns:70px 1fr 70px;padding:10px}
+      #cie-v1-slice .cie-scenario{grid-column:1/-1}#cie-v1-slice .cie-progress{grid-column:2}#cie-v1-slice .cie-controls #cie-prev{grid-column:1;grid-row:2}#cie-v1-slice .cie-controls #cie-next{grid-column:3;grid-row:2}
+      #cie-v1-slice .cie-landscape{height:290px}.cie-node{min-width:86px!important;font-size:13px!important}
+      #cie-v1-slice .cie-today-head{display:block}.cie-today-head p{text-align:left!important;margin-top:9px!important}.cie-home-landscape{height:225px!important}.cie-begin-anywhere{align-items:flex-start!important;flex-direction:column!important;gap:5px!important}
+      #cie-v1-slice .cie-journey-item{grid-template-columns:1fr;gap:7px}.cie-journey-copy{font-size:10px!important}
+      #cie-v1-slice .cie-directions{grid-template-columns:1fr}.cie-growth-reflection{align-items:flex-start;flex-direction:column}
+      #cie-v1-slice .cie-review-item{grid-template-columns:1fr;gap:7px}.cie-review-actions{margin-top:5px;flex-wrap:wrap}
+      #cie-v1-slice .cie-cover-choice{align-items:flex-start;flex-direction:column}
+      #cie-v1-slice .cie-account-section{grid-template-columns:1fr;gap:7px}.cie-account-section&gt;label{padding-top:0}
+    }
+  &lt;/style&gt;
+  &lt;div class=&quot;cie-window&quot;&gt;
+    &lt;header class=&quot;cie-topbar&quot;&gt;
+      &lt;button class=&quot;cie-brand&quot; type=&quot;button&quot; aria-label=&quot;Return to Today&quot;&gt;&lt;span class=&quot;cie-mark&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span&gt;CIE Professional&lt;/span&gt;&lt;/button&gt;
+      &lt;button class=&quot;cie-account&quot; type=&quot;button&quot; aria-label=&quot;Open my account&quot;&gt;&lt;span class=&quot;cie-account-mark&quot; aria-hidden=&quot;true&quot;&gt;○&lt;/span&gt;&lt;span&gt;My account&lt;/span&gt;&lt;span class=&quot;cie-account-arrow&quot;&gt;▾&lt;/span&gt;&lt;/button&gt;
+    &lt;/header&gt;
+    &lt;main class=&quot;cie-stage&quot; id=&quot;cie-stage&quot; aria-live=&quot;polite&quot;&gt;&lt;/main&gt;
+    &lt;footer class=&quot;cie-controls&quot;&gt;
+      &lt;select class=&quot;cie-scenario&quot; id=&quot;cie-scenario&quot; aria-label=&quot;Choose a prototype journey&quot;&gt;&lt;/select&gt;
+      &lt;button type=&quot;button&quot; id=&quot;cie-prev&quot;&gt;← Previous&lt;/button&gt;
+      &lt;div class=&quot;cie-progress&quot;&gt;&lt;div class=&quot;cie-dots&quot; id=&quot;cie-dots&quot;&gt;&lt;/div&gt;&lt;strong id=&quot;cie-step-title&quot;&gt;&lt;/strong&gt;&lt;span id=&quot;cie-step-count&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+      &lt;button type=&quot;button&quot; id=&quot;cie-next&quot;&gt;Next →&lt;/button&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+  (function(){
+    const root=document.getElementById(&#x27;cie-v1-slice&#x27;);
+    const stage=root.querySelector(&#x27;#cie-stage&#x27;), title=root.querySelector(&#x27;#cie-step-title&#x27;), count=root.querySelector(&#x27;#cie-step-count&#x27;);
+    const prev=root.querySelector(&#x27;#cie-prev&#x27;), next=root.querySelector(&#x27;#cie-next&#x27;), dots=root.querySelector(&#x27;#cie-dots&#x27;), scenarioSelect=root.querySelector(&#x27;#cie-scenario&#x27;);
+    const screens=[
+      {title:&#x27;Today&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-today-head&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Today&lt;/div&gt;&lt;h2 style=&quot;margin-top:17px&quot;&gt;Your professional landscape.&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;What CIE has come to understand through your work, contribution, and reflection.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;cie-home-landscape&quot;&gt;&lt;svg class=&quot;cie-landscape-art&quot; viewBox=&quot;0 0 720 245&quot; role=&quot;img&quot; aria-label=&quot;Early capability mountain landscape&quot;&gt;&lt;path d=&quot;M35 204 C110 181 143 84 226 91 C300 97 321 193 405 186 C494 178 527 63 685 54&quot;/&gt;&lt;path d=&quot;M49 218 C126 197 166 113 230 120 C307 128 337 214 418 202 C506 188 554 94 691 81&quot;/&gt;&lt;path class=&quot;grounded&quot; d=&quot;M79 196 C142 163 178 107 229 111 C293 116 322 181 391 181&quot;/&gt;&lt;circle cx=&quot;229&quot; cy=&quot;111&quot; r=&quot;30&quot;/&gt;&lt;text x=&quot;229&quot; y=&quot;108&quot;&gt;Shared direction&lt;/text&gt;&lt;text class=&quot;detail&quot; x=&quot;229&quot; y=&quot;125&quot;&gt;1 EXPERIENCE&lt;/text&gt;&lt;circle class=&quot;emerging&quot; cx=&quot;391&quot; cy=&quot;181&quot; r=&quot;27&quot;/&gt;&lt;text x=&quot;391&quot; y=&quot;178&quot;&gt;Sense-making&lt;/text&gt;&lt;text class=&quot;detail&quot; x=&quot;391&quot; y=&quot;195&quot;&gt;EMERGING&lt;/text&gt;&lt;circle cx=&quot;530&quot; cy=&quot;99&quot; r=&quot;28&quot;/&gt;&lt;text x=&quot;530&quot; y=&quot;96&quot;&gt;Decision design&lt;/text&gt;&lt;text class=&quot;detail&quot; x=&quot;530&quot; y=&quot;113&quot;&gt;1 CONTEXT&lt;/text&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div class=&quot;cie-home-paths&quot;&gt;&lt;button class=&quot;cie-home-path&quot;&gt;&lt;span&gt;&lt;strong&gt;Build my understanding&lt;/strong&gt;&lt;small&gt;Bring something new, explore a thought, or simply have a conversation.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-home-path&quot;&gt;&lt;span&gt;&lt;strong&gt;My Career&lt;/strong&gt;&lt;small&gt;Understand what you’ve built, contributed, learned, and become.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-home-path&quot;&gt;&lt;span&gt;&lt;strong&gt;Put my Identity to work&lt;/strong&gt;&lt;small&gt;Apply what CIE knows to an opportunity or professional purpose.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Build my understanding&#x27;,html:`&lt;div class=&quot;cie-columns&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Build my understanding&lt;/div&gt;&lt;h1&gt;Where would you&lt;br&gt;like to begin?&lt;/h1&gt;&lt;p class=&quot;cie-lead&quot;&gt;Bring something you already have, or simply tell me what’s on your mind. We can build your professional understanding gradually.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;cie-options&quot;&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Bring a document or artifact&lt;/strong&gt;&lt;small&gt;Résumé, portfolio, project brief, review, certificate, work sample, or something else.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Share your LinkedIn&lt;/strong&gt;&lt;small&gt;Explore what it says—and what it may leave out.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Just have a conversation&lt;/strong&gt;&lt;small&gt;Begin with whatever is on your mind.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Initial understanding from a document&#x27;,html:`&lt;div class=&quot;cie-thread&quot;&gt;&lt;div class=&quot;cie-conversation-context&quot;&gt;&lt;span&gt;Starting context&lt;/span&gt;&lt;strong&gt;Professional-Resume.pdf&lt;/strong&gt;&lt;small&gt;Imported material · not yet confirmed&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot;&gt;This is my initial understanding of your professional profile after reading the document.&lt;/div&gt;&lt;div class=&quot;cie-paper&quot;&gt;&lt;p class=&quot;cie-quote&quot; style=&quot;font-size:20px&quot;&gt;You appear to have worked primarily as a software engineer, increasingly oriented toward backend and platform systems, integrations, and reliable operations.&lt;/p&gt;&lt;div class=&quot;cie-chips&quot;&gt;&lt;span class=&quot;cie-chip&quot;&gt;Python&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;TypeScript&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;PostgreSQL&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;AWS&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;Event-driven systems&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-trace&quot;&gt;Still unclear: your individual impact, decision scope, and the work you consider most important.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot; style=&quot;font-size:20px;margin:23px 0 0&quot;&gt;What would you like to do first?&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Build my professional profile&lt;/button&gt;&lt;button&gt;Understand a work experience&lt;/button&gt;&lt;button&gt;Explore a direction&lt;/button&gt;&lt;button&gt;Something else&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Initial understanding from LinkedIn&#x27;,html:`&lt;div class=&quot;cie-thread&quot;&gt;&lt;div class=&quot;cie-conversation-context&quot;&gt;&lt;span&gt;Starting context&lt;/span&gt;&lt;strong&gt;LinkedIn profile&lt;/strong&gt;&lt;small&gt;External Representation · not yet confirmed&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot;&gt;This is my initial understanding of your professional profile after reading your LinkedIn.&lt;/div&gt;&lt;div class=&quot;cie-paper&quot;&gt;&lt;p class=&quot;cie-quote&quot; style=&quot;font-size:20px&quot;&gt;You currently present yourself as a software and platform professional with experience connecting technical delivery, operational reliability, and cross-functional direction.&lt;/p&gt;&lt;div class=&quot;cie-chips&quot;&gt;&lt;span class=&quot;cie-chip&quot;&gt;Platform engineering&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;Backend systems&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;Cross-functional delivery&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;Technical leadership&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-trace&quot;&gt;A public profile shows how you are represented; it may not show the experiences or contribution behind that representation.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot; style=&quot;font-size:20px;margin:23px 0 0&quot;&gt;What would you like to do first?&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Build my professional profile&lt;/button&gt;&lt;button&gt;Understand a work experience&lt;/button&gt;&lt;button&gt;Review how I’m represented&lt;/button&gt;&lt;button&gt;Something else&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;An informal objective&#x27;,html:`&lt;div class=&quot;cie-thread&quot;&gt;&lt;div class=&quot;cie-conversation-context&quot;&gt;&lt;span&gt;Starting context&lt;/span&gt;&lt;strong&gt;Conversation only&lt;/strong&gt;&lt;small&gt;No imported material&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot;&gt;Of course. What would be useful to talk through today?&lt;/div&gt;&lt;div class=&quot;cie-user-line&quot;&gt;I recently helped three teams after a reorganization. I want to understand what I actually contributed, because it feels more important than the meeting itself.&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot;&gt;It sounds like you’d like to understand that work experience and what it may reveal about how you contribute. Shall we start there?&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Yes, let’s start there&lt;/button&gt;&lt;button&gt;I’d frame it differently&lt;/button&gt;&lt;button&gt;I’m not sure yet&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Conversation follows the objective&#x27;,html:`&lt;div class=&quot;cie-thread&quot;&gt;&lt;div class=&quot;cie-conversation-context&quot;&gt;&lt;span&gt;Conversation objective&lt;/span&gt;&lt;strong&gt;Understand a work experience&lt;/strong&gt;&lt;small&gt;Can change as the conversation develops&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot;&gt;Tell me what was happening after the reorganization.&lt;/div&gt;&lt;div class=&quot;cie-user-line&quot;&gt;Everyone had different information and nobody was sure who could decide. I created a process that helped the three teams agree on priorities and decision ownership.&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot;&gt;How did you bring those different perspectives into one process, especially when people disagreed?&lt;/div&gt;&lt;div class=&quot;cie-input&quot;&gt;&lt;em&gt;Share whatever feels relevant…&lt;/em&gt;&lt;span class=&quot;cie-send&quot;&gt;CONTINUE →&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;A conversation checkpoint&#x27;,html:`&lt;div class=&quot;cie-columns&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Before I interpret it&lt;/div&gt;&lt;h2 style=&quot;margin-top:24px&quot;&gt;Have I understood the experience correctly?&lt;/h2&gt;&lt;p class=&quot;cie-lead&quot;&gt;This is a factual checkpoint after the conversation—not yet a capability proposal.&lt;/p&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Yes, continue&lt;/button&gt;&lt;button&gt;Correct something&lt;/button&gt;&lt;button&gt;Keep talking&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-hearing&quot;&gt;&lt;div class=&quot;cie-fact&quot;&gt;&lt;label&gt;Context&lt;/label&gt;&lt;span&gt;Three teams after a reorganization&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-fact&quot;&gt;&lt;label&gt;What you did&lt;/label&gt;&lt;span&gt;Created a shared prioritization process&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-fact&quot;&gt;&lt;label&gt;What changed&lt;/label&gt;&lt;span&gt;Teams agreed on priorities and decision ownership&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-fact&quot;&gt;&lt;label&gt;Still unclear&lt;/label&gt;&lt;span&gt;How you handled disagreement in the room&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Meaning is proposed&#x27;,html:`&lt;div style=&quot;max-width:760px;margin:0 auto&quot;&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;For your reflection&lt;/div&gt;&lt;div class=&quot;cie-grammar&quot;&gt;&lt;div&gt;&lt;label&gt;Observation&lt;/label&gt;&lt;p&gt;You brought three groups with different information into a shared prioritization process.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;label&gt;Interpretation&lt;/label&gt;&lt;p&gt;This may show a recurring capability in creating shared direction under ambiguity—not simply facilitating a meeting.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;label&gt;Question&lt;/label&gt;&lt;p&gt;Does that feel central to how you contribute, or was it particular to this situation?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Keep this&lt;/button&gt;&lt;button&gt;Refine it&lt;/button&gt;&lt;button&gt;Not yet&lt;/button&gt;&lt;button&gt;That’s not right&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;My Career opens on Identity&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;My Career&lt;/div&gt;&lt;h2 style=&quot;margin-top:20px&quot;&gt;My Identity&lt;/h2&gt;&lt;div class=&quot;cie-tabs&quot;&gt;&lt;span class=&quot;cie-tab active&quot;&gt;My Identity&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Work&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Journey&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Growth&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;For My Review&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-identity&quot;&gt;&lt;div class=&quot;cie-meta&quot;&gt;What CIE understands so far&lt;/div&gt;&lt;p class=&quot;cie-quote&quot; style=&quot;font-size:25px;margin-top:10px&quot;&gt;“You help groups recover shared direction when priorities, information, and decision ownership become unclear.”&lt;/p&gt;&lt;div class=&quot;cie-chips&quot;&gt;&lt;span class=&quot;cie-chip&quot;&gt;Shared direction under ambiguity · emerging&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;Decision design · early understanding&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-trace&quot;&gt;Based on 1 confirmed experience · this is not yet an established Professional Identity&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Review my first Identity&lt;/button&gt;&lt;button&gt;Keep building my understanding&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;The work becomes visible&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;My Career&lt;/div&gt;&lt;h2 style=&quot;margin-top:20px&quot;&gt;My Work&lt;/h2&gt;&lt;div class=&quot;cie-tabs&quot;&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Identity&lt;/span&gt;&lt;span class=&quot;cie-tab active&quot;&gt;My Work&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Journey&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Growth&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;For My Review&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-work&quot;&gt;&lt;article&gt;&lt;small&gt;Contribution · July 2026&lt;/small&gt;&lt;h3&gt;Restored direction after a reorganization&lt;/h3&gt;&lt;p&gt;Created a shared process that helped three teams agree on priorities and decision ownership.&lt;/p&gt;&lt;div class=&quot;cie-trace&quot;&gt;1 grounded experience · corroboration not yet requested&lt;/div&gt;&lt;/article&gt;&lt;article&gt;&lt;small&gt;Build my understanding&lt;/small&gt;&lt;h3&gt;What would you like to add or explore?&lt;/h3&gt;&lt;p&gt;Bring a project, artifact, recent experience, or simply tell CIE what’s on your mind.&lt;/p&gt;&lt;div class=&quot;cie-trace&quot;&gt;Continue through conversation →&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;My Journey&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;My Career&lt;/div&gt;&lt;h2 style=&quot;margin-top:20px&quot;&gt;My Journey&lt;/h2&gt;&lt;div class=&quot;cie-tabs&quot;&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Identity&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Work&lt;/span&gt;&lt;span class=&quot;cie-tab active&quot;&gt;My Journey&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Growth&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;For My Review&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-journey&quot;&gt;&lt;section class=&quot;cie-journey-item&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-journey-company&quot;&gt;McKinsey &amp;amp; Company&lt;/div&gt;&lt;div class=&quot;cie-journey-date&quot;&gt;2014–2026&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;cie-journey-kicker&quot;&gt;12-year journey&lt;/div&gt;&lt;div class=&quot;cie-journey-role&quot;&gt;Senior Manager, Engineering Operations · Service Delivery Manager · Operations Team Lead · IT Operations Specialist&lt;/div&gt;&lt;p class=&quot;cie-journey-copy&quot;&gt;Over a 12-year journey, progressively expanded responsibilities from technical operations into senior engineering leadership, operating model transformation, product thinking, and AI enablement.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-journey-item&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-journey-company&quot;&gt;Additional Technical Foundations&lt;/div&gt;&lt;div class=&quot;cie-journey-date&quot;&gt;2012–2014&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;cie-journey-role&quot;&gt;Intel · Quest Software · NetApp&lt;/div&gt;&lt;p class=&quot;cie-journey-copy&quot;&gt;Further technical experience and detailed career history available on LinkedIn.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-journey-item&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-journey-company&quot;&gt;CNG Educational Services&lt;/div&gt;&lt;div class=&quot;cie-journey-date&quot;&gt;2009–2011&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;cie-journey-role&quot;&gt;Founder &amp;amp; Operations Manager&lt;/div&gt;&lt;p class=&quot;cie-journey-copy&quot;&gt;Co-founded and scaled an education services company from startup to approximately 80 employees while leading business development, operations, finance, HR, and client delivery.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-journey-item&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-journey-company&quot;&gt;Hewlett-Packard&lt;/div&gt;&lt;div class=&quot;cie-journey-date&quot;&gt;2006–2009&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;cie-journey-role&quot;&gt;Infrastructure Specialist&lt;/div&gt;&lt;p class=&quot;cie-journey-copy&quot;&gt;Built the technical foundation of an enterprise IT career supporting large-scale infrastructure, server platforms, virtualization, storage, backup, networking, and operations.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;div class=&quot;cie-growth-reflection&quot;&gt;&lt;div&gt;&lt;strong&gt;Your journey is more than a chronology.&lt;/strong&gt;&lt;small&gt;Add a place, role, or transition—or discuss how CIE has understood part of it.&lt;/small&gt;&lt;/div&gt;&lt;button&gt;Add or discuss my journey →&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;My Growth&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;My Career&lt;/div&gt;&lt;h2 style=&quot;margin-top:20px&quot;&gt;My Growth&lt;/h2&gt;&lt;div class=&quot;cie-tabs&quot;&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Identity&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Work&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Journey&lt;/span&gt;&lt;span class=&quot;cie-tab active&quot;&gt;My Growth&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;For My Review&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-directions&quot;&gt;&lt;article class=&quot;cie-direction&quot;&gt;&lt;div class=&quot;cie-direction-state&quot;&gt;My Direction · active&lt;/div&gt;&lt;h3&gt;Move from AI enablement into AI strategy leadership.&lt;/h3&gt;&lt;p&gt;Bring your engineering operations and transformation experience closer to the decisions that shape how organizations adopt AI.&lt;/p&gt;&lt;div class=&quot;cie-direction-parts&quot;&gt;&lt;div class=&quot;cie-direction-part&quot;&gt;&lt;label&gt;What I already bring&lt;/label&gt;&lt;span&gt;Operating model transformation · technical leadership · enabling teams through change&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-direction-part&quot;&gt;&lt;label&gt;What is in motion&lt;/label&gt;&lt;span&gt;Applying product thinking and AI enablement in current leadership work&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-direction-part&quot;&gt;&lt;label&gt;Worth exploring next&lt;/label&gt;&lt;span&gt;Where have you influenced an AI decision—not only enabled its delivery?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/article&gt;&lt;article class=&quot;cie-direction emerging&quot;&gt;&lt;div class=&quot;cie-direction-state&quot;&gt;My Direction · taking shape&lt;/div&gt;&lt;h3&gt;Express my work with greater clarity and ownership.&lt;/h3&gt;&lt;p&gt;Make the contribution and impact behind a long career easier to understand—without reducing it to titles or responsibilities.&lt;/p&gt;&lt;div class=&quot;cie-direction-parts&quot;&gt;&lt;div class=&quot;cie-direction-part&quot;&gt;&lt;label&gt;What I already bring&lt;/label&gt;&lt;span&gt;A deep journey across technical operations, service delivery, and engineering leadership&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-direction-part&quot;&gt;&lt;label&gt;What is in motion&lt;/label&gt;&lt;span&gt;Recovering the experiences behind your emerging Professional Identity&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-direction-part&quot;&gt;&lt;label&gt;Worth exploring next&lt;/label&gt;&lt;span&gt;Which piece of work best shows the leader you have become?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class=&quot;cie-growth-reflection&quot;&gt;&lt;div&gt;&lt;strong&gt;Your directions can coexist—and change.&lt;/strong&gt;&lt;small&gt;CIE helps you notice movement through work, learning, contribution, and reflection.&lt;/small&gt;&lt;/div&gt;&lt;button&gt;Add or discuss a direction →&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;For My Review&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;My Career&lt;/div&gt;&lt;h2 style=&quot;margin-top:20px&quot;&gt;For My Review&lt;/h2&gt;&lt;div class=&quot;cie-tabs&quot;&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Identity&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Work&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Journey&lt;/span&gt;&lt;span class=&quot;cie-tab&quot;&gt;My Growth&lt;/span&gt;&lt;span class=&quot;cie-tab active&quot;&gt;For My Review&lt;/span&gt;&lt;/div&gt;&lt;p class=&quot;cie-lead&quot; style=&quot;max-width:670px;margin-bottom:25px&quot;&gt;From time to time, CIE brings parts of your career back for reflection. Nothing changes unless you choose to keep or redefine it.&lt;/p&gt;&lt;div class=&quot;cie-review-list&quot;&gt;&lt;section class=&quot;cie-review-item&quot;&gt;&lt;div class=&quot;cie-review-kind&quot;&gt;Identity review&lt;/div&gt;&lt;div class=&quot;cie-review-content&quot;&gt;&lt;strong&gt;You help groups recover shared direction when priorities and decision ownership become unclear.&lt;/strong&gt;&lt;small&gt;First understood through your reorganization experience · last reviewed July 2026&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Keep it&lt;/button&gt;&lt;button&gt;Redefine or discuss&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-review-item&quot;&gt;&lt;div class=&quot;cie-review-kind&quot;&gt;My Work review&lt;/div&gt;&lt;div class=&quot;cie-review-content&quot;&gt;&lt;strong&gt;Restored direction after a reorganization.&lt;/strong&gt;&lt;small&gt;Does this still capture the contribution that mattered most?&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Keep it&lt;/button&gt;&lt;button&gt;Redefine or discuss&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-review-item&quot;&gt;&lt;div class=&quot;cie-review-kind&quot;&gt;My Journey review&lt;/div&gt;&lt;div class=&quot;cie-review-content&quot;&gt;&lt;strong&gt;McKinsey &amp;amp; Company · 2014–2026&lt;/strong&gt;&lt;small&gt;CIE understands this as a progression from technical operations into engineering leadership, transformation, and AI enablement.&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Keep it&lt;/button&gt;&lt;button&gt;Redefine or discuss&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;A first capability landscape&#x27;,html:`&lt;div style=&quot;text-align:center&quot;&gt;&lt;div class=&quot;cie-eyebrow&quot; style=&quot;display:inline-block&quot;&gt;Today&lt;/div&gt;&lt;h2 style=&quot;margin-top:19px&quot;&gt;Your capability is beginning to take shape.&lt;/h2&gt;&lt;p style=&quot;margin-top:10px&quot;&gt;The terrain reflects what has been grounded so far—not how capable you are.&lt;/p&gt;&lt;div class=&quot;cie-landscape&quot;&gt;&lt;span class=&quot;cie-share-landscape&quot;&gt;Future shareable view ↗&lt;/span&gt;&lt;svg class=&quot;cie-landscape-art&quot; viewBox=&quot;0 0 620 310&quot; role=&quot;img&quot; aria-label=&quot;Organic capability terrain showing four connected capabilities&quot;&gt;&lt;path d=&quot;M48 238 C112 177 142 78 222 91 C300 104 294 222 377 215 C458 208 476 84 568 73&quot;/&gt;&lt;path d=&quot;M54 255 C126 207 166 116 230 124 C305 134 322 246 394 235 C474 223 500 121 573 103&quot;/&gt;&lt;path class=&quot;grounded&quot; d=&quot;M75 222 C140 165 174 107 225 112 C290 118 305 206 370 202&quot;/&gt;&lt;circle cx=&quot;225&quot; cy=&quot;112&quot; r=&quot;31&quot;/&gt;&lt;text x=&quot;225&quot; y=&quot;109&quot;&gt;Shared direction&lt;/text&gt;&lt;text class=&quot;detail&quot; x=&quot;225&quot; y=&quot;126&quot;&gt;1 EXPERIENCE&lt;/text&gt;&lt;circle class=&quot;emerging&quot; cx=&quot;370&quot; cy=&quot;202&quot; r=&quot;27&quot;/&gt;&lt;text x=&quot;370&quot; y=&quot;199&quot;&gt;Sense-making&lt;/text&gt;&lt;text class=&quot;detail&quot; x=&quot;370&quot; y=&quot;216&quot;&gt;EMERGING&lt;/text&gt;&lt;circle cx=&quot;480&quot; cy=&quot;112&quot; r=&quot;29&quot;/&gt;&lt;text x=&quot;480&quot; y=&quot;109&quot;&gt;Decision design&lt;/text&gt;&lt;text class=&quot;detail&quot; x=&quot;480&quot; y=&quot;126&quot;&gt;1 CONTEXT&lt;/text&gt;&lt;circle class=&quot;emerging&quot; cx=&quot;125&quot; cy=&quot;210&quot; r=&quot;25&quot;/&gt;&lt;text x=&quot;125&quot; y=&quot;207&quot;&gt;Facilitation&lt;/text&gt;&lt;text class=&quot;detail&quot; x=&quot;125&quot; y=&quot;224&quot;&gt;UNFOLDING&lt;/text&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Inside one capability&#x27;,html:`&lt;div class=&quot;cie-columns&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;From the Landscape&lt;/div&gt;&lt;h1&gt;Creates shared direction under ambiguity.&lt;/h1&gt;&lt;p class=&quot;cie-lead&quot;&gt;This detail view explains why the capability appears in the Landscape. With one confirmed experience, it remains an early understanding—not yet a recurring pattern.&lt;/p&gt;&lt;div class=&quot;cie-chips&quot;&gt;&lt;span class=&quot;cie-chip&quot;&gt;Early understanding&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;1 experience&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;1 professional context&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-paper&quot;&gt;&lt;div class=&quot;cie-meta&quot;&gt;Why CIE is showing this&lt;/div&gt;&lt;h3 style=&quot;margin:9px 0&quot;&gt;Restored direction after a reorganization&lt;/h3&gt;&lt;p&gt;Three teams aligned on priorities through a process you created.&lt;/p&gt;&lt;div class=&quot;cie-trace&quot;&gt;Confirmed by you · no external corroboration&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button&gt;See the experience&lt;/button&gt;&lt;button&gt;Discuss this with CIE&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;A first Identity&#x27;,html:`&lt;div class=&quot;cie-identity&quot;&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;What I understand so far&lt;/div&gt;&lt;h2 style=&quot;margin-top:22px&quot;&gt;A first Professional Identity&lt;/h2&gt;&lt;p class=&quot;cie-lead&quot;&gt;This is a proposed starting version, not a finished profile. Saving it means you want this reviewed understanding to become the current version of your Identity. It can continue changing as CIE learns with you.&lt;/p&gt;&lt;div class=&quot;cie-quote&quot; style=&quot;margin-top:34px&quot;&gt;“You help groups recover shared direction when priorities, information, and decision ownership become unclear.”&lt;/div&gt;&lt;div class=&quot;cie-chips&quot;&gt;&lt;span class=&quot;cie-chip&quot;&gt;Shared direction under ambiguity&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;Decision design&lt;/span&gt;&lt;span class=&quot;cie-chip&quot;&gt;Sense-making · emerging&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Use this as my first Identity&lt;/button&gt;&lt;button&gt;Refine the language&lt;/button&gt;&lt;button&gt;Keep exploring without saving it&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Put my Identity to work&#x27;,html:`&lt;div class=&quot;cie-columns&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Put my Identity to work&lt;/div&gt;&lt;h1&gt;What are you preparing for?&lt;/h1&gt;&lt;p class=&quot;cie-lead&quot;&gt;Choose a purpose. CIE will use what you’ve built together—and remain curious about what is still unknown.&lt;/p&gt;&lt;div class=&quot;cie-trace&quot; style=&quot;margin-top:24px&quot;&gt;Starts from your current Professional Identity · supporting work remains private until you choose what to include&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-options&quot;&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Explore an opportunity&lt;/strong&gt;&lt;small&gt;Understand the fit before preparing an application.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Build or tailor a résumé&lt;/strong&gt;&lt;small&gt;Select the Identity, work, and evidence that support its purpose.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Prepare for an interview&lt;/strong&gt;&lt;small&gt;Connect likely questions to grounded experiences you can speak from.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Prepare for a performance review&lt;/strong&gt;&lt;small&gt;Year-end review, self-assessment, or development conversation.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Another purpose&lt;/strong&gt;&lt;small&gt;Promotion, professional conversation, LinkedIn update, or something else.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Bring the opportunity&#x27;,html:`&lt;div class=&quot;cie-opportunity-entry&quot;&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Explore an opportunity&lt;/div&gt;&lt;h2 style=&quot;margin-top:20px&quot;&gt;What opportunity would you like to understand?&lt;/h2&gt;&lt;p class=&quot;cie-lead&quot;&gt;Share the job description. CIE will interpret what the role appears to need, then explore how it relates to your Identity and work.&lt;/p&gt;&lt;div class=&quot;cie-source-fields&quot;&gt;&lt;div class=&quot;cie-source-field&quot;&gt;&lt;label for=&quot;cie-job-link&quot;&gt;Job-posting link&lt;/label&gt;&lt;input id=&quot;cie-job-link&quot; type=&quot;url&quot; placeholder=&quot;Paste the opportunity link…&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cie-or&quot;&gt;or&lt;/div&gt;&lt;div class=&quot;cie-source-field&quot;&gt;&lt;label for=&quot;cie-job-text&quot;&gt;Job-description text&lt;/label&gt;&lt;textarea id=&quot;cie-job-text&quot; placeholder=&quot;Paste the role description here…&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Understand this opportunity&lt;/button&gt;&lt;button&gt;Discuss it first&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;cie-trace&quot;&gt;The job description becomes conversation context—not part of your Professional Identity.&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Grounded and unknown&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Exploring an opportunity&lt;/div&gt;&lt;h2 style=&quot;margin-top:20px&quot;&gt;Two things are worth discussing.&lt;/h2&gt;&lt;div class=&quot;cie-match&quot;&gt;&lt;section&gt;&lt;div class=&quot;cie-meta&quot;&gt;Grounded match&lt;/div&gt;&lt;h3&gt;Cross-functional direction&lt;/h3&gt;&lt;p&gt;The role needs someone who can align multiple teams under changing priorities. Your reorganization experience supports this directly.&lt;/p&gt;&lt;div class=&quot;cie-trace&quot;&gt;Grounded in 1 confirmed experience&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;unknown&quot;&gt;&lt;div class=&quot;cie-meta&quot;&gt;Unknown—not a gap&lt;/div&gt;&lt;h3&gt;Jira&lt;/h3&gt;&lt;p&gt;This role asks for Jira, but I don’t currently have evidence of that in what we’ve built together.&lt;/p&gt;&lt;div class=&quot;cie-cie-line&quot; style=&quot;font-size:19px;margin:18px 0 0&quot;&gt;Have you used it?&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Yes&lt;/button&gt;&lt;button&gt;No&lt;/button&gt;&lt;button&gt;Not sure&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Curiosity follows the answer&#x27;,html:`&lt;div class=&quot;cie-thread&quot;&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Exploring the Jira experience&lt;/div&gt;&lt;div class=&quot;cie-user-line&quot; style=&quot;margin-top:27px&quot;&gt;Yes, I have.&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot;&gt;Tell me how you used it. What were you working on, and what did you actually do with Jira?&lt;/div&gt;&lt;div class=&quot;cie-input&quot;&gt;&lt;em&gt;Share the context and your contribution…&lt;/em&gt;&lt;span class=&quot;cie-send&quot;&gt;CONTINUE →&lt;/span&gt;&lt;/div&gt;&lt;p style=&quot;margin-top:18px&quot;&gt;CIE does not add “Jira” yet. It first understands the experience behind the answer.&lt;/p&gt;&lt;/div&gt;`},
+      {title:&#x27;Discovery returns to governance&#x27;,html:`&lt;div style=&quot;max-width:760px;margin:0 auto&quot;&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;A new piece of your work&lt;/div&gt;&lt;div class=&quot;cie-user-line&quot; style=&quot;margin-top:27px&quot;&gt;I built the Jira project our operations team used to coordinate a six-month migration. I designed the workflow and reporting, then taught the team how to use it.&lt;/div&gt;&lt;div class=&quot;cie-grammar&quot;&gt;&lt;div&gt;&lt;label&gt;Observation&lt;/label&gt;&lt;p&gt;You designed and operated a Jira workflow for a six-month migration, then enabled the operations team to use it.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;label&gt;Interpretation&lt;/label&gt;&lt;p&gt;The meaningful contribution may be less “knows Jira” and more “turns complex coordination into an operating system others can use.”&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;label&gt;Question&lt;/label&gt;&lt;p&gt;Is that an important part of how you contributed, or am I reading too much into this example?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Keep this and continue&lt;/button&gt;&lt;button&gt;Refine it&lt;/button&gt;&lt;button&gt;Only record the Jira experience&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Continue into an application&#x27;,html:`&lt;div class=&quot;cie-next-representation&quot;&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Opportunity understood&lt;/div&gt;&lt;h2 style=&quot;margin-top:20px&quot;&gt;Would you like to build or tailor a résumé?&lt;/h2&gt;&lt;p class=&quot;cie-lead&quot;&gt;CIE can carry this opportunity forward with the Identity, work, expectations, and Jira experience you have just reviewed.&lt;/p&gt;&lt;div class=&quot;cie-context-line&quot;&gt;&lt;span&gt;Operations Strategy Lead&lt;/span&gt;&lt;span&gt;3 grounded matches&lt;/span&gt;&lt;span&gt;1 newly confirmed experience&lt;/span&gt;&lt;span&gt;Opportunity context preserved&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Yes, build the résumé&lt;/button&gt;&lt;button&gt;Not now&lt;/button&gt;&lt;button&gt;Keep discussing the opportunity&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Choose the supporting work&#x27;,html:`&lt;div class=&quot;cie-preview&quot;&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Tailoring from an opportunity&lt;/div&gt;&lt;h2 style=&quot;margin-top:18px&quot;&gt;Operations Strategy Lead&lt;/h2&gt;&lt;p style=&quot;margin-top:8px&quot;&gt;CIE has carried the opportunity context forward and selected the parts of your governed Identity and career that support it. Review what should be used in the résumé.&lt;/p&gt;&lt;div class=&quot;cie-rule&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cie-meta&quot;&gt;Identity angle for this opportunity&lt;/div&gt;&lt;p class=&quot;cie-quote&quot; style=&quot;font-size:21px;margin-top:8px&quot;&gt;Creates shared direction and durable operating structures when teams face changing priorities and complex coordination.&lt;/p&gt;&lt;div class=&quot;cie-rule&quot;&gt;&lt;/div&gt;&lt;h3&gt;Supporting work and evidence&lt;/h3&gt;&lt;div class=&quot;cie-support-list&quot;&gt;&lt;div class=&quot;cie-support-item&quot;&gt;&lt;span class=&quot;cie-support-check&quot;&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Jira migration operating system&lt;/strong&gt;&lt;small&gt;Workflow design · reporting · team enablement · confirmed experience&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-support-fit&quot;&gt;Supports 3 expectations&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-support-item&quot;&gt;&lt;span class=&quot;cie-support-check&quot;&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Reorganization prioritization process&lt;/strong&gt;&lt;small&gt;Cross-functional alignment · decision ownership · confirmed experience&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-support-fit&quot;&gt;Supports 2 expectations&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-support-item&quot;&gt;&lt;span class=&quot;cie-support-check&quot;&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Capability: shared direction under ambiguity&lt;/strong&gt;&lt;small&gt;Grounded across the selected work; wording can be tailored, meaning cannot be invented&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-support-fit&quot;&gt;Identity&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Create the tailored résumé&lt;/button&gt;&lt;button&gt;Change what is included&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;cie-cover-choice&quot;&gt;&lt;div&gt;&lt;strong&gt;Would you also like to create a cover letter?&lt;/strong&gt;&lt;p&gt;It will use this opportunity and the same selected supporting work.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;cie-actions&quot; style=&quot;margin-top:0&quot;&gt;&lt;button&gt;Yes&lt;/button&gt;&lt;button&gt;Not now&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-trace&quot;&gt;The résumé and optional cover letter become shareable Representations. Your supporting set remains private.&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Build a résumé manually&#x27;,html:`&lt;div class=&quot;cie-preview&quot;&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Build or tailor a résumé&lt;/div&gt;&lt;h2 style=&quot;margin-top:18px&quot;&gt;Choose what this résumé should express.&lt;/h2&gt;&lt;p style=&quot;margin-top:8px&quot;&gt;Begin without exploring an opportunity. You choose the Identity angle and supporting work; CIE helps shape them into an honest Representation.&lt;/p&gt;&lt;div class=&quot;cie-rule&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cie-meta&quot;&gt;Identity angle&lt;/div&gt;&lt;p class=&quot;cie-quote&quot; style=&quot;font-size:21px;margin-top:8px&quot;&gt;Engineering and operations leader who creates shared direction and durable ways of working through complexity and change.&lt;/p&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button&gt;Discuss or refine this angle&lt;/button&gt;&lt;button&gt;Use a different Identity&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;cie-rule&quot;&gt;&lt;/div&gt;&lt;h3&gt;Supporting work and evidence&lt;/h3&gt;&lt;div class=&quot;cie-support-list&quot;&gt;&lt;div class=&quot;cie-support-item&quot;&gt;&lt;span class=&quot;cie-support-check&quot;&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;McKinsey &amp;amp; Company · 12-year journey&lt;/strong&gt;&lt;small&gt;Engineering operations · service delivery · transformation · AI enablement&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-support-fit&quot;&gt;Journey&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-support-item&quot;&gt;&lt;span class=&quot;cie-support-check&quot;&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Reorganization prioritization process&lt;/strong&gt;&lt;small&gt;Cross-functional alignment · decision ownership · confirmed experience&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-support-fit&quot;&gt;My Work&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cie-support-item&quot;&gt;&lt;span class=&quot;cie-support-check&quot;&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;CNG Educational Services&lt;/strong&gt;&lt;small&gt;Founder · operations · business growth · team leadership&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-support-fit&quot;&gt;Journey&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Create this résumé&lt;/button&gt;&lt;button&gt;Add or discuss supporting work&lt;/button&gt;&lt;button&gt;Bring an existing résumé to tailor&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;cie-cover-choice&quot;&gt;&lt;div&gt;&lt;strong&gt;Would you also like to create a cover letter?&lt;/strong&gt;&lt;p&gt;You can add an organization, opportunity, or intended reader as context.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;cie-actions&quot; style=&quot;margin-top:0&quot;&gt;&lt;button&gt;Yes&lt;/button&gt;&lt;button&gt;Not now&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Choose the interview context&#x27;,html:`&lt;div class=&quot;cie-columns&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Prepare for an interview&lt;/div&gt;&lt;h1&gt;What should we prepare from?&lt;/h1&gt;&lt;p class=&quot;cie-lead&quot;&gt;Choose something you have already shaped with CIE, bring a new opportunity, or simply tell me what you know. You do not need a formal application to begin.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;cie-options&quot;&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;My Identities&lt;/strong&gt;&lt;small&gt;Choose the Identity that best reflects how you want to approach this conversation.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;My résumés&lt;/strong&gt;&lt;small&gt;Choose a saved résumé—including one already tailored to an opportunity.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Bring another opportunity&lt;/strong&gt;&lt;small&gt;Share a link or job-description text.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Just discuss the interview&lt;/strong&gt;&lt;small&gt;Tell me about the role, organization, conversation, or concern.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Grounded interview preparation&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Preparing from a tailored résumé&lt;/div&gt;&lt;div class=&quot;cie-conversation-context&quot; style=&quot;margin-top:20px&quot;&gt;&lt;span&gt;Selected from My résumés&lt;/span&gt;&lt;strong&gt;Operations Strategy Lead&lt;/strong&gt;&lt;small&gt;Opportunity context included&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot;&gt;Based on this opportunity, I think it is reasonable to expect questions around leading across ambiguity, designing ways of working, and demonstrating impact. These parts of your work may help you answer from experience.&lt;/div&gt;&lt;div class=&quot;cie-review-list&quot; style=&quot;margin-top:25px&quot;&gt;&lt;section class=&quot;cie-review-item&quot;&gt;&lt;div class=&quot;cie-review-kind&quot;&gt;Direction&lt;/div&gt;&lt;div class=&quot;cie-review-content&quot;&gt;&lt;strong&gt;Tell me about a time you aligned teams with competing priorities.&lt;/strong&gt;&lt;small&gt;Possible anchor: reorganization prioritization process · decision ownership · three teams&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Practice this&lt;/button&gt;&lt;button&gt;Discuss&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-review-item&quot;&gt;&lt;div class=&quot;cie-review-kind&quot;&gt;Operating model&lt;/div&gt;&lt;div class=&quot;cie-review-content&quot;&gt;&lt;strong&gt;How have you turned a complex transformation into a way of working others could use?&lt;/strong&gt;&lt;small&gt;Possible anchor: Jira migration operating system · workflow · reporting · team enablement&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-actions&quot;&gt;&lt;button&gt;Practice this&lt;/button&gt;&lt;button&gt;Discuss&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-review-item&quot;&gt;&lt;div class=&quot;cie-review-kind&quot;&gt;Impact&lt;/div&gt;&lt;div class=&quot;cie-review-content&quot;&gt;&lt;strong&gt;What changed because of your leadership, and how did you know?&lt;/strong&gt;&lt;small&gt;Possible anchors across My Work · CIE may need to clarify outcomes and organizational impact with you&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-actions&quot;&gt;&lt;button&gt;Practice this&lt;/button&gt;&lt;button&gt;Discuss&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;div class=&quot;cie-growth-reflection&quot;&gt;&lt;div&gt;&lt;strong&gt;Or begin wherever your concern is.&lt;/strong&gt;&lt;small&gt;Ask about the company, a question you expect, a difficult experience, or how to express your contribution.&lt;/small&gt;&lt;/div&gt;&lt;button&gt;Discuss this interview →&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Set the performance review context&#x27;,html:`&lt;div class=&quot;cie-columns&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Prepare for a performance review&lt;/div&gt;&lt;h1&gt;What period are we looking at?&lt;/h1&gt;&lt;p class=&quot;cie-lead&quot;&gt;The period helps CIE find the relevant work. Anything you share about how your organization evaluates performance helps CIE interpret that work in the right language.&lt;/p&gt;&lt;div class=&quot;cie-source-fields&quot;&gt;&lt;div class=&quot;cie-source-field&quot;&gt;&lt;label for=&quot;cie-review-start&quot;&gt;From&lt;/label&gt;&lt;input id=&quot;cie-review-start&quot; type=&quot;date&quot; value=&quot;2026-01-01&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cie-source-field&quot;&gt;&lt;label for=&quot;cie-review-end&quot;&gt;To&lt;/label&gt;&lt;input id=&quot;cie-review-end&quot; type=&quot;date&quot; value=&quot;2026-12-31&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-options&quot;&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Share the review framework or form&lt;/strong&gt;&lt;small&gt;Bring the template, performance criteria, or instructions you were given.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Share goals or expectations&lt;/strong&gt;&lt;small&gt;What you were expected to deliver, influence, or develop during this period.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Explain the internal language&lt;/strong&gt;&lt;small&gt;Tell CIE what impact, leadership, performance, or contribution mean where you work.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Just have a conversation&lt;/strong&gt;&lt;small&gt;Begin with the period, the review, or whatever is on your mind.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Frame work for the review&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Performance review · January–December 2026&lt;/div&gt;&lt;div class=&quot;cie-conversation-context&quot; style=&quot;margin-top:20px&quot;&gt;&lt;span&gt;Review context&lt;/span&gt;&lt;strong&gt;Leadership expectations · internal impact guidance&lt;/strong&gt;&lt;small&gt;Provided by you&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-cie-line&quot;&gt;From what you shared, “impact” here appears to mean more than completing the work. It emphasizes adoption by others, measurable improvement, and influence beyond your immediate team. Is that the right lens for this review?&lt;/div&gt;&lt;div class=&quot;cie-actions&quot; style=&quot;margin-top:-7px;margin-bottom:26px&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Yes, use this lens&lt;/button&gt;&lt;button&gt;Redefine or discuss it&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-list&quot;&gt;&lt;section class=&quot;cie-review-item&quot;&gt;&lt;div class=&quot;cie-review-kind&quot;&gt;Contribution&lt;/div&gt;&lt;div class=&quot;cie-review-content&quot;&gt;&lt;strong&gt;Created a shared prioritization and decision-ownership process after the reorganization.&lt;/strong&gt;&lt;small&gt;Within review period · grounded in My Work&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-actions&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Use this&lt;/button&gt;&lt;button&gt;Discuss&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-review-item&quot;&gt;&lt;div class=&quot;cie-review-kind&quot;&gt;Outcome&lt;/div&gt;&lt;div class=&quot;cie-review-content&quot;&gt;&lt;strong&gt;Three teams aligned on priorities and knew where decisions could be made.&lt;/strong&gt;&lt;small&gt;Confirmed outcome · CIE can help distinguish this from the activity that produced it&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-actions&quot;&gt;&lt;button&gt;Use this&lt;/button&gt;&lt;button&gt;Discuss&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-review-item&quot;&gt;&lt;div class=&quot;cie-review-kind&quot;&gt;Impact to clarify&lt;/div&gt;&lt;div class=&quot;cie-review-content&quot;&gt;&lt;strong&gt;Whether the process continued to be used and improved delivery beyond the initial alignment.&lt;/strong&gt;&lt;small&gt;Not yet known · worth exploring before making an impact claim&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;cie-review-actions&quot;&gt;&lt;button&gt;Explore this&lt;/button&gt;&lt;button&gt;Leave unknown&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;div class=&quot;cie-growth-reflection&quot;&gt;&lt;div&gt;&lt;strong&gt;Something important missing from the period?&lt;/strong&gt;&lt;small&gt;Add a piece of work, an outcome, feedback, or simply discuss how the year felt.&lt;/small&gt;&lt;/div&gt;&lt;button&gt;Add or discuss this review →&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;Another professional purpose&#x27;,html:`&lt;div class=&quot;cie-columns&quot;&gt;&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;Another purpose&lt;/div&gt;&lt;h1&gt;What would you like to work on?&lt;/h1&gt;&lt;p class=&quot;cie-lead&quot;&gt;Bring something that gives the conversation context, or simply tell me what you are trying to understand, prepare, or express.&lt;/p&gt;&lt;div class=&quot;cie-trace&quot; style=&quot;margin-top:24px&quot;&gt;You do not need to name the purpose perfectly. CIE can help establish it through conversation.&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-options&quot;&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Bring a document or professional profile&lt;/strong&gt;&lt;small&gt;Professional bio, internal profile, portfolio, promotion case, application material, or something else.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Share your LinkedIn&lt;/strong&gt;&lt;small&gt;Review or reshape how your professional Identity is represented there.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Bring a promotion or internal opportunity&lt;/strong&gt;&lt;small&gt;Share the role description, expectations, criteria, link, or pasted text.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;cie-option&quot;&gt;&lt;span&gt;&lt;strong&gt;Just have a conversation&lt;/strong&gt;&lt;small&gt;Begin with whatever is on your mind.&lt;/small&gt;&lt;/span&gt;&lt;span class=&quot;cie-arrow&quot;&gt;→&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`},
+      {title:&#x27;My account&#x27;,html:`&lt;div&gt;&lt;div class=&quot;cie-eyebrow&quot;&gt;My account&lt;/div&gt;&lt;h2 style=&quot;margin-top:20px;margin-bottom:28px&quot;&gt;Account and privacy&lt;/h2&gt;&lt;div class=&quot;cie-account-sections&quot;&gt;&lt;section class=&quot;cie-account-section&quot;&gt;&lt;label&gt;Personal details&lt;/label&gt;&lt;div class=&quot;cie-account-fields&quot;&gt;&lt;div class=&quot;cie-account-field&quot;&gt;&lt;div&gt;&lt;strong&gt;Esteban Aguilar&lt;/strong&gt;&lt;small&gt;Name&lt;/small&gt;&lt;/div&gt;&lt;button&gt;Edit&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;cie-account-field&quot;&gt;&lt;div&gt;&lt;strong&gt;esteban@example.com&lt;/strong&gt;&lt;small&gt;Email address&lt;/small&gt;&lt;/div&gt;&lt;button&gt;Change&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-account-section&quot;&gt;&lt;label&gt;Security&lt;/label&gt;&lt;div class=&quot;cie-account-fields&quot;&gt;&lt;div class=&quot;cie-account-field&quot;&gt;&lt;div&gt;&lt;strong&gt;Password&lt;/strong&gt;&lt;small&gt;Last changed 4 months ago&lt;/small&gt;&lt;/div&gt;&lt;button&gt;Change password&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-account-section&quot;&gt;&lt;label&gt;Your data&lt;/label&gt;&lt;div class=&quot;cie-account-fields&quot;&gt;&lt;div class=&quot;cie-account-field&quot;&gt;&lt;div&gt;&lt;strong&gt;Export my data&lt;/strong&gt;&lt;small&gt;Receive a copy of your Identity, work, journey, evidence, directions, and Representations.&lt;/small&gt;&lt;/div&gt;&lt;button&gt;Request export&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-account-section&quot;&gt;&lt;label&gt;Profile visibility&lt;/label&gt;&lt;div class=&quot;cie-account-fields&quot;&gt;&lt;div class=&quot;cie-account-field&quot;&gt;&lt;div&gt;&lt;strong&gt;Allow my professional profile to be visible&lt;/strong&gt;&lt;small&gt;Your profile is private. In the future, you will be able to choose whether a governed profile can be discovered by others.&lt;/small&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;cie-future&quot;&gt;Future&lt;/span&gt;&lt;button disabled style=&quot;margin-left:10px&quot;&gt;Off&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;cie-trace&quot;&gt;This will remain separate from résumés, maps, and other Representations you explicitly choose to share.&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;cie-account-section&quot;&gt;&lt;label&gt;Account closure&lt;/label&gt;&lt;div class=&quot;cie-account-fields&quot;&gt;&lt;div class=&quot;cie-account-field&quot;&gt;&lt;div&gt;&lt;strong&gt;Close my account&lt;/strong&gt;&lt;small&gt;Review what will happen to your Professional Identity, evidence, Representations, shared links, and account data before continuing.&lt;/small&gt;&lt;/div&gt;&lt;button&gt;Review account closure&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;cie-trace&quot;&gt;You will have an opportunity to export your data and confirm the consequences before any closure request is submitted.&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;`}
+    ];
+    const scenarios=[
+      {id:&#x27;today&#x27;,label:&#x27;Today &amp; Capability Landscape&#x27;,steps:[0,13,14]},
+      {id:&#x27;build&#x27;,label:&#x27;Build my understanding&#x27;,steps:[1,2,3,4,5,6,7]},
+      {id:&#x27;career&#x27;,label:&#x27;My Career&#x27;,steps:[8,15,9,10,11,12]},
+      {id:&#x27;opportunity&#x27;,label:&#x27;Explore an opportunity&#x27;,steps:[16,17,18,19,20,21,22]},
+      {id:&#x27;resume&#x27;,label:&#x27;Build or tailor a résumé&#x27;,steps:[16,23]},
+      {id:&#x27;interview&#x27;,label:&#x27;Prepare for an interview&#x27;,steps:[16,24,25]},
+      {id:&#x27;performance&#x27;,label:&#x27;Prepare for a performance review&#x27;,steps:[16,26,27]},
+      {id:&#x27;another&#x27;,label:&#x27;Another purpose&#x27;,steps:[16,28]},
+      {id:&#x27;account&#x27;,label:&#x27;My Account&#x27;,steps:[29]}
+    ];
+    let scenarioIndex=0, scenarioStep=0;
+    scenarios.forEach((scenario,i)=&gt;{const option=document.createElement(&#x27;option&#x27;);option.value=scenario.id;option.textContent=scenario.label;scenarioSelect.appendChild(option)});
+    function openScenario(id,targetScreen){
+      const found=scenarios.findIndex(scenario=&gt;scenario.id===id);
+      if(found&lt;0)return;
+      scenarioIndex=found;
+      const targetIndex=typeof targetScreen===&#x27;number&#x27;?scenarios[found].steps.indexOf(targetScreen):-1;
+      scenarioStep=targetIndex&gt;=0?targetIndex:0;
+      scenarioSelect.value=id;
+      render();
+    }
+    function renderDots(){
+      dots.innerHTML=&#x27;&#x27;;
+      scenarios[scenarioIndex].steps.forEach((_,i)=&gt;{const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.className=&#x27;cie-dot&#x27;;b.setAttribute(&#x27;aria-label&#x27;,&#x27;Go to step &#x27;+(i+1)+&#x27; in &#x27;+scenarios[scenarioIndex].label);b.classList.toggle(&#x27;active&#x27;,i===scenarioStep);b.addEventListener(&#x27;click&#x27;,()=&gt;{scenarioStep=i;render()});dots.appendChild(b)});
+    }
+    function render(){
+      const scenario=scenarios[scenarioIndex], index=scenario.steps[scenarioStep];
+      stage.innerHTML=screens[index].html;
+      title.textContent=screens[index].title;
+      count.textContent=scenario.label+&#x27; · &#x27;+(scenarioStep+1)+&#x27; of &#x27;+scenario.steps.length;
+      prev.disabled=scenarioStep===0;
+      next.disabled=scenarioStep===scenario.steps.length-1;
+      next.textContent=scenarioStep===scenario.steps.length-1?&#x27;End of journey&#x27;:&#x27;Next →&#x27;;
+      renderDots();
+    }
+    function labelOf(element){return element.textContent.replace(/\s+/g,&#x27; &#x27;).trim()}
+    stage.addEventListener(&#x27;click&#x27;,event=&gt;{
+      const tab=event.target.closest(&#x27;.cie-tab&#x27;);
+      if(tab){
+        const tabRoutes={&#x27;My Identity&#x27;:8,&#x27;My Work&#x27;:9,&#x27;My Journey&#x27;:10,&#x27;My Growth&#x27;:11,&#x27;For My Review&#x27;:12};
+        const destination=tabRoutes[labelOf(tab)];
+        if(typeof destination===&#x27;number&#x27;)openScenario(&#x27;career&#x27;,destination);
+        return;
+      }
+      const button=event.target.closest(&#x27;button&#x27;);
+      if(!button)return;
+      const label=labelOf(button);
+      if(label.startsWith(&#x27;Build my understanding&#x27;))openScenario(&#x27;build&#x27;);
+      else if(label.startsWith(&#x27;My Career&#x27;))openScenario(&#x27;career&#x27;);
+      else if(label.startsWith(&#x27;Put my Identity to work&#x27;))openScenario(&#x27;opportunity&#x27;);
+      else if(label.startsWith(&#x27;Bring a document or artifact&#x27;))openScenario(&#x27;build&#x27;,2);
+      else if(label.startsWith(&#x27;Share your LinkedIn&#x27;))openScenario(&#x27;build&#x27;,3);
+      else if(label.startsWith(&#x27;Just have a conversation&#x27;)&amp;&amp;scenarios[scenarioIndex].id===&#x27;build&#x27;)openScenario(&#x27;build&#x27;,4);
+      else if(label.startsWith(&#x27;Explore an opportunity&#x27;))openScenario(&#x27;opportunity&#x27;,17);
+      else if(label.startsWith(&#x27;Build or tailor a résumé&#x27;))openScenario(&#x27;resume&#x27;,23);
+      else if(label.startsWith(&#x27;Prepare for an interview&#x27;))openScenario(&#x27;interview&#x27;,24);
+      else if(label.startsWith(&#x27;Prepare for a performance review&#x27;))openScenario(&#x27;performance&#x27;,26);
+      else if(label.startsWith(&#x27;Another purpose&#x27;))openScenario(&#x27;another&#x27;,28);
+    });
+    root.querySelector(&#x27;.cie-account&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;openScenario(&#x27;account&#x27;));
+    root.querySelector(&#x27;.cie-brand&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;openScenario(&#x27;today&#x27;));
+    scenarioSelect.addEventListener(&#x27;change&#x27;,()=&gt;openScenario(scenarioSelect.value));
+    prev.addEventListener(&#x27;click&#x27;,()=&gt;{if(scenarioStep&gt;0){scenarioStep--;render()}});
+    next.addEventListener(&#x27;click&#x27;,()=&gt;{if(scenarioStep&lt;scenarios[scenarioIndex].steps.length-1){scenarioStep++;render()}});
+    scenarioSelect.value=scenarios[0].id;
+    render();
+  })();
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handleLeave = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>
