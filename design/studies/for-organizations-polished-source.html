@@ -1,0 +1,288 @@
+<div id="for-organizations-study">
+  <style>
+    #for-organizations-study { --org-paper:#f3efe4; --org-deep:#e8dfcd; --org-ink:#242720; --org-muted:#6d7067; --org-olive:#59634b; --org-sage:#7d8868; --org-amber:#a5753c; --org-rule:rgba(36,39,32,.18); color:light-dark(#242720,#ede8db); font-family:Montserrat,system-ui,sans-serif; }
+    #for-organizations-study * { box-sizing:border-box; }
+    #for-organizations-study .study-tools { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px; margin-bottom:16px; }
+    #for-organizations-study .study-tools > div { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+    #for-organizations-study .study-layout { display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:18px; align-items:start; }
+    #for-organizations-study .stage { min-width:0; overflow:hidden; }
+    #for-organizations-study .org-page { width:100%; overflow:hidden; border:1px solid var(--border); background:var(--org-paper); color:var(--org-ink); box-shadow:0 8px 30px rgba(36,39,32,.08); }
+    #for-organizations-study .org-page.is-mobile { width:390px; max-width:100%; margin-inline:auto; }
+    #for-organizations-study .site-head { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:18px 5%; border-bottom:1px solid var(--org-rule); }
+    #for-organizations-study .brand { font-family:"Cormorant Garamond",Georgia,serif; font-size:24px; font-weight:400; white-space:nowrap; }
+    #for-organizations-study .nav { display:flex; gap:20px; color:var(--org-muted); font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+    #for-organizations-study .nav span:nth-child(3) { color:var(--org-olive); }
+    #for-organizations-study .mobile-menu { display:none; font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+    #for-organizations-study .page-section { position:relative; padding:78px 7%; border-bottom:1px solid rgba(36,39,32,.1); cursor:pointer; }
+    #for-organizations-study .page-section:hover::after,
+    #for-organizations-study .page-section.is-active::after { content:""; position:absolute; inset:7px; border:1px solid var(--org-amber); pointer-events:none; }
+    #for-organizations-study .eyebrow { color:var(--org-amber); font-size:9px; letter-spacing:.16em; text-transform:uppercase; }
+    #for-organizations-study h1,
+    #for-organizations-study h2,
+    #for-organizations-study h3 { margin:0; font-family:"Cormorant Garamond",Georgia,serif; font-weight:400; }
+    #for-organizations-study .display { max-width:760px; margin-top:20px; font-size:clamp(44px,6.7vw,82px); line-height:1; }
+    #for-organizations-study .headline { max-width:680px; margin-top:18px; font-size:clamp(32px,4.2vw,52px); line-height:1.07; }
+    #for-organizations-study .lede { max-width:660px; margin:24px 0 0; color:var(--org-muted); font-size:14px; line-height:1.72; }
+    #for-organizations-study .hero { min-height:650px; display:flex; flex-direction:column; justify-content:center; }
+    #for-organizations-study .lineage { max-width:670px; margin-top:30px; padding-left:24px; border-left:2px solid var(--org-sage); color:var(--org-muted); font-size:13px; line-height:1.7; }
+    #for-organizations-study .status-note { width:max-content; max-width:100%; margin-top:26px; padding:10px 14px; border:1px solid var(--org-rule); color:var(--org-olive); font-size:9px; letter-spacing:.08em; text-transform:uppercase; }
+    #for-organizations-study .thesis { min-height:520px; display:flex; flex-direction:column; justify-content:center; }
+    #for-organizations-study .thesis-lines { margin-top:30px; }
+    #for-organizations-study .thesis-lines p { margin:0; font-family:"Cormorant Garamond",Georgia,serif; font-size:clamp(40px,6vw,72px); line-height:1.08; }
+    #for-organizations-study .thesis-lines p:last-child { color:var(--org-olive); }
+    #for-organizations-study .case-field { display:grid; grid-template-columns:.8fr 1.2fr; gap:9%; margin-top:42px; }
+    #for-organizations-study .case-context { padding-top:18px; border-top:1px solid var(--org-rule); color:var(--org-muted); font-size:11px; line-height:1.65; }
+    #for-organizations-study .case-story { font-family:"Cormorant Garamond",Georgia,serif; font-size:27px; line-height:1.4; }
+    #for-organizations-study .decision-line { position:relative; display:grid; grid-template-columns:1fr 132px 1fr; gap:20px; align-items:start; margin-top:42px; }
+    #for-organizations-study .decision-line::before { content:""; position:absolute; top:0; left:0; right:0; border-top:1px solid var(--org-sage); }
+    #for-organizations-study .assumption { min-height:145px; padding:24px; border-top:3px solid var(--org-rule); }
+    #for-organizations-study .assumption.over { border-color:var(--org-amber); }
+    #for-organizations-study .assumption.under { border-color:var(--org-sage); }
+    #for-organizations-study .assumption strong { display:block; font-family:"Cormorant Garamond",Georgia,serif; font-size:25px; font-weight:400; }
+    #for-organizations-study .assumption p { margin:18px 0 0; color:var(--org-muted); font-size:11px; line-height:1.65; }
+    #for-organizations-study .same-decision { position:relative; z-index:1; align-self:start; margin-top:-7px; padding:0 10px; background:var(--org-paper); color:var(--org-olive); font-size:9px; font-weight:600; letter-spacing:.1em; line-height:1.55; text-align:center; text-transform:uppercase; }
+    #for-organizations-study .visibility-explanation { max-width:720px; margin:42px 0 0 auto; padding-top:24px; border-top:1px solid var(--org-rule); color:var(--org-muted); font-family:"Cormorant Garamond",Georgia,serif; font-size:24px; line-height:1.45; }
+    #for-organizations-study .lens { display:grid; grid-template-columns:.8fr 1.2fr; gap:9%; align-items:start; }
+    #for-organizations-study .lens-shift { margin-top:20px; color:var(--org-muted); font-size:12px; line-height:1.65; }
+    #for-organizations-study .landscape { position:relative; min-height:330px; border-left:1px solid var(--org-rule); }
+    #for-organizations-study .onion-field { position:absolute; left:1%; right:1%; top:18%; bottom:24%; isolation:isolate; }
+    #for-organizations-study .onion-field::before { content:""; position:absolute; z-index:-2; inset:0; border-radius:50%; background:linear-gradient(100deg,rgba(89,99,75,.42) 0%,rgba(125,136,104,.27) 42%,rgba(243,239,228,0) 82%); box-shadow:0 24px 31px -24px rgba(36,39,32,.48); transform:translateY(28px) scaleX(.98); }
+    #for-organizations-study .onion-field::after { content:""; position:absolute; z-index:-1; inset:0; border-radius:50%; background:radial-gradient(ellipse at 51% 35%,rgba(255,255,255,.16) 0%,rgba(243,239,228,.05) 55%,rgba(165,117,60,.1) 77%,rgba(89,99,75,.13) 100%); box-shadow:inset 0 -27px 34px -29px rgba(36,39,32,.5),inset -20px -8px 28px -25px rgba(165,117,60,.42); pointer-events:none; }
+    #for-organizations-study .onion-ring { position:absolute; border:1px solid rgba(89,99,75,.52); border-radius:50%; background:transparent; box-shadow:inset 0 -9px 17px -18px rgba(36,39,32,.28); }
+    #for-organizations-study .onion-ring.value { inset:0; border-color:var(--org-amber); box-shadow:inset 0 -18px 27px -24px rgba(165,117,60,.34); }
+    #for-organizations-study .onion-ring.knowledge { inset:11%; }
+    #for-organizations-study .onion-ring.teams { inset:22%; border-color:rgba(89,99,75,.54); }
+    #for-organizations-study .onion-ring.people { inset:33%; border-color:rgba(89,99,75,.68); background:rgba(125,136,104,.035); }
+    #for-organizations-study .onion-label { position:absolute; z-index:2; padding:5px 9px; background:rgba(243,239,228,.94); color:#4f554c; font-family:Montserrat,system-ui,sans-serif; font-size:10px; font-weight:500; letter-spacing:.015em; line-height:1; text-transform:none; white-space:nowrap; transform:translate(-50%,-50%); }
+    #for-organizations-study .onion-label.value { left:72%; top:90%; color:var(--org-amber); transform:translate(-50%,-50%); }
+    #for-organizations-study .onion-label.knowledge { left:50%; top:84%; transform:translate(-50%,-50%); }
+    #for-organizations-study .onion-label.teams { left:45%; top:23%; transform:translate(-50%,-50%) rotate(-1deg); }
+    #for-organizations-study .onion-label.people { left:50%; top:50%; color:var(--org-olive); }
+    #for-organizations-study .scale { position:absolute; padding:8px 12px; background:var(--org-paper); color:var(--org-muted); font-size:10px; }
+    #for-organizations-study .scale.capability { right:6%; bottom:-12px; color:var(--org-olive); font-family:"Cormorant Garamond",Georgia,serif; font-size:23px; }
+    #for-organizations-study .questions { margin-top:42px; }
+    #for-organizations-study .question { display:grid; grid-template-columns:52px 1fr; gap:18px; padding:24px 0; border-top:1px solid var(--org-rule); font-family:"Cormorant Garamond",Georgia,serif; font-size:26px; line-height:1.25; }
+    #for-organizations-study .question span { color:var(--org-amber); font-family:Montserrat,system-ui,sans-serif; font-size:9px; }
+    #for-organizations-study .technology { display:grid; grid-template-columns:.85fr 1.15fr; gap:10%; min-height:380px; align-items:center; background:rgba(125,136,104,.08); }
+    #for-organizations-study .technology-copy { font-family:"Cormorant Garamond",Georgia,serif; font-size:28px; line-height:1.4; }
+    #for-organizations-study .technology-copy strong { color:var(--org-olive); font-weight:400; }
+    #for-organizations-study .provenance { min-height:420px; display:flex; flex-direction:column; justify-content:center; }
+    #for-organizations-study .origin-copy { max-width:760px; margin-top:24px; font-family:"Cormorant Garamond",Georgia,serif; font-size:30px; line-height:1.4; }
+    #for-organizations-study .open-paths { display:grid; grid-template-columns:1.25fr .75fr; gap:8%; }
+    #for-organizations-study .shape-path { padding:34px; border:1px solid var(--org-olive); }
+    #for-organizations-study .general-path { padding-top:34px; border-top:1px solid var(--org-rule); }
+    #for-organizations-study .open-paths h3 { font-size:31px; }
+    #for-organizations-study .open-paths p { color:var(--org-muted); font-size:12px; line-height:1.65; }
+    #for-organizations-study .path-label { display:inline-block; margin-top:18px; padding-bottom:4px; border-bottom:1px solid currentColor; color:var(--org-olive); font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+    #for-organizations-study .site-foot { display:flex; justify-content:space-between; gap:20px; padding:26px 7%; color:var(--org-muted); font-size:8px; letter-spacing:.1em; text-transform:uppercase; }
+    #for-organizations-study .inspector { position:sticky; top:0; }
+    #for-organizations-study .inspector dl { margin:16px 0 0; }
+    #for-organizations-study .inspector dt { margin-top:14px; color:var(--muted-foreground); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+    #for-organizations-study .inspector dd { margin:4px 0 0; font-size:12px; line-height:1.45; }
+    #for-organizations-study .org-page.is-mobile .site-head { padding:16px 20px; }
+    #for-organizations-study .org-page.is-mobile .nav { display:none; }
+    #for-organizations-study .org-page.is-mobile .mobile-menu { display:block; }
+    #for-organizations-study .org-page.is-mobile .page-section { padding:58px 24px; }
+    #for-organizations-study .org-page.is-mobile .hero { min-height:690px; justify-content:flex-start; padding-top:92px; }
+    #for-organizations-study .org-page.is-mobile .display { font-size:49px; }
+    #for-organizations-study .org-page.is-mobile .headline { font-size:37px; }
+    #for-organizations-study .org-page.is-mobile .case-field,
+    #for-organizations-study .org-page.is-mobile .lens,
+    #for-organizations-study .org-page.is-mobile .technology,
+    #for-organizations-study .org-page.is-mobile .open-paths { grid-template-columns:1fr; gap:34px; }
+    #for-organizations-study .org-page.is-mobile .decision-line { grid-template-columns:1fr; }
+    #for-organizations-study .org-page.is-mobile .same-decision { text-align:left; }
+    #for-organizations-study .org-page.is-mobile .visibility-explanation { margin-top:32px; font-size:22px; }
+    #for-organizations-study .org-page.is-mobile .landscape { min-height:300px; border-left:0; }
+    #for-organizations-study .org-page.is-mobile .question { grid-template-columns:34px 1fr; font-size:23px; }
+    #for-organizations-study .org-page.is-mobile .technology { padding-block:72px; }
+    #for-organizations-study .org-page.is-mobile .shape-path { padding:26px; }
+    #for-organizations-study .org-page.is-mobile .site-foot { display:grid; gap:10px; padding:24px; }
+    #for-organizations-study .org-page.is-mobile .site-head.nav-open { flex-wrap:wrap; align-items:flex-start; }
+    #for-organizations-study .org-page.is-mobile .site-head.nav-open .nav { order:3; display:flex; flex-direction:column; width:100%; gap:0; padding:18px 0 4px; border-top:1px solid var(--org-rule); }
+    #for-organizations-study .org-page.is-mobile .site-head.nav-open .nav span { padding:12px 0; border-bottom:1px solid var(--org-rule); }
+    @media (max-width:820px) {
+      #for-organizations-study .study-layout { grid-template-columns:1fr; }
+      #for-organizations-study .inspector { position:static; }
+      #for-organizations-study .org-page .site-head { padding:16px 20px; }
+      #for-organizations-study .org-page .nav { display:none; }
+      #for-organizations-study .org-page .mobile-menu { display:block; }
+      #for-organizations-study .org-page .site-head.nav-open { flex-wrap:wrap; align-items:flex-start; }
+      #for-organizations-study .org-page .site-head.nav-open .nav { order:3; display:flex; flex-direction:column; width:100%; gap:0; padding:18px 0 4px; border-top:1px solid var(--org-rule); }
+      #for-organizations-study .org-page .site-head.nav-open .nav span { padding:12px 0; border-bottom:1px solid var(--org-rule); }
+      #for-organizations-study .org-page .page-section { padding:58px 24px; }
+      #for-organizations-study .org-page .hero { min-height:690px; justify-content:flex-start; padding-top:92px; }
+      #for-organizations-study .org-page .display { font-size:49px; }
+      #for-organizations-study .org-page .headline { font-size:37px; }
+      #for-organizations-study .org-page .case-field,
+      #for-organizations-study .org-page .lens,
+      #for-organizations-study .org-page .technology,
+      #for-organizations-study .org-page .open-paths { grid-template-columns:1fr; gap:34px; }
+      #for-organizations-study .org-page .decision-line { grid-template-columns:1fr; }
+      #for-organizations-study .org-page .same-decision { text-align:left; }
+      #for-organizations-study .org-page .visibility-explanation { margin-top:32px; font-size:22px; }
+      #for-organizations-study .org-page .landscape { min-height:300px; border-left:0; }
+      #for-organizations-study .org-page .question { grid-template-columns:34px 1fr; font-size:23px; }
+      #for-organizations-study .org-page .technology { padding-block:72px; }
+      #for-organizations-study .org-page .shape-path { padding:26px; }
+      #for-organizations-study .org-page .site-foot { display:grid; gap:10px; padding:24px; }
+    }
+    /* Polished visual direction */
+    #for-organizations-study .org-page { border:0; box-shadow:0 24px 70px rgba(36,39,32,.14); }
+    #for-organizations-study .site-head { padding:24px 6%; background:rgba(243,239,228,.96); border-color:rgba(89,99,75,.2); }
+    #for-organizations-study .brand { display:inline-flex; flex-direction:column; align-items:stretch; width:190px; font-size:31px; line-height:.9; letter-spacing:-.015em; text-align:center; }
+    #for-organizations-study .brand::after { content:""; display:block; width:100%; height:18px; margin-top:2px; background:center / 100% 100% no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 30'%3E%3Cpath d='M3 18 C55 18 93 19 123 17 L139 7 L149 14 L158 12 L173 19 L187 16 L205 20 C232 22 260 22 297 22' fill='none' stroke='%237d8868' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+    #for-organizations-study .nav { gap:24px; color:#62675d; }
+    #for-organizations-study .nav span:nth-child(3) { padding-bottom:5px; border-bottom:1px solid var(--org-sage); }
+    #for-organizations-study .page-section { padding:100px 8%; }
+    #for-organizations-study .page-section:hover::after,
+    #for-organizations-study .page-section.is-active::after { inset:12px; border-color:rgba(165,117,60,.55); }
+    #for-organizations-study .display { max-width:830px; font-size:clamp(58px,7vw,92px); letter-spacing:-.026em; }
+    #for-organizations-study .headline { font-size:clamp(39px,4.6vw,60px); letter-spacing:-.018em; }
+    #for-organizations-study .lede { color:#5c6258; font-size:15px; }
+    #for-organizations-study .hero { min-height:760px; overflow:hidden; background:radial-gradient(circle at 84% 22%,rgba(125,136,104,.2),transparent 34%),radial-gradient(circle at 72% 68%,rgba(165,117,60,.09),transparent 25%),linear-gradient(145deg,#f7f3e9 0%,#eee7d8 100%); }
+    #for-organizations-study .hero::before { content:""; position:absolute; width:440px; height:440px; right:-9%; bottom:-28%; border:1px solid rgba(125,136,104,.35); border-radius:47% 53% 49% 51%; transform:rotate(-12deg); }
+    #for-organizations-study .lineage { max-width:720px; padding-left:30px; border-color:var(--org-sage); color:#565f55; font-size:14px; }
+    #for-organizations-study .status-note { margin-top:34px; padding:10px 0; border-width:1px 0 0; }
+    #for-organizations-study .thesis { min-height:620px; background:#59634b; color:#f3efe4; }
+    #for-organizations-study .thesis .eyebrow { color:#d6ad7d; }
+    #for-organizations-study .thesis-lines p { font-size:clamp(48px,6.7vw,82px); letter-spacing:-.02em; }
+    #for-organizations-study .thesis-lines p:last-child { color:#e7dfca; }
+    #for-organizations-study .case-field { gap:11%; margin-top:56px; }
+    #for-organizations-study .case-context { color:#62675d; }
+    #for-organizations-study .case-story { padding:10px 0 10px 34px; border-left:1px solid rgba(125,136,104,.5); font-size:30px; }
+    #for-organizations-study .decision-line { margin-top:56px; }
+    #for-organizations-study .assumption { min-height:180px; padding:34px 30px 30px; border-top:0; background:rgba(255,255,255,.14); }
+    #for-organizations-study .assumption strong { font-size:31px; }
+    #for-organizations-study .visibility-explanation { margin-top:52px; padding-top:30px; font-size:27px; }
+    #for-organizations-study .lens { min-height:620px; align-items:center; background:radial-gradient(circle at 76% 52%,rgba(125,136,104,.13),transparent 35%); }
+    #for-organizations-study .landscape { min-height:420px; border-left:0; }
+    #for-organizations-study .onion-ring { border-width:1.5px; }
+    #for-organizations-study .scale { z-index:1; padding:9px 13px; }
+    #for-organizations-study .questions { margin-top:56px; }
+    #for-organizations-study .question { padding:30px 0; font-size:30px; }
+    #for-organizations-study .question:nth-child(even) { padding-left:10%; }
+    #for-organizations-study .technology { min-height:500px; background:radial-gradient(circle at 82% 45%,rgba(125,136,104,.12),transparent 34%); color:var(--org-ink); }
+    #for-organizations-study .technology .eyebrow { color:var(--org-amber); }
+    #for-organizations-study .technology .technology-copy { color:var(--org-muted); font-size:31px; }
+    #for-organizations-study .technology .technology-copy strong { color:var(--org-olive); }
+    #for-organizations-study .provenance { min-height:520px; background:radial-gradient(circle at 15% 50%,rgba(125,136,104,.14),transparent 30%); }
+    #for-organizations-study .origin-copy { font-size:34px; }
+    #for-organizations-study .open-paths { margin-top:42px; }
+    #for-organizations-study .shape-path { padding:42px; border:0; background:rgba(125,136,104,.14); }
+    #for-organizations-study .general-path { padding-top:42px; }
+    #for-organizations-study .open-paths h3 { font-size:36px; }
+    #for-organizations-study .site-foot { padding:34px 7%; }
+    @media (max-width:820px) {
+      #for-organizations-study .org-page .page-section { padding:68px 24px; }
+      #for-organizations-study .org-page .hero { min-height:760px; padding-top:96px; }
+      #for-organizations-study .org-page .display { font-size:50px; }
+      #for-organizations-study .org-page .headline { font-size:38px; }
+      #for-organizations-study .org-page .case-story { padding:24px 0 0; border-left:0; border-top:1px solid rgba(125,136,104,.5); font-size:25px; }
+      #for-organizations-study .org-page .assumption { min-height:0; }
+      #for-organizations-study .org-page .decision-line::before { display:none; }
+      #for-organizations-study .org-page .assumption { padding:28px 0 10px; border-top:1px solid var(--org-sage); background:transparent; }
+      #for-organizations-study .org-page .same-decision { width:max-content; margin:0; padding:8px 0 8px 14px; border-left:2px solid var(--org-amber); background:transparent; text-align:left; }
+      #for-organizations-study .org-page .question:nth-child(even) { padding-left:0; }
+      #for-organizations-study .org-page .technology { padding-block:82px; }
+      #for-organizations-study .org-page .landscape { min-height:300px; }
+    }
+  </style>
+
+  <div class="study-tools">
+    <div><button class="btn btn-primary" type="button" data-view="desktop" aria-pressed="true">Desktop study</button><button class="btn" type="button" data-view="mobile" aria-pressed="false">Mobile study</button></div>
+    <div class="text-small text-muted">Select any numbered section to inspect its design intent.</div>
+  </div>
+
+  <div class="study-layout">
+    <div class="stage">
+      <main class="org-page is-desktop" aria-label="For Organizations public page polished study">
+        <header class="site-head"><div class="brand">Alaya Crafts</div><nav class="nav" aria-label="Public site navigation"><span>The Alaya Idea</span><span>CIE Professional</span><span>For Organizations</span><span>Ideas</span><span>Contact</span></nav><div class="mobile-menu">Explore</div></header>
+
+        <section class="page-section hero is-active" data-section="principle">
+          <span class="eyebrow">01 — For Organizations</span><h1 class="display">What CIE Professional begins with one person, Alaya is learning to understand at organizational scale.</h1>
+          <div class="lineage">CIE Professional builds an evidence-grounded understanding of capability from the work, experience, evidence, reflection, objectives, and relationships that give it shape.<br><br>The same principle matters across an organization: capability should be understood through the work that reveals it, not assumed from roles, structures, or headcount.</div>
+          <div class="status-note">CIE Organization is a direction under development—not yet a launched product.</div>
+        </section>
+
+        <section class="page-section thesis" data-section="thesis">
+          <span class="eyebrow">02 — Thesis</span><div class="thesis-lines"><p>Strategy gives capability direction.</p><p>Capability turns strategy into action.</p></div>
+          <p class="lede">Strategy can set a clear destination while leaving a harder question unanswered: does the capability to carry it out already exist, is it fragmented, or was it never there?</p>
+        </section>
+
+        <section class="page-section" data-section="condition">
+          <span class="eyebrow">03 — The organizational condition</span><h2 class="headline">A network operations team needed to pivot and upskill to support a CDN solution. Leadership opted for training from the provider.</h2>
+          <div class="case-field"><div class="case-context">That decision looked aligned. It began from an incomplete picture.</div><div class="case-story">But the decision itself was built on a miscalibration—overstating what some engineers already knew, and underestimating what others were capable of.<br><br>Without visibility into actual capability, resources drain, motivation erodes, and strategy stalls.</div></div>
+        </section>
+
+        <section class="page-section" data-section="visibility">
+          <span class="eyebrow">04 — What is difficult to see</span><h2 class="headline">Organizations can misread capability in both directions at once.</h2>
+          <div class="decision-line"><div class="assumption over"><strong>Overstated</strong><p>A role, reputation, or past exposure implies depth the work does not yet support.</p></div><div class="same-decision">One decision.<br>Two misreadings.</div><div class="assumption under"><strong>Underestimated</strong><p>Valuable capability remains hidden behind assignment, title, visibility, or circumstance.</p></div></div>
+          <p class="visibility-explanation">Both readings can grow from the same conditions: knowledge fragmented across teams and systems, important capability remaining implicit in practice, and what already exists unable to travel to the work that needs it.</p>
+        </section>
+
+        <section class="page-section lens" data-section="lens">
+          <div><span class="eyebrow">05 — A different lens</span><h2 class="headline">What changes when capability becomes a unit of understanding?</h2><p class="lens-shift">The value of a strategy can only be revealed by the capability to execute it.</p></div>
+          <div class="landscape" aria-label="A four-ring capability landscape: Value outside Knowledge, Knowledge outside Teams, and People at the core."><div class="onion-field"><div class="onion-ring value"></div><div class="onion-ring knowledge"></div><div class="onion-ring teams"></div><div class="onion-ring people"></div><span class="onion-label value">Value</span><span class="onion-label knowledge">Knowledge</span><span class="onion-label teams">Teams</span><span class="onion-label people">People</span></div><span class="scale capability">Capability landscape</span></div>
+        </section>
+
+        <section class="page-section" data-section="questions">
+          <span class="eyebrow">06 — Questions Alaya explores</span><h2 class="headline">The direction begins with questions, not a service catalogue.</h2>
+          <div class="questions"><div class="question"><span>01</span>Where does strategy depend on capability the organization cannot yet see clearly?</div><div class="question"><span>02</span>What knowledge disappears between teams, systems, or changes in responsibility?</div><div class="question"><span>03</span>Where is technology introduced without the capability needed to sustain it?</div><div class="question"><span>04</span>What capability already exists but remains fragmented, implicit, or difficult to reuse?</div><div class="question"><span>05</span>Which training decisions begin before the real starting point is understood?</div></div>
+        </section>
+
+        <section class="page-section technology" data-section="technology">
+          <div><span class="eyebrow">07 — Technology’s role</span><h2 class="headline">Technology can connect understanding.</h2></div><div class="technology-copy"><strong>It cannot substitute for capability.</strong><br><br>Its role is to help preserve evidence, reveal relationships, connect knowledge to work, and make an evolving capability landscape usable. The people, work, and knowledge remain the source.</div>
+        </section>
+
+        <section class="page-section provenance" data-section="provenance">
+          <span class="eyebrow">08 — Human provenance</span><p class="origin-copy">This direction grew from more than two decades of work across technology, engineering, network operations, leadership, product thinking, organizational systems, knowledge, and execution—and from repeatedly seeing how much important capability remains difficult to recognize until the work demands it.</p>
+        </section>
+
+        <section class="page-section" data-section="paths">
+          <span class="eyebrow">09 — Open paths</span><div class="open-paths"><div class="shape-path"><h3>Help shape the direction</h3><p>If this matches something you have seen, and you would want to help shape CIE Organization before launch, share the experience with Alaya.</p><span class="path-label">Share what you have seen</span></div><div class="general-path"><h3>Start a general conversation</h3><p>If something here connects with a question you are exploring, an idea you are developing, or work you are trying to understand, write to Alaya directly. Your message will be read and answered by a person.</p><span class="path-label">Contact Alaya</span></div></div>
+        </section>
+
+        <footer class="site-foot"><span>Alaya Crafts</span><span>The Alaya Idea · CIE Professional · Organizations · Ideas · Contact</span><span>Capability is the enduring asset.</span></footer>
+      </main>
+    </div>
+
+    <aside class="inspector card" aria-live="polite">
+      <div class="text-small text-muted">Section <span id="org-number">01</span></div><h3 id="org-title">Shared principle</h3><dl><dt>Composition</dt><dd id="org-composition"></dd><dt>Hierarchy</dt><dd id="org-hierarchy"></dd><dt>Mobile</dt><dd id="org-mobile"></dd><dt>Guardrail</dt><dd id="org-guardrail"></dd></dl>
+    </aside>
+  </div>
+
+  <script>
+    (()=>{
+      const root=document.getElementById('for-organizations-study');
+      const page=root.querySelector('.org-page');
+      const notes={
+        principle:{n:'01',t:'Shared principle',composition:'A restrained opening establishes CIE Professional lineage before making any organizational claim.',hierarchy:'The real method comes first; the future organizational direction is explicitly labeled.',mobile:'The lineage becomes one readable column and the maturity note remains visible.',guardrail:'Do not imply organizational product availability or an active practice.'},
+        thesis:{n:'02',t:'Thesis',composition:'The page’s single dark field gives the central argument its strongest visual emphasis.',hierarchy:'Strategy directs; capability acts. Technology remains deliberately secondary.',mobile:'The two lines retain separate rhythm without forced side-by-side treatment.',guardrail:'Avoid “strategy-to-execution friction” and other worn transformation language.'},
+        condition:{n:'03',t:'Organizational condition',composition:'The concrete operational scene carries the headline weight; the generalization becomes a quiet caption beside the consequence.',hierarchy:'The real example earns attention before the page interprets it.',mobile:'The longer scene-setting headline is followed by the short caption, then the miscalibration and consequence.',guardrail:'No outcome, client relationship, or Alaya intervention is implied.'},
+        visibility:{n:'04',t:'Difficult to see',composition:'One two-direction miscalibration remains the central structure; fragmented, implicit, and immobile capability are absorbed into its explanation.',hierarchy:'Overstatement and underestimation receive equal weight without introducing a second framework.',mobile:'The two sides become a vertical sequence followed by one explanatory paragraph.',guardrail:'No maturity scale, score, assessment, heatmap, or stacked consulting framework.'},
+        lens:{n:'05',t:'Different lens',composition:'Editorial copy sits beside one abstract widening field across organizational scales.',hierarchy:'Capability is the unit of understanding; people are never reduced to a metric.',mobile:'The field follows the explanation and remains conceptual.',guardrail:'Teams stay inside the organizational landscape, never presented as an offering.'},
+        questions:{n:'06',t:'Questions Alaya explores',composition:'Five ruled questions create depth without resembling service pillars.',hierarchy:'Questions remain open territories rather than promised deliverables.',mobile:'Each question becomes a compact chapter with its number retained.',guardrail:'Do not turn these into clickable offerings or diagnostic intake.'},
+        technology:{n:'07',t:'Technology’s role',composition:'A restrained light field keeps technology in a supporting role.',hierarchy:'People, work, and knowledge remain the source; technology supports use.',mobile:'The qualification follows the headline immediately.',guardrail:'No AI protagonist, platform claim, or automation theater.'},
+        provenance:{n:'08',t:'Human provenance',composition:'One sustained sentence with substantial space; no founder biography grid.',hierarchy:'Lived operational continuity supports the direction without becoming authority theater.',mobile:'The sentence breaks naturally into a readable editorial block.',guardrail:'Do not convert experience into logos, named clients, or inflated credentials.'},
+        paths:{n:'09',t:'Open paths',composition:'The pre-launch shaping invitation is larger and bounded; general contact remains quieter and separate.',hierarchy:'Help us think is not confused with discuss an engagement.',mobile:'The two invitations stack with explicit distinction.',guardrail:'No form funnel, callback promise, Calendly, chatbot, or lead qualification.'}
+      };
+      function show(k){const d=notes[k];if(!d)return;root.querySelectorAll('.page-section').forEach(s=>s.classList.toggle('is-active',s.dataset.section===k));root.querySelector('#org-number').textContent=d.n;root.querySelector('#org-title').textContent=d.t;['composition','hierarchy','mobile','guardrail'].forEach(x=>root.querySelector('#org-'+x).textContent=d[x]);}
+      root.querySelectorAll('.page-section').forEach(s=>s.addEventListener('click',()=>show(s.dataset.section)));
+      const siteHead=root.querySelector('.site-head');
+      const mobileMenu=root.querySelector('.mobile-menu');
+      const mobileViewport=window.matchMedia('(max-width:820px)');
+      const setMenu=open=>{siteHead.classList.toggle('nav-open',open);mobileMenu.setAttribute('aria-expanded',String(open));mobileMenu.textContent=open?'Close':'Explore';};
+      mobileMenu.setAttribute('role','button');
+      mobileMenu.setAttribute('tabindex','0');
+      mobileMenu.setAttribute('aria-expanded','false');
+      mobileMenu.setAttribute('aria-label','Toggle site navigation');
+      mobileMenu.addEventListener('click',()=>setMenu(!siteHead.classList.contains('nav-open')));
+      mobileMenu.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setMenu(!siteHead.classList.contains('nav-open'));}});
+      root.querySelectorAll('.nav span').forEach(item=>item.addEventListener('click',()=>setMenu(false)));
+      mobileViewport.addEventListener('change',e=>{if(!e.matches)setMenu(false);});
+      root.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{const m=b.dataset.view==='mobile';page.classList.toggle('is-mobile',m);page.classList.toggle('is-desktop',!m);if(!m&&!mobileViewport.matches)setMenu(false);root.querySelectorAll('[data-view]').forEach(x=>{const active=x===b;x.setAttribute('aria-pressed',String(active));x.classList.toggle('btn-primary',active);});}));
+      show('principle');
+    })();
+  </script>
+</div>
