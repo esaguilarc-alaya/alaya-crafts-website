@@ -2,5 +2,4 @@
 
 Reserved for the production Alaya Crafts public website.
 
-The approved low-fidelity study in `design/studies/` is a design reference and must not be treated as production source. Production implementation begins only after the next design slice is approved.
-
+Production must be composed from shared source modules and editable study sources. Rendered study exports are visual references only and must never be copied into production. See `docs/project-briefs/homepage-production-reference-gate.md` and `architecture/decisions/001-static-build-and-github-pages-routing.md` before implementation.

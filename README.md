@@ -21,11 +21,9 @@ CIE Professional informs the website's family resemblance—calmness, epistemic 
 
 ## Current status
 
-The approved V1 low-fidelity homepage study is preserved at [`design/studies/homepage-low-fidelity.html`](design/studies/homepage-low-fidelity.html). It remains a design artifact, not production code.
+The five-page design set and cross-page coherence baseline are approved. Homepage, CIE Professional, For Organizations, Ideas, and Contact remain design artifacts rather than production source.
 
-The study establishes the homepage narrative and responsive composition, the Capability Landscape, the explanation of Capability Intelligence and CIE, maturity asymmetry, the human Contact path, and section-level design rationale.
-
-Future website UX, visual design, content, architecture decisions, implementation, and public assets belong in this repository.
+Production work begins with the Homepage as the reference implementation. Its source boundary and acceptance checks are recorded in [`docs/project-briefs/homepage-production-reference-gate.md`](docs/project-briefs/homepage-production-reference-gate.md), while the V1 navigation and URL behavior are recorded in [`design/direction/public-site-route-contract-v1.md`](design/direction/public-site-route-contract-v1.md).
 
 ## Technical foundation
 
@@ -55,4 +53,3 @@ src/                      Future production implementation
 - CIE must be explained before it is treated as a familiar acronym.
 - Avoid generic service cards, unsupported claims, fake dashboards, fabricated proof, AI imagery, conversion pressure, and founder mythology.
 - Contact remains direct and human; no chatbot or AI intermediary.
-
