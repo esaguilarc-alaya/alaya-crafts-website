@@ -11,13 +11,22 @@
 4. Codex dispatches:
 
 ```text
+Work only in repository <ABSOLUTE-REPOSITORY-PATH>.
+First verify that `git rev-parse --show-toplevel` returns that exact path.
+If it does not, stop without interpreting similarly named controls or missions
+from another repository.
+
 Read docs/engineering-control/README.md and the implementation-actor contract.
 Execute only mission <MISSION-ID> at <MISSION-PATH>, issued in commit
 <ISSUANCE-COMMIT>. Verify the packet and repository state before substantive
 work. Write the required actor return beside the packet; do not edit mission.md.
 ```
 
-Dispatch does not add requirements. Never dispatch “the newest mission.”
+The absolute repository path is mandatory even when sender and actor appear to
+share a working directory. Before dispatch, Codex verifies the issuance object
+and packet at that exact path. Dispatch does not add requirements. Never
+dispatch “the newest mission,” substitute a nearby repository's ID series, or
+rely on an implicit current directory.
 
 ## Starting-state reconciliation
 
@@ -64,4 +73,3 @@ ID, include `Supersedes: <old ID>` and the reason, and disposition the old
 mission `SUPERSEDED`. During execution, changed requirements require the actor
 to stop before a replacement is issued. Returns and dispositions are historical
 records; correct material errors with a new dated addendum, never silent rewrite.
-

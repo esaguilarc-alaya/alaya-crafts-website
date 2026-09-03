@@ -38,14 +38,16 @@ See [`actor-contracts.md`](actor-contracts.md) for exact boundaries.
 ## Operating loop
 
 1. Codex inspects Git and QA state, chooses one already-authorized candidate, and drafts a complete packet from the template.
-2. Codex verifies the packet, creates `reviews/missions/<MISSION-ID>/mission.md`, commits it, and dispatches the exact ID, path, and issuance commit.
-3. Claude Code verifies the packet and starting state, performs only authorized work in an isolated checkout when needed, and writes `claude-return.md` in the same directory. `mission.md` is never edited after issuance.
+2. Codex verifies the packet, creates `reviews/missions/<MISSION-ID>/mission.md`, commits it, and dispatches the absolute repository path, exact ID, mission path, and issuance commit.
+3. Claude Code first verifies that the repository root exactly matches the dispatched absolute path, then verifies the packet and starting state, performs only authorized work in an isolated checkout when needed, and writes `claude-return.md` in the same directory. `mission.md` is never edited after issuance.
 4. Codex independently inspects the actual diff and reruns material proof. It writes `codex-disposition.md` and updates the governed QA tracker/backlog.
 5. Esteban makes any reserved product, merge, deployment, or risk decision. Nothing is pushed or merged unless the mission explicitly authorizes it.
 
 ## Required controls
 
-- Neutral mission IDs and exact-path dispatch; never “latest” or “next.”
+- Neutral mission IDs and exact-path dispatch, including the absolute repository
+  root and a mandatory root check; never “latest,” “next,” or an implicit
+  working directory.
 - Explicit repository, branch, baseline commit, issuance commit, main commit,
   and clean or declared user-owned working-tree state.
 - Finite authorization, required proof, prohibited work, and stop conditions.
@@ -78,4 +80,3 @@ mission authorizes no more than intended.
 Before execution: dispatch only the exact committed packet. Before disposition:
 compare baseline-to-return commits, inspect the working tree, rerun decisive
 checks, reconcile QA IDs, and state what remains unproved.
-
