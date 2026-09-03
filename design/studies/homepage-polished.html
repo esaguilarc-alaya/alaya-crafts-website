@@ -983,17 +983,12 @@ html&gt;body{padding:0}&lt;/style&gt;
     #alaya-homepage-study .contact-invitation { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 7%; border-top:1px solid var(--alaya-rule); }
     #alaya-homepage-study .contact-invitation p { margin:0; color:var(--alaya-fog); font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:18px; }
     #alaya-homepage-study .contact-link { border:0; border-bottom:1px solid currentColor; padding:0 0 4px; background:transparent; color:var(--alaya-pine); font:500 10px Montserrat, sans-serif; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
-    #alaya-homepage-study .contact-page { display:none; min-height:680px; padding:74px 12%; background:var(--alaya-paper); }
-    #alaya-homepage-study .contact-page.is-visible { display:block; }
-    #alaya-homepage-study .contact-page .contact-copy { max-width:650px; margin-top:70px; }
-    #alaya-homepage-study .contact-page .contact-human { margin-top:54px; padding-top:22px; border-top:1px solid var(--alaya-rule); color:var(--alaya-fog); font-size:12px; }
-    #alaya-homepage-study .contact-page .contact-human strong { display:block; margin-bottom:8px; color:var(--alaya-ink); font-family:&quot;Cormorant Garamond&quot;, Georgia, serif; font-size:24px; font-weight:400; }
     #alaya-homepage-study .inspector { position:sticky; top:0; }
     #alaya-homepage-study .inspector h3 { margin-bottom:8px; }
     #alaya-homepage-study .inspector dl { margin:16px 0 0; }
     #alaya-homepage-study .inspector dt { margin-top:14px; color:var(--muted-foreground); font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
     #alaya-homepage-study .inspector dd { margin:4px 0 0; font-size:12px; line-height:1.45; }
-    #alaya-homepage-study .mobile-nav { display:none; }
+    #alaya-homepage-study .mobile-nav { display:none; border:0; padding:0; background:transparent; color:var(--alaya-ink); font:500 10px Montserrat, sans-serif; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
     #alaya-homepage-study .site-viewport.is-mobile .site-head { padding:16px 20px; }
     #alaya-homepage-study .site-viewport.is-mobile .site-nav { display:none; }
     #alaya-homepage-study .site-viewport.is-mobile .mobile-nav { display:block; font-size:10px; text-transform:uppercase; }
@@ -1019,6 +1014,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     #alaya-homepage-study .site-viewport.is-mobile .field-note.technology { right:2%; top:58%; }
     #alaya-homepage-study .site-viewport.is-mobile .field-note.intelligence { right:16%; bottom:7%; }
     #alaya-homepage-study .site-viewport.is-mobile .present-expression { min-height:220px; }
+    #alaya-homepage-study .site-viewport.is-mobile .maturity-field &gt; * { min-width:0; }
     #alaya-homepage-study .site-viewport.is-mobile .product-glimpse &gt; div:first-child { order:2; }
     #alaya-homepage-study .site-viewport.is-mobile .product-sheet { min-height:240px; }
     #alaya-homepage-study .site-viewport.is-mobile .condition { font-size:19px; }
@@ -1028,11 +1024,24 @@ html&gt;body{padding:0}&lt;/style&gt;
     #alaya-homepage-study .site-viewport.is-mobile .site-foot { display:grid; gap:10px; padding:24px; }
     #alaya-homepage-study .site-viewport.is-mobile .contact-invitation { display:grid; padding:24px; }
     #alaya-homepage-study .site-viewport.is-mobile .contact-link { justify-self:start; }
-    #alaya-homepage-study .site-viewport.is-mobile .contact-page { min-height:600px; padding:54px 24px; }
-    #alaya-homepage-study .site-viewport.is-mobile .contact-page .contact-copy { margin-top:70px; }
     @media (max-width: 820px) {
       #alaya-homepage-study .study-shell { grid-template-columns:1fr; }
       #alaya-homepage-study .inspector { position:static; }
+      #alaya-homepage-study .site-viewport .site-head { padding:16px 20px; }
+      #alaya-homepage-study .site-viewport .site-nav { display:none; }
+      #alaya-homepage-study .site-viewport .mobile-nav { display:block; }
+      #alaya-homepage-study .site-viewport .site-head.nav-open { flex-wrap:wrap; align-items:flex-start; }
+      #alaya-homepage-study .site-viewport .site-head.nav-open .site-nav { order:3; display:flex; flex-direction:column; width:100%; gap:0; padding:18px 0 4px; border-top:1px solid var(--alaya-rule); }
+      #alaya-homepage-study .site-viewport .site-head.nav-open .site-nav span { padding:12px 0; border-bottom:1px solid var(--alaya-rule); }
+      #alaya-homepage-study .site-viewport .home-section { padding:54px 24px; }
+      #alaya-homepage-study .site-viewport .observation-grid,
+      #alaya-homepage-study .site-viewport .maturity-field,
+      #alaya-homepage-study .site-viewport .product-glimpse,
+      #alaya-homepage-study .site-viewport .origin,
+      #alaya-homepage-study .site-viewport .cie-definition { grid-template-columns:1fr; gap:28px; }
+      #alaya-homepage-study .site-viewport .open-paths { grid-template-columns:1fr; }
+      #alaya-homepage-study .site-viewport .open-paths div { border-right:0; border-bottom:1px solid var(--alaya-rule); }
+      #alaya-homepage-study .site-viewport .site-foot { display:grid; gap:10px; padding:24px; }
     }
   &lt;/style&gt;
 
@@ -1096,7 +1105,6 @@ html&gt;body{padding:0}&lt;/style&gt;
     #alaya-homepage-study .contact-invitation { margin-bottom:36px; padding-inline:0; }
     #alaya-homepage-study .contact-invitation p { font-size:23px; line-height:1.4; }
     #alaya-homepage-study .site-foot { padding-block:34px; }
-    #alaya-homepage-study .contact-page { min-height:760px; background:radial-gradient(circle at 72% 40%, rgba(111,136,112,.08), transparent 30%), var(--alaya-paper); }
     #alaya-homepage-study .site-viewport.is-mobile .home-section { padding-block:72px; }
     #alaya-homepage-study .site-viewport.is-mobile .hero { min-height:620px; padding-top:100px; }
     #alaya-homepage-study .site-viewport.is-mobile .hero .display { font-size:56px; line-height:1.08; letter-spacing:-.025em; }
@@ -1125,8 +1133,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;div class=&quot;site-viewport is-desktop&quot; aria-label=&quot;Low-fidelity Alaya Crafts homepage composition&quot;&gt;
         &lt;header class=&quot;site-head&quot;&gt;
           &lt;div class=&quot;wordmark&quot;&gt;Alaya Crafts&lt;/div&gt;
-          &lt;nav class=&quot;site-nav&quot; aria-label=&quot;Study navigation&quot;&gt;&lt;span&gt;The Alaya Idea&lt;/span&gt;&lt;span&gt;CIE Professional&lt;/span&gt;&lt;span&gt;For Organizations&lt;/span&gt;&lt;span&gt;Ideas&lt;/span&gt;&lt;span data-contact-open&gt;Contact&lt;/span&gt;&lt;/nav&gt;
-          &lt;div class=&quot;mobile-nav&quot;&gt;Explore&lt;/div&gt;
+          &lt;nav class=&quot;site-nav&quot; aria-label=&quot;Study navigation&quot;&gt;&lt;span&gt;The Alaya Idea&lt;/span&gt;&lt;span&gt;CIE Professional&lt;/span&gt;&lt;span&gt;For Organizations&lt;/span&gt;&lt;span&gt;Ideas&lt;/span&gt;&lt;span&gt;Contact&lt;/span&gt;&lt;/nav&gt;
+          &lt;button class=&quot;mobile-nav&quot; type=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;Explore&lt;/button&gt;
         &lt;/header&gt;
 
         &lt;section class=&quot;home-section hero is-active&quot; data-section=&quot;curiosity&quot;&gt;
@@ -1223,20 +1231,11 @@ html&gt;body{padding:0}&lt;/style&gt;
 
         &lt;section class=&quot;home-section&quot; data-section=&quot;paths&quot;&gt;
           &lt;span class=&quot;section-index&quot;&gt;11 — Open paths&lt;/span&gt;
-          &lt;div class=&quot;contact-invitation&quot;&gt;&lt;p&gt;If something here connects with a question you’re exploring, start a conversation.&lt;/p&gt;&lt;button class=&quot;contact-link&quot; type=&quot;button&quot; data-contact-open&gt;Write to Alaya&lt;/button&gt;&lt;/div&gt;
+          &lt;div class=&quot;contact-invitation&quot;&gt;&lt;p&gt;If something here connects with a question you’re exploring, start a conversation.&lt;/p&gt;&lt;span class=&quot;contact-link&quot;&gt;Write to Alaya&lt;/span&gt;&lt;/div&gt;
           &lt;div class=&quot;open-paths&quot;&gt;&lt;div&gt;&lt;strong&gt;Explore CIE Professional&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;For Organizations&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Follow the Ideas&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;/section&gt;
-        &lt;footer class=&quot;site-foot&quot;&gt;&lt;span&gt;Alaya Crafts&lt;/span&gt;&lt;span&gt;The Alaya Idea · CIE Professional · Organizations · Contact&lt;/span&gt;&lt;span&gt;Capability is the enduring asset.&lt;/span&gt;&lt;/footer&gt;
+        &lt;footer class=&quot;site-foot&quot;&gt;&lt;span&gt;Alaya Crafts&lt;/span&gt;&lt;span&gt;The Alaya Idea · CIE Professional · For Organizations · Ideas · Contact&lt;/span&gt;&lt;span&gt;Capability is the enduring asset.&lt;/span&gt;&lt;/footer&gt;
 
-        &lt;section class=&quot;contact-page&quot; aria-label=&quot;Contact page study&quot;&gt;
-          &lt;button class=&quot;contact-link&quot; type=&quot;button&quot; data-contact-close&gt;← Back to Alaya Crafts&lt;/button&gt;
-          &lt;div class=&quot;contact-copy&quot;&gt;
-            &lt;span class=&quot;section-index&quot;&gt;Contact&lt;/span&gt;
-            &lt;h2 class=&quot;display&quot;&gt;Start a conversation.&lt;/h2&gt;
-            &lt;p class=&quot;lede&quot;&gt;Alaya is an evolving body of work. If something here connects with a question you’re exploring, an idea you’re developing, or work you’re trying to understand, you can reach us directly.&lt;/p&gt;
-            &lt;div class=&quot;contact-human&quot;&gt;&lt;strong&gt;Write to Alaya&lt;/strong&gt;Your message will be read and answered by a person.&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/section&gt;
       &lt;/div&gt;
     &lt;/div&gt;
 
@@ -1259,6 +1258,9 @@ html&gt;body{padding:0}&lt;/style&gt;
     (() =&gt; {
       const root = document.getElementById(&#x27;alaya-homepage-study&#x27;);
       const viewport = root.querySelector(&#x27;.site-viewport&#x27;);
+      const siteHead = root.querySelector(&#x27;.site-head&#x27;);
+      const mobileNav = root.querySelector(&#x27;.mobile-nav&#x27;);
+      const actualMobile = window.matchMedia(&#x27;(max-width: 820px)&#x27;);
       const details = {
         curiosity:{n:&#x27;01&#x27;,title:&#x27;Curiosity&#x27;,layout:&#x27;A sparse first viewport with one dominant thought, one grounding sentence, and two quiet paths.&#x27;,hierarchy:&#x27;Poetic opening first; plain-spoken worldview immediately beneath it.&#x27;,density:&#x27;Very low. The emptiness is part of the argument.&#x27;,interaction:&#x27;Links remain understated; the trace responds only through subtle local movement in a later polished pass.&#x27;,desktop:&#x27;Large editorial scale with the trace entering from the lower right.&#x27;,mobile:&#x27;The grounding sentence arrives without requiring a long scroll; the trace occupies less of the field.&#x27;,landscape:&#x27;Almost absent: one partial contour suggests something not yet understood.&#x27;},
         observation:{n:&#x27;02&#x27;,title:&#x27;Observation&#x27;,layout:&#x27;A shared editorial field connects people and organizations without segment cards.&#x27;,hierarchy:&#x27;One observation, then two related contexts.&#x27;,density:&#x27;Low to medium; enough examples to make capability concrete.&#x27;,interaction:&#x27;None required. Reading carries the section.&#x27;,desktop:&#x27;Parallel columns reveal the shared condition.&#x27;,mobile:&#x27;The two contexts stack with a continuous rule so they remain related.&#x27;,landscape:&#x27;A second trace appears. Accumulation begins but remains ambiguous.&#x27;},
@@ -1282,19 +1284,30 @@ html&gt;body{padding:0}&lt;/style&gt;
       root.querySelectorAll(&#x27;.home-section&#x27;).forEach(section =&gt; section.addEventListener(&#x27;click&#x27;, () =&gt; show(section.dataset.section)));
       root.querySelectorAll(&#x27;[data-view]&#x27;).forEach(button =&gt; button.addEventListener(&#x27;click&#x27;, () =&gt; {
         const mobile = button.dataset.view === &#x27;mobile&#x27;;
-        viewport.classList.toggle(&#x27;is-mobile&#x27;, mobile); viewport.classList.toggle(&#x27;is-desktop&#x27;, !mobile);
+        viewport.classList.toggle(&#x27;is-mobile&#x27;, actualMobile.matches || mobile); viewport.classList.toggle(&#x27;is-desktop&#x27;, !actualMobile.matches &amp;&amp; !mobile);
         root.querySelectorAll(&#x27;[data-view]&#x27;).forEach(b =&gt; { const active = b === button; b.setAttribute(&#x27;aria-pressed&#x27;, String(active)); b.classList.toggle(&#x27;btn-primary&#x27;, active); });
       }));
-      root.querySelectorAll(&#x27;[data-contact-open]&#x27;).forEach(trigger =&gt; trigger.addEventListener(&#x27;click&#x27;, () =&gt; {
-        root.querySelectorAll(&#x27;.home-section, .contact-invitation, .site-foot&#x27;).forEach(el =&gt; el.style.display = &#x27;none&#x27;);
-        root.querySelector(&#x27;.contact-page&#x27;).classList.add(&#x27;is-visible&#x27;);
-        viewport.scrollIntoView({behavior:&#x27;smooth&#x27;, block:&#x27;start&#x27;});
-      }));
-      root.querySelectorAll(&#x27;[data-contact-close]&#x27;).forEach(trigger =&gt; trigger.addEventListener(&#x27;click&#x27;, () =&gt; {
-        root.querySelector(&#x27;.contact-page&#x27;).classList.remove(&#x27;is-visible&#x27;);
-        root.querySelectorAll(&#x27;.home-section, .contact-invitation, .site-foot&#x27;).forEach(el =&gt; el.style.display = &#x27;&#x27;);
-        viewport.scrollIntoView({behavior:&#x27;smooth&#x27;, block:&#x27;start&#x27;});
-      }));
+      function closeMobileNav() {
+        siteHead.classList.remove(&#x27;nav-open&#x27;);
+        mobileNav.textContent = &#x27;Explore&#x27;;
+        mobileNav.setAttribute(&#x27;aria-expanded&#x27;, &#x27;false&#x27;);
+      }
+      mobileNav.addEventListener(&#x27;click&#x27;, () =&gt; {
+        const open = !siteHead.classList.contains(&#x27;nav-open&#x27;);
+        siteHead.classList.toggle(&#x27;nav-open&#x27;, open);
+        mobileNav.textContent = open ? &#x27;Close&#x27; : &#x27;Explore&#x27;;
+        mobileNav.setAttribute(&#x27;aria-expanded&#x27;, String(open));
+      });
+      root.querySelectorAll(&#x27;.site-nav span&#x27;).forEach(item =&gt; item.addEventListener(&#x27;click&#x27;, closeMobileNav));
+      function syncActualViewport() {
+        if (actualMobile.matches) {
+          viewport.classList.add(&#x27;is-mobile&#x27;);
+          viewport.classList.remove(&#x27;is-desktop&#x27;);
+        }
+        closeMobileNav();
+      }
+      actualMobile.addEventListener(&#x27;change&#x27;, syncActualViewport);
+      syncActualViewport();
       show(&#x27;curiosity&#x27;);
     })();
   &lt;/script&gt;
