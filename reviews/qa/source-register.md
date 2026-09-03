@@ -35,3 +35,13 @@ and whether an external export/import occurred. Do not rewrite prior entries.
 - Purpose: record independent acceptance of the For Organizations production migration and close only its portion of `QA-CAND-004` and `QA-CAND-005`
 - Verification: inspected changed values/formulas, scanned for formula errors (none), and rendered all three worksheets for visual review
 - External import/export: none; `/Users/estebanaguilar/Downloads/Alaya_Website_QA_Tracker.xlsx` remains unchanged
+
+### 2026-09-03 — QA-CAND-003 issuance preflight reconciliation
+
+- Editor/reviewer: Codex
+- Before SHA-256: `f201cd6c6e8b86b8a77029a493993690d6d1b6a01a0afebd87d61a5f64ef19fd`
+- After SHA-256: `0732386e22fb044b47fba77dba00f24b7a38d692966f0c20802c6a4224ff0692`
+- Changed ranges: appended `Session History!A22:E22`; updated `Review Log!F27:H27`
+- Purpose: close the proposed CIE diagram regression-hardening candidate after preflight proved the requested failure-sensitive assertion already exists in `tests/cie-professional.spec.mjs` at commit `bf9518a`
+- Verification: inspected changed values/formulas, scanned for formula errors (none), and rendered all three worksheets for visual review
+- External import/export: none; `/Users/estebanaguilar/Downloads/Alaya_Website_QA_Tracker.xlsx` remains unchanged
