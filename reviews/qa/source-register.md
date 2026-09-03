@@ -25,3 +25,13 @@ and whether an external export/import occurred. Do not rewrite prior entries.
 - Purpose: accept corrected evidence and close `QA-CAND-002` as “described production state not found,” without changing website source or asserting the unproved cause of the original QA description
 - Verification: inspected changed values/formulas, scanned for formula errors (none), and rendered all three worksheets for visual review
 - External import/export: none; `/Users/estebanaguilar/Downloads/Alaya_Website_QA_Tracker.xlsx` remains unchanged
+
+### 2026-09-03 — Mission AW-20260903-003 disposition
+
+- Editor/reviewer: Codex
+- Before SHA-256: `0d834db3253cc72f01872270681a5516ad4d1636b80f2a9120e74c407ce1cb82`
+- After SHA-256: `f201cd6c6e8b86b8a77029a493993690d6d1b6a01a0afebd87d61a5f64ef19fd`
+- Changed ranges: appended `Session History!A21:E21` and `Review Log!A29:H29`
+- Purpose: record independent acceptance of the For Organizations production migration and close only its portion of `QA-CAND-004` and `QA-CAND-005`
+- Verification: inspected changed values/formulas, scanned for formula errors (none), and rendered all three worksheets for visual review
+- External import/export: none; `/Users/estebanaguilar/Downloads/Alaya_Website_QA_Tracker.xlsx` remains unchanged
