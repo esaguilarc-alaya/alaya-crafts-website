@@ -22,7 +22,7 @@ state before issuing a mission.
 | Candidate | Source record | Classification | Current evidence | Mission boundary / dependency |
 |---|---|---|---|---|
 | `QA-CAND-001` | Review Log: `src/pages/home.mjs`, 2026-09-03 | Non-blocking improvement | Seven body links work in both base-path modes but bypass the route helper. Status `Open (non-blocking)`. | First confirm whether full route-table usage is desired; this is not currently a defect. If authorized, bound changes to body-link generation and tests. |
-| `QA-CAND-002` | Review Log: `src/pages/cie.mjs` closing quiet path, 2026-09-03 | Open content/product choice | `Explore CIE Professional` points to `#main`, effectively a self-jump. Status `Open (non-blocking)`. | **Esteban/product decision required before implementation:** intended destination/copy is not established in the tracker. Recommended first real mission is verification/decision framing, not a guessed fix. |
+| `QA-CAND-002` | Review Log: `src/pages/cie.mjs` closing quiet path, 2026-09-03 | **Closed — described production state not found** | Missions `AW-20260903-001` and `AW-20260903-002` established that the CIE studies contain `Explore CIE Professional` as inert closing spans, while production uses `#understanding` and `../`. No source contains the alleged combined production anchor. | No code change. Closed by Codex disposition of `AW-20260903-002`; the origin of the tracker's `#main` combination remains unproved and is not asserted. |
 | `QA-CAND-003` | Review Log: capability-diagram z-index regression, 2026-09-03 | Verification hardening | Manual source/DOM/screenshot proof says fixed; regression class occurred twice. Existing test reportedly checks visibility, not paint order. | Re-check current test. If still absent and Esteban authorizes hardening, add a stable overlap/paint-order regression assertion only. Do not alter the approved diagram. |
 | `QA-CAND-004` | Review Log rows for shared header/component plus active production gate | Production checkpoint, partly satisfied | Shared shell, canonical routes, `aria-current`, responsive menu, footer, and brand lockup are proved for Homepage and CIE Professional. Older “Open” rows are therefore superseded for those pages, not globally closed. | Apply as acceptance criteria within each remaining page migration; do not create a standalone rewrite mission or touch pending For Organizations work in another checkout. |
 | `QA-CAND-005` | Session History and active gate | Remaining page-specific production reviews | For Organizations, Ideas, launch article, and Contact lack workbook-recorded production approval. | Each page gets a separately issued mission after its implementation baseline is committed/isolated. Preserve page-specific visual/content constraints. |
@@ -53,10 +53,7 @@ state before issuing a mission.
 
 ## Recommended first real mission
 
-Issue a **verification/decision-framing mission for `QA-CAND-002`** after
-confirming a clean isolated baseline. It is the smallest genuinely open item and
-contains a product choice that must not be guessed. The actor should verify the
-current rendered behavior and identify the accepted source(s) that could define
-the intended destination; implementation should remain unauthorized until
-Esteban selects or confirms the outcome.
-
+After the pending For Organizations work is dispositioned, consider a bounded
+verification-hardening mission for `QA-CAND-003`. First confirm that the current
+test still lacks a failure-sensitive paint-order assertion; if so, authorize
+only the smallest stable regression check and no diagram implementation change.
