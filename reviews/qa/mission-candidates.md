@@ -14,10 +14,11 @@ state before issuing a mission.
 - CIE Professional production migration: approved under the production gate.
 - For Organizations production migration: accepted by Codex disposition of
   `AW-20260903-003` in both supported base-path modes.
+- Ideas index and launch article: accepted by Codex disposition of
+  `AW-20260903-004` in both supported base-path modes.
 - Homepage Production Reference Gate and ADR 001: approved/active.
-- The gate explicitly retains page-specific review for Ideas, the launch
-  article, and Contact. Approval of the shared pattern is not
-  approval of those pages.
+- The gate explicitly retains page-specific review for Contact. Approval of the
+  shared pattern is not approval of that page.
 
 ## Candidate list
 
@@ -26,8 +27,8 @@ state before issuing a mission.
 | `QA-CAND-001` | Review Log: `src/pages/home.mjs`, 2026-09-03 | Non-blocking improvement | Seven body links work in both base-path modes but bypass the route helper. Status `Open (non-blocking)`. | First confirm whether full route-table usage is desired; this is not currently a defect. If authorized, bound changes to body-link generation and tests. |
 | `QA-CAND-002` | Review Log: `src/pages/cie.mjs` closing quiet path, 2026-09-03 | **Closed — described production state not found** | Missions `AW-20260903-001` and `AW-20260903-002` established that the CIE studies contain `Explore CIE Professional` as inert closing spans, while production uses `#understanding` and `../`. No source contains the alleged combined production anchor. | No code change. Closed by Codex disposition of `AW-20260903-002`; the origin of the tracker's `#main` combination remains unproved and is not asserted. |
 | `QA-CAND-003` | Review Log: capability-diagram z-index regression, 2026-09-03 | **Closed — regression assertion already present** | Issuance preflight confirmed `tests/cie-professional.spec.mjs` already scrolls the diagram into view, samples every label with `elementFromPoint`, rejects `.diagram-path` as topmost, and requires the sampled element inside its card. Git history traces the assertion to `bf9518a`. | No mission or code change. Retain the existing assertion in the full suite; reopen only on new failure evidence. |
-| `QA-CAND-004` | Review Log rows for shared header/component plus active production gate | Production checkpoint, partly satisfied | Shared shell, canonical routes, `aria-current`, responsive menu, footer, and brand lockup are proved for Homepage, CIE Professional, and For Organizations. Older “Open” rows are superseded for those pages, not globally closed. | Apply as acceptance criteria within each remaining page migration; do not create a standalone rewrite mission. |
-| `QA-CAND-005` | Session History and active gate | Remaining page-specific production reviews | Ideas, launch article, and Contact lack workbook-recorded production approval. For Organizations was accepted by `AW-20260903-003`. | Each remaining page gets a separately issued mission after its implementation baseline is committed/isolated. Preserve page-specific visual/content constraints. |
+| `QA-CAND-004` | Review Log rows for shared header/component plus active production gate | Production checkpoint, partly satisfied | Shared shell, canonical routes, `aria-current`, responsive menu, footer, and brand lockup are proved for Homepage, CIE Professional, For Organizations, Ideas, and the launch article. Older “Open” rows are superseded for those routes, not globally closed. | Apply as acceptance criteria within the remaining Contact migration; do not create a standalone rewrite mission. |
+| `QA-CAND-005` | Session History and active gate | Remaining page-specific production review | Contact lacks workbook-recorded production approval. Ideas and the launch article were accepted by `AW-20260903-004`. | Issue Contact separately after confirming its implementation baseline is committed or isolated. Preserve the approved compact, direct, human contact constraints. |
 
 ## Recurring regression classes to carry into relevant missions
 
@@ -55,7 +56,7 @@ state before issuing a mission.
 
 ## Recommended next real mission
 
-Choose the next page-specific production migration from `QA-CAND-005`: Ideas,
-the launch article, or Contact. Before issuance, confirm that its implementation
-baseline is committed or explicitly isolated and carry forward the shared-shell,
-real-viewport, and study-contamination regression controls.
+Issue the Contact page-specific production migration from `QA-CAND-005` after
+confirming that its implementation baseline is committed or explicitly isolated.
+Carry forward the shared-shell, real-viewport, direct-human-contact, and
+study-contamination regression controls.
