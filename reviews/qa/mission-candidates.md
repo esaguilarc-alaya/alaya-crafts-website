@@ -22,6 +22,9 @@ state before issuing a mission.
 - Homepage Production Reference Gate and ADR 001: approved/active.
 - All approved V1 routes have now completed their page-specific production
   reviews. This does not itself authorize deployment.
+- Release readiness was verified and accepted by `AW-20260903-006`: local
+  source, build, tests, generated artifacts, routing, and the checked-in workflow
+  definition are ready. The accepted commit range remains unpublished.
 
 ## Candidate list
 
@@ -59,9 +62,10 @@ state before issuing a mission.
 
 ## Recommended next real mission
 
-No further page-migration mission is required. If Esteban wants to prepare a
-release, the next bounded mission should be a read-only release/deployment-
-readiness review covering repository state, CI/Pages configuration, canonical
-domain and base-path assumptions, and the full regression suite. Deployment
-must remain separately authorized. `QA-CAND-001` is an optional non-blocking
-maintainability improvement and should not be represented as a release defect.
+No further page-migration or readiness mission is required. The next action is
+an owner decision, not an automatically authorized mission: Esteban may
+authorize a controlled pre-push upstream reconciliation and push of `main`.
+Codex must re-check the current remote state and exact outgoing range before
+that push, then verify the GitHub Pages workflow and published routes after it.
+`QA-CAND-001` remains an optional non-blocking maintainability improvement and
+must not be represented as a release defect.
