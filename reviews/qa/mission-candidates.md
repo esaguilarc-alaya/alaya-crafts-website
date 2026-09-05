@@ -24,7 +24,11 @@ state before issuing a mission.
   reviews. This does not itself authorize deployment.
 - Release readiness was verified and accepted by `AW-20260903-006`: local
   source, build, tests, generated artifacts, routing, and the checked-in workflow
-  definition are ready. The accepted commit range remains unpublished.
+  definition are ready. That accepted range was subsequently published.
+- Homepage Sections 05 and 07 were visually refined and accepted by
+  `AW-20260904-002`: Section 05 now communicates a capability landscape and
+  Section 07 shows a recognizable mountain landscape. The refinement remains
+  local until separately authorized for publication.
 
 ## Candidate list
 
@@ -62,10 +66,11 @@ state before issuing a mission.
 
 ## Recommended next real mission
 
-No further page-migration or readiness mission is required. The next action is
-an owner decision, not an automatically authorized mission: Esteban may
-authorize a controlled pre-push upstream reconciliation and push of `main`.
-Codex must re-check the current remote state and exact outgoing range before
-that push, then verify the GitHub Pages workflow and published routes after it.
+No further page-migration, readiness, or corrective visual mission is required.
+The next action is an owner decision, not an automatically authorized mission:
+Esteban may authorize a controlled pre-push upstream reconciliation and push of
+the accepted Homepage refinement. Codex must re-check the current remote state
+and exact outgoing range before that push, then verify the GitHub Pages workflow
+and published Homepage after it.
 `QA-CAND-001` remains an optional non-blocking maintainability improvement and
 must not be represented as a release defect.
