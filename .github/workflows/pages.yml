@@ -25,9 +25,14 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - run: npm test
+      - name: Test root base path
+        run: npm test
+      - name: Test repository base path
+        run: npm test
         env:
           BASE_PATH: /alaya-crafts-website
+      - name: Build root artifact for custom domain
+        run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
