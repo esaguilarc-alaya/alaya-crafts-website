@@ -27,7 +27,9 @@ state before issuing a mission.
   definition are ready. That accepted range was subsequently published.
 - Homepage Sections 05 and 07 were visually refined and accepted by
   `AW-20260904-002`: Section 05 now communicates a capability landscape and
-  Section 07 shows a recognizable mountain landscape. The refinement remains
+  Section 07 shows a recognizable mountain landscape. Esteban subsequently
+  supplied and approved replacement artwork; `AW-20260904-004` integrated and
+  accepted those exact governed SVGs plus the shared favicon. The result remains
   local until separately authorized for publication.
 
 ## Candidate list
@@ -66,10 +68,10 @@ state before issuing a mission.
 
 ## Recommended next real mission
 
-No further page-migration, readiness, or corrective visual mission is required.
+No further page-migration, readiness, artwork, favicon, or corrective visual mission is required.
 The next action is an owner decision, not an automatically authorized mission:
 Esteban may authorize a controlled pre-push upstream reconciliation and push of
-the accepted Homepage refinement. Codex must re-check the current remote state
+the accepted Homepage artwork and favicon. Codex must re-check the current remote state
 and exact outgoing range before that push, then verify the GitHub Pages workflow
 and published Homepage after it.
 `QA-CAND-001` remains an optional non-blocking maintainability improvement and
