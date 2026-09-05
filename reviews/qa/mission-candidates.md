@@ -30,7 +30,10 @@ state before issuing a mission.
   Section 07 shows a recognizable mountain landscape. Esteban subsequently
   supplied and approved replacement artwork; `AW-20260904-004` integrated and
   accepted those exact governed SVGs plus the shared favicon. The result remains
-  local until separately authorized for publication.
+  published with the accepted release range. `AW-20260904-005` subsequently
+  corrected the Pages artifact for the custom-domain root while retaining the
+  repository-subpath regression suite; publication and live-domain checks are
+  operator actions recorded separately from actor implementation.
 
 ## Candidate list
 
@@ -68,11 +71,9 @@ state before issuing a mission.
 
 ## Recommended next real mission
 
-No further page-migration, readiness, artwork, favicon, or corrective visual mission is required.
-The next action is an owner decision, not an automatically authorized mission:
-Esteban may authorize a controlled pre-push upstream reconciliation and push of
-the accepted Homepage artwork and favicon. Codex must re-check the current remote state
-and exact outgoing range before that push, then verify the GitHub Pages workflow
-and published Homepage after it.
+No further page-migration, readiness, artwork, favicon, or custom-domain artifact
+correction mission is required. Complete and record the already authorized live
+deployment checks for `AW-20260904-005`; only new production evidence should open
+a corrective mission.
 `QA-CAND-001` remains an optional non-blocking maintainability improvement and
 must not be represented as a release defect.
