@@ -33,7 +33,12 @@ state before issuing a mission.
   published with the accepted release range. `AW-20260904-005` subsequently
   corrected the Pages artifact for the custom-domain root while retaining the
   repository-subpath regression suite; publication and live-domain checks are
-  operator actions recorded separately from actor implementation.
+  operator actions recorded separately from actor implementation. Esteban later
+  approved a revised conceptual model for Sections 05–06; `AW-20260908-002`
+  integrated and accepted Capability, Experience, Practice, Contribution,
+  Knowledge, and Curiosity as the living field, followed by Capability
+  Intelligence and CIE in the approved explanatory order. That later revision is
+  accepted locally but has not been pushed or deployed.
 
 ## Candidate list
 

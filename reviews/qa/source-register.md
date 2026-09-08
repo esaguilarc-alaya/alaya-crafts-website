@@ -55,3 +55,13 @@ and whether an external export/import occurred. Do not rewrite prior entries.
 - Purpose: record independent acceptance of the Ideas index and approved launch article and close those two portions of `QA-CAND-005`; Contact remains pending
 - Verification: inspected changed values/formulas, scanned for formula errors (none), and rendered all three worksheets for visual review
 - External import/export: none; `/Users/estebanaguilar/Downloads/Alaya_Website_QA_Tracker.xlsx` remains unchanged
+
+### 2026-09-08 — Mission AW-20260908-002 disposition
+
+- Editor/reviewer: Codex
+- Before SHA-256: `e7a7953bafd2946fd7c3c4ec1dad1d050870d630c06e232893274d17996340e7`
+- After SHA-256: `7a4db94ee3f444c74a322f53fc00d2b3efb16441c7911c37ba37b81545b13f19`
+- Changed ranges: appended `Session History!A29:E29` and `Review Log!A36:H36`
+- Purpose: record independent acceptance of the owner-approved Homepage Sections 05–06 conceptual revision under `AW-20260908-002`
+- Verification: inspected the appended values and formulas, scanned for formula errors (none), and rendered all three worksheets for visual review
+- External import/export: none; `/Users/estebanaguilar/Downloads/Alaya_Website_QA_Tracker.xlsx` remains unchanged
