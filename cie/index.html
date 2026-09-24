@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alaya Crafts &mdash; Capability, read from the work itself</title>
+<meta name="description" content="Alaya reads capability from accounts of work that was actually done — in a person and in an organization — so that it can be seen, and then cultivated. Evidence with the sentence attached. No scores.">
+<meta name="author" content="Alaya Crafts">
+<link rel="canonical" href="https://alayacrafts.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alaya Crafts">
+<meta property="og:title" content="Capability, read from the work itself">
+<meta property="og:description" content="The hardest thing to see is what people can already do. Alaya reads capability from accounts of real work — practices and dimensions, evidence with the sentence attached, and no scores.">
+<meta property="og:url" content="https://alayacrafts.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capability, read from the work itself">
+<meta name="twitter:description" content="The hardest thing to see is what people can already do.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3efe4'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='21' fill='%2359634b' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#f3efe4; --paper-deep:#e9e1d1; --card:#faf8f3; --warm:#f7f4ec;
+    --ink:#242720; --muted:#62675d; --olive:#59634b; --sage:#7d8868; --amber:#a5753c;
+    --rule:rgba(89,99,75,.22); --rule-soft:rgba(89,99,75,.12);
+    --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --body:Montserrat,system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.7;margin:0;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding-inline:22px}
+
+  /* nav */
+  .nav{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px;padding-block:28px 0}
+  .nav .mark{font-family:var(--display);font-size:23px;letter-spacing:-.012em}
+  .nav .links{display:flex;gap:20px;font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+  .nav .links a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+  .nav .links a:hover{border-bottom-color:var(--amber);color:var(--ink)}
+  @media(max-width:560px){.nav .links{display:none}}
+
+  /* hero */
+  .hero{padding-block:76px 60px;border-bottom:1px solid var(--rule)}
+  .hero .eb{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:22px}
+  .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,7.4vw,74px);line-height:1.02;letter-spacing:-.034em;margin:0 0 26px;max-width:15ch;text-wrap:balance}
+  .hero p{font-size:17px;color:var(--muted);margin:0;max-width:50ch;line-height:1.6}
+  .hero p b{color:var(--ink);font-weight:500}
+
+  section{padding-block:66px;border-bottom:1px solid var(--rule-soft)}
+  .eb{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin:0 0 15px}
+  h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,4.4vw,42px);line-height:1.1;letter-spacing:-.024em;margin:0 0 20px;max-width:24ch;text-wrap:balance}
+  h3{font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:-.014em;margin:0 0 7px;line-height:1.2}
+  p{margin:0 0 17px;color:var(--muted);max-width:62ch}
+  p:last-child{margin-bottom:0}
+  p b{color:var(--ink);font-weight:500}
+  p.lg{font-size:17.5px;color:var(--ink);line-height:1.55;max-width:34ch;font-family:var(--display);font-size:clamp(23px,3.2vw,30px);letter-spacing:-.018em}
+
+  .pull{border-left:2px solid var(--amber);padding:4px 0 4px 20px;margin:26px 0;max-width:58ch}
+  .pull p{font-family:var(--display);font-size:clamp(21px,2.8vw,26px);line-height:1.32;letter-spacing:-.016em;color:var(--ink);max-width:none;margin:0}
+
+  /* axes */
+  .ax2{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:26px 0}
+  @media(min-width:760px){.ax2{grid-template-columns:1fr 1fr}}
+  .axc{background:var(--card);padding:22px 22px}
+  .axc .t{font-size:8.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--amber);margin-bottom:4px}
+  .axc h3{margin-bottom:14px}
+  .axc .row{display:grid;grid-template-columns:1fr;gap:1px 14px;padding:8px 0;border-top:1px solid var(--rule-soft)}
+  @media(min-width:420px){.axc .row{grid-template-columns:118px 1fr;align-items:baseline}}
+  .axc .row:first-of-type{border-top:0;padding-top:0}
+  .axc .row b{font-family:var(--display);font-size:18px;font-weight:400;letter-spacing:-.012em;color:var(--ink);line-height:1.2}
+  .axc .row span{font-size:12.6px;color:var(--muted);line-height:1.5}
+  .axc .row.odd b,.axc .row.odd span{color:var(--amber)}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:28px 0 8px}
+  @media(min-width:620px){.stats{grid-template-columns:1fr 1fr}}
+  @media(min-width:900px){.stats{grid-template-columns:repeat(3,1fr)}}
+  .sx{background:var(--card);padding:22px 20px 20px}
+  .sx .v{font-family:var(--display);font-size:clamp(40px,5.6vw,54px);line-height:.95;letter-spacing:-.035em;color:var(--olive);font-variant-numeric:tabular-nums}
+  .sx .v em{font-style:normal;font-size:.55em;letter-spacing:-.01em}
+  .sx p{font-size:13px;line-height:1.5;margin:13px 0 0;color:var(--muted);max-width:none}
+  .sx p b{color:var(--ink);font-weight:500}
+  .sx.hl{background:var(--warm)}
+  .sx.hl .v{color:var(--amber)}
+  .src{font-size:11px;color:var(--muted);line-height:1.5;margin-top:14px}
+  .src a{color:var(--muted)}
+
+  /* comparison */
+  .cmp{border:1px solid var(--rule-soft);background:var(--rule-soft);display:grid;grid-template-columns:1fr;gap:1px;margin-top:26px}
+  @media(min-width:720px){.cmp{grid-template-columns:1fr 1fr}}
+  .cmp .hd{background:var(--paper-deep);padding:11px 18px;font-size:8.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+  .cmp .hd.b{color:var(--olive)}
+  .cmp .c{background:var(--card);padding:15px 18px;font-size:13.4px;line-height:1.55;color:var(--muted)}
+  .cmp .c.b{background:var(--warm);color:var(--ink)}
+  .cmp .c.b b{color:var(--olive);font-weight:500}
+  @media(max-width:719px){
+    .cmp .hd{display:none}
+    .cmp .c::before{content:"Today — ";color:var(--amber);font-size:11px;letter-spacing:.06em}
+    .cmp .c.b::before{content:"Alaya — ";color:var(--olive)}
+  }
+
+  /* dimension read */
+  .read{border:1px solid var(--rule);background:var(--card);padding:26px 26px;margin-top:28px}
+  .read .old{font-size:14px;color:var(--muted);padding-bottom:16px;margin-bottom:18px;border-bottom:1px solid var(--rule-soft);line-height:1.55}
+  .read .old s{color:#8d8878}
+  .read .r{display:grid;grid-template-columns:1fr;gap:1px 18px;padding:8px 0;border-top:1px solid var(--rule-soft);font-size:13.6px;line-height:1.5}
+  @media(min-width:620px){.read .r{grid-template-columns:128px 1fr}}
+  .read .r:first-of-type{border-top:0}
+  .read .r b{font-family:var(--display);font-size:18px;font-weight:400;letter-spacing:-.012em;color:var(--ink)}
+  .read .r span{color:var(--muted)}
+  .read .acct{font-size:13.6px;line-height:1.6;color:var(--ink);padding-bottom:16px;margin-bottom:4px;border-bottom:1px solid var(--rule-soft)}
+  .read .acct b{color:var(--olive);font-weight:500}
+  .read .none{margin-top:18px;padding-top:15px;border-top:1px solid var(--rule-soft);font-size:13.2px;color:var(--muted);line-height:1.6}
+  .read .none b{color:var(--amber);font-weight:500}
+  .read .ax{font-size:8.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--amber);margin:18px 0 9px;padding-top:14px;border-top:1px solid var(--rule-soft)}
+  .read .ax:first-of-type{margin-top:0;padding-top:0;border-top:0}
+  .read .tail{margin-top:18px;padding-top:15px;border-top:1px solid var(--rule-soft);font-size:13.4px;color:var(--muted);line-height:1.6}
+  .read .tail b{color:var(--olive);font-weight:500}
+
+  /* three audiences */
+  .who{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:26px}
+  @media(min-width:800px){.who{grid-template-columns:repeat(3,1fr)}}
+  .wc{background:var(--card);padding:22px 21px}
+  .wc .n{font-size:8.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--sage);margin-bottom:11px}
+  .wc p{font-size:13.3px;line-height:1.58;margin:0;max-width:none}
+  .wc.mid{background:var(--warm)}
+  .wc.mid .n{color:var(--amber)}
+
+  /* engine */
+  .eng{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:26px 0 34px}
+  @media(min-width:760px){.eng{grid-template-columns:1fr 1fr}}
+  .ec{background:var(--card);padding:24px 23px}
+  .ec .n{font-size:8.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+  .ec h3{margin-bottom:10px}
+  .ec p{font-size:13.6px;line-height:1.6;margin:0 0 12px;max-width:none}
+  .ec p:last-child{margin-bottom:0}
+  .ec p b{color:var(--olive);font-weight:500}
+
+  /* services */
+  .svc{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:26px}
+  @media(min-width:760px){.svc{grid-template-columns:1fr 1fr}}
+  .sc{background:var(--card);padding:21px 21px}
+  .sc.free{background:var(--warm)}
+  .sc .w{font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--sage);margin-bottom:10px}
+  .sc.free .w{color:var(--amber)}
+  .sc p{font-size:13.2px;line-height:1.58;margin:0;max-width:none}
+
+  .close{padding-block:70px 90px}
+  .close h2{max-width:20ch}
+  .close .mail{display:inline-block;margin-top:10px;font-family:var(--display);font-size:clamp(24px,4vw,34px);letter-spacing:-.02em;color:var(--olive);text-decoration:none;border-bottom:1px solid var(--rule)}
+  .close .mail:hover{border-bottom-color:var(--olive)}
+
+  footer{border-top:1px solid var(--rule);padding-block:26px 40px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav class="nav">
+    <div class="mark">Alaya Crafts</div>
+    <div class="links">
+      <a href="#what">What it is</a>
+      <a href="#different">Different</a>
+      <a href="#now">Why now</a>
+      <a href="#services">Services</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <p class="eb">Capability intelligence</p>
+    <h1>Capability, read from the work itself.</h1>
+    <p>Capability is the hardest thing in any organization to see, and the easiest thing to claim. Alaya reads it from accounts of work that was actually done — in a person and in an organization — <b>so that it can be seen, and then cultivated.</b></p>
+  </div>
+
+  <!-- PROBLEM -->
+  <section id="what">
+    <p class="eb">The problem nobody is solving</p>
+    <h2>The hardest thing to see is what people can already do.</h2>
+    <p>Ask a capable professional what they are good at and you will get job titles and adjectives. Not because they are hiding anything &mdash; because the moment that would tell them, the one where they say <i>I had not thought of that as something I did</i>, only happens when somebody asks properly, and almost nobody ever does.</p>
+    <p>Ask an organization what it can do and you get an org chart and an inventory of declared skills. The same gap, one floor up, with a larger budget behind it.</p>
+
+    <div class="pull">
+      <p>Both sides are guessing about the same thing from opposite ends, and neither has an instrument.</p>
+    </div>
+
+    <p><b>The cost of that is quiet, which is why it survives.</b> Development budget aimed at capability that was already there. People hired from outside for work somebody inside had done twice. Projects not attempted because nobody knew the company could do them. None of it shows up as a loss anywhere, because the thing that would have made it visible has never existed.</p>
+    <p>None of this is a data problem. The evidence exists &mdash; it is in what people did last quarter and the quarter before. It has simply never been read.</p>
+  </section>
+
+  <!-- WHAT IT DOES -->
+  <section>
+    <p class="eb">What Alaya does</p>
+    <h2>Capability is cultivated, not counted.</h2>
+    <p>It is not a stock sitting in a warehouse waiting to be inventoried. It grows through craft &mdash; practice done deliberately, repeatedly, under real conditions. Naming it does nothing for it. Scoring it does less.</p>
+
+    <div class="pull">
+      <p>But cultivation needs a direction, and direction needs sight. You cannot grow what you cannot see, and you cannot see it in a list of claims.</p>
+    </div>
+
+    <p>So Alaya reads accounts of work that was actually done, <b>on two axes at once</b>.</p>
+    <div class="ax2">
+      <div class="axc">
+        <div class="t">Where &mdash; seven practices</div>
+        <h3>What the act changed</h3>
+        <div class="row"><b>Inquiry</b><span>What is known.</span></div>
+        <div class="row"><b>Direction</b><span>What is settled.</span></div>
+        <div class="row"><b>Creation</b><span>What exists.</span></div>
+        <div class="row"><b>Transition</b><span>An arrangement.</span></div>
+        <div class="row"><b>Assurance</b><span>What is accepted.</span></div>
+        <div class="row"><b>Stewardship</b><span>A person's capability.</span></div>
+        <div class="row odd"><b>Operation</b><span>Nothing &mdash; it holds a state against pressure.</span></div>
+      </div>
+      <div class="axc">
+        <div class="t">How &mdash; five dimensions</div>
+        <h3>The way it showed</h3>
+        <div class="row"><b>Reasoning</b><span>What they worked out that did not follow from what was in front of them.</span></div>
+        <div class="row"><b>Perception</b><span>What they noticed that was there for anyone and attended to by no one.</span></div>
+        <div class="row"><b>Relational</b><span>How they got the agreement, decision or effort of someone they could not direct.</span></div>
+        <div class="row"><b>Steadying</b><span>How they kept another person able to carry on.</span></div>
+        <div class="row"><b>Execution</b><span>What they actually pulled off, where it could have failed.</span></div>
+      </div>
+    </div>
+
+    <p>Practices are not job titles &mdash; a practice is classified by what the act changed. One piece of work usually belongs to several at once, and is allowed to. Dimensions are the same everywhere; what changes with the craft is the practice they show up in.</p>
+
+    <div class="pull">
+      <p>Capability is what sits at the intersection. Neither axis means anything on its own, and a rating means less than either.</p>
+    </div>
+
+    <p><b>That intersection is what makes it usable.</b> &ldquo;Advanced&rdquo; gives nobody anything to do. Knowing that someone's strength shows up in the reasoning and relational aspects of work that changes what is settled &mdash; and thins out where the work is about holding something steady &mdash; tells a person where to push next and tells an organization what to develop, where to deploy, and where it is exposed.</p>
+    <p>And every reading stays anchored to the exact sentence in the account that supports it. No sentence, no reading.</p>
+  </section>
+
+  <!-- DIFFERENT -->
+  <section id="different">
+    <p class="eb">The gap, measured</p>
+    <h2>The problem is documented. The market is aimed somewhere else.</h2>
+    <p>None of what follows is our research. It is what the industry reports about itself &mdash; and read together it describes an organization that cannot see what it already has, and a person whose capability goes unread inside it.</p>
+
+    <div class="stats">
+      <div class="sx hl">
+        <div class="v">412<em>%</em></div>
+        <p><b>more applications per recruiter</b> between 2022 and 2025, while recruiters per organization fell <b>56%</b>. Time-to-fill went <b>up 37%</b> anyway &mdash; five times the volume, half the people, and slower.</p>
+      </div>
+      <div class="sx">
+        <div class="v">38<em>%</em></div>
+        <p>of organizations across 74 countries maintain <b>a single enterprise-wide skills library</b>. The other 62% cannot answer what they have in one place.</p>
+      </div>
+      <div class="sx">
+        <div class="v">11<em>%</em></div>
+        <p>of HR leaders take <b>a long-term view of workforce planning</b>. Capability is a long-horizon asset being managed on a short horizon.</p>
+      </div>
+      <div class="sx hl">
+        <div class="v">66<em>/</em>7</div>
+        <p><b>66% of C-suite leaders</b> say their traditional functions must fundamentally change to stay competitive. <b>7%</b> report meaningful progress. Across 9,000+ leaders in 89 countries.</p>
+      </div>
+      <div class="sx">
+        <div class="v">24<em>%</em></div>
+        <p>of employees report <b>no training at all</b>. Cultivation is not being done badly; in a quarter of cases it is not being done.</p>
+      </div>
+      <div class="sx">
+        <div class="v">26<em>%</em></div>
+        <p>of applicants <b>trust that AI will evaluate them fairly</b>, while 52% believe it is already screening them. The instrument is losing the room.</p>
+      </div>
+    </div>
+    <p class="src">Sources: <a href="https://www.greenhouse.com/recruiting-benchmarks">Greenhouse, The Hire Standard: Hiring Benchmarks 2026</a> &middot; Mercer, Skills Snapshot Survey 2025/26 (74 countries) &middot; <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/hr-monitor">McKinsey, HR Monitor 2026</a> &middot; <a href="https://action.deloitte.com/insight/5005/2026-talent-acquisition-technology-trends-the-new-imperative">Deloitte, 2026 Human Capital &amp; TA Technology Trends</a> &middot; <a href="https://www.gartner.com/en/newsroom/press-releases/2025-07-31-gartner-survey-shows-just-26-percent-of-job-applicants-trust-ai-will-fairly-evaluate-them">Gartner applicant trust survey</a> (n=2,918).</p>
+
+    
+
+    <h2 style="font-size:clamp(24px,3.4vw,32px);margin-top:48px">The difference is not speed. It is where the instrument points.</h2>
+    <p>Almost all the money and engineering of the last few years went to the front door &mdash; matching, screening, sorting, scheduling. That is a real problem and it is being worked on hard. It is also not the one the numbers above describe.</p>
+    <p>What an organization actually buys to see <i>the people it already has</i> is far older and far thinner: a skills inventory filled in by self-assessment, a competency matrix, a manager's recollection at a talent review. That is the shelf Alaya sits on.</p>
+
+    <div class="cmp">
+      <div class="hd">What organizations buy today</div>
+      <div class="hd b">What Alaya does</div>
+
+      <div class="c">A skills inventory, filled in by self-assessment and manager tagging.</div>
+      <div class="c b">Reads <b>an account of one bounded piece of work that was actually done</b>.</div>
+
+      <div class="c">A rating. Advanced, Level 4, seven out of ten.</div>
+      <div class="c b">Evidence, <b>with the sentence attached</b>. There is no score &mdash; no field exists to put one in.</div>
+
+      <div class="c">Says someone is a strong communicator.</div>
+      <div class="c b">Shows <b>four times they moved someone who started out against them</b>, and what each of those people wanted instead.</div>
+
+      <div class="c">A framework the company owns, which the person is rarely shown.</div>
+      <div class="c b"><b>A record the person builds, keeps, and takes with them.</b></div>
+
+      <div class="c">A complete-looking grid, where a blank cell means nothing in particular.</div>
+      <div class="c b">Separates <b>evidenced</b>, <b>known absent</b>, and <b>nobody has looked</b>. Most of an honest profile is the third.</div>
+
+      <div class="c">Tells you who is ready for the next role.</div>
+      <div class="c b">Refuses to. It shows the ground; the decision stays with the people accountable for it.</div>
+    </div>
+
+    <p style="margin-top:26px"><b>The refusals are the product.</b> No scores, no rankings, no personality words, no recommendation about a human being. Each one costs something obvious and buys something less obvious: a system that cannot be used against the people feeding it is a system people will tell the truth to. Everything downstream depends on that.</p>
+  </section>
+
+  <!-- WHY NOW -->
+  <section id="now">
+    <p class="eb">Why there is a market</p>
+    <h2>The flood is the reason, not the obstacle.</h2>
+    <p>Hundreds of funded companies say they are fixing exactly this problem, for organizations and professionals both &mdash; automating the writing of r&eacute;sum&eacute;s on one side, automating the parsing of them on the other, and matching skills matrices to job descriptions in between.</p>
+    <p>What almost none of them touch is <b>the thing being written and parsed</b>. AI is being applied, very fast and very well, to a faulty process and to three unusually thin representations: <b>the r&eacute;sum&eacute;, the job description, and the skills matrix</b>. Not one of those was ever a decent description of what a person can do. Automating them in both directions does not make them one &mdash; it makes the same thin thing arrive sooner, in greater quantity, from both sides at once.</p>
+
+    <p><b>Applying intelligence to a thin representation returns a thin answer faster.</b> The representation was the problem.</p>
+
+    <p><b>When a signal becomes free to produce, it stops being a signal.</b> The only thing that recovers is something more expensive to fake. Constructing a whole situation &mdash; what it was like before, who objected, what it cost &mdash; is not something anyone does by accident.</p>
+    <p><b>And the inward problem is larger than the hiring one and much less served.</b> Organizations are building internal skills inventories at a serious rate, and the research behind that trend keeps reporting the same thing: the visibility gap is not closing. Cataloguing declared skills faster does not tell a company who can actually do the work. It is the r&eacute;sum&eacute; problem again, indoors, with a bigger budget behind it.</p>
+    <p>Meanwhile the question <i>do we already have someone who can do this</i> has become expensive to get wrong. Hiring externally for capability that already exists inside is a cost nobody can see, because the thing that would make it visible has never existed.</p>
+    </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <p class="eb">The engine</p>
+    <h2>CIE &mdash; the Capability Intelligence Engine.</h2>
+    <p>Everything below is a way of putting the same machine in the hands of an organization or a professional. It has two parts, and the line between them is the whole design.</p>
+
+    <div class="eng">
+      <div class="ec">
+        <div class="n">One &middot; the conversation</div>
+        <h3>An AI instance, on a short leash</h3>
+        <p>It asks about work that was actually done &mdash; a situation, what the person did, how it ended &mdash; and chases the specifics people skip past without noticing: what it was like before, how many, what made it hard, who had to agree.</p>
+        <p><b>Its scope is deliberately bounded.</b> It cannot ask anyone to rate themselves, and it cannot ask anyone to agree with an interpretation. It gathers. It does not judge.</p>
+      </div>
+      <div class="ec">
+        <div class="n">Two &middot; the reading</div>
+        <h3>A backend that recognises a landscape</h3>
+        <p>What comes out of the conversation is read against a capability landscape Alaya built: <b>practices</b>, which describe where capability is exercised, and <b>dimensions</b>, which describe how it shows when it is.</p>
+        <p>Every reading is anchored to a quoted sentence from the account, or it returns nothing. Nothing is inferred about a person that cannot be pointed at.</p>
+      </div>
+    </div>
+
+    <p class="eb" style="margin-top:0">Services</p>
+    <h2 style="font-size:clamp(24px,3.4vw,32px)">What we do, and who buys it.</h2>
+    <p>Different buyers, different budgets. One of them needs no software at all.</p>
+
+    <div class="svc">
+      <div class="sc free">
+        <h3>CIE Professional</h3>
+        <div class="w">Free · the foundation</div>
+        <p>A person builds their own capability record from accounts of their work, and keeps it. Not sold, not monetised, not rented to employers. The record belongs to whoever built it.</p>
+      </div>
+      <div class="sc">
+        <h3>Capability advisory</h3>
+        <div class="w">Organizations</div>
+        <p>Designing an organization's own capability model — what it must be able to do, how evidence is governed, what has to stay theirs and what can live on a platform. From a short diagnostic to a fractional architect arrangement.</p>
+      </div>
+      <div class="sc">
+        <h3>CIE Organizations</h3>
+        <div class="w">Companies of 150 to 500</div>
+        <p>Evidenced capability coverage against the targets a company sets for itself. Not a score for anyone. A map of where the evidence is, where it is missing, and where nobody has looked yet.</p>
+      </div>
+      <div class="sc">
+        <h3>Institutional programmes</h3>
+        <div class="w">Professional bodies, universities, associations</div>
+        <p>One agreement covering every member. An evidenced capability record offered as a membership benefit, funded from dues rather than from the individual.</p>
+      </div>
+      <div class="sc">
+        <h3>Firm &amp; practice licences</h3>
+        <div class="w">Search firms, coaches, small practices</div>
+        <p>A private, branded instance used with a firm's own candidates or a coach's own clients. Candidates keep their record; the firm gets a consented view, never ownership of the data.</p>
+      </div>
+      <div class="sc">
+        <h3>Career transition</h3>
+        <div class="w">Employers and outplacement providers</div>
+        <p>For people leaving a company in a restructure. They go with a record of what they actually did, rather than a reformatted CV and a fortnight of workshops.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <div class="close">
+    <p class="eb">Where this is</p>
+    <h2>Early, on purpose, and not pretending otherwise.</h2>
+    <p>The method is built and written down. Parts of the platform are finished and parts are weeks away. We would rather say that than have someone find it out later — the whole proposition rests on not overclaiming, and a company that overclaims about itself has already lost the argument.</p>
+    
+  </div>
+
+  <footer>
+    <span>Alaya Crafts</span>
+    <span>Curiosity · Observation · Learning · Building</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
