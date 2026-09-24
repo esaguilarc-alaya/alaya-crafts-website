@@ -22,4 +22,5 @@ for (const page of [homePage, ciePage, organizationsPage, ideasPage, ideaArticle
 }
 
 await cp(join(root, "src", "assets"), join(output, "assets"), { recursive: true });
+await cp(join(root, "cie"), join(output, "cie"), { recursive: true });
 console.log(`Built ${output}${basePath ? ` for base path ${basePath}` : ""}`);
