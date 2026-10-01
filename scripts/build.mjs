@@ -6,6 +6,7 @@ import { ciePage } from "../src/pages/cie.mjs";
 import { organizationsPage } from "../src/pages/organizations.mjs";
 import { ideasPage } from "../src/pages/ideas.mjs";
 import { ideaArticlePage } from "../src/pages/idea-article.mjs";
+import { ideaTechnologyExtendsItPage } from "../src/pages/idea-technology-extends-it.mjs";
 import { contactPage } from "../src/pages/contact.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -15,7 +16,7 @@ const basePath = process.env.BASE_PATH ?? "";
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 
-for (const page of [homePage, ciePage, organizationsPage, ideasPage, ideaArticlePage, contactPage]) {
+for (const page of [homePage, ciePage, organizationsPage, ideasPage, ideaArticlePage, ideaTechnologyExtendsItPage, contactPage]) {
   const directory = page.outputPath === "/" ? output : join(output, page.outputPath);
   await mkdir(directory, { recursive: true });
   await writeFile(join(directory, "index.html"), page.render(basePath));
