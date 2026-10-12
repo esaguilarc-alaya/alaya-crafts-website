@@ -95,13 +95,12 @@ test("Section 05 selects the approved desktop artwork at 1440px without fetching
   }
 });
 
-test("Section 05 and Section 07 visuals stay legible and non-overflowing at 390px, selecting the mobile composition", async ({ page }) => {
+test("the living-field visual stays legible and non-overflowing at 390px, selecting the mobile composition", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   const requested = [];
   page.on("request", (req) => requested.push(req.url()));
   await page.goto("/");
   const field = page.locator(".landscape");
-  const mountain = page.locator(".product-mountain");
   const fieldImage = field.locator("img.field-svg");
   await field.scrollIntoViewIfNeeded();
   await expect(fieldImage).toBeVisible();
@@ -124,11 +123,6 @@ test("Section 05 and Section 07 visuals stay legible and non-overflowing at 390p
     expect(labelBox.x + labelBox.width).toBeLessThanOrEqual(fieldBox.x + fieldBox.width + 1);
     expect(labelBox.y + labelBox.height).toBeLessThanOrEqual(fieldBox.y + fieldBox.height + 1);
   }
-  await mountain.scrollIntoViewIfNeeded();
-  await expect(mountain.locator("img.mountain-scene")).toBeVisible();
-  const mountainBox = await mountain.boundingBox();
-  expect(mountainBox.x).toBeGreaterThanOrEqual(0);
-  expect(mountainBox.x + mountainBox.width).toBeLessThanOrEqual(390);
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
 });
 
@@ -142,61 +136,60 @@ test("Section 05 artwork source no longer carries obsolete Technology/Intelligen
   }
 });
 
-test("Section 06 explains the connecting activity before naming the engine, and never as a generic intelligence engine", async ({ page }) => {
+test("homepage is the Alaya Idea page: one h1, the approved section order, and no leftover numbering before the closing sections", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/");
-  const forms = page.locator(".section.forms");
-  await expect(forms.locator(".eyebrow")).toHaveText("06 — Where the idea is taking form");
-  await expect(forms.locator(".cie-definition h2")).toHaveText("Understanding the landscape as a whole.");
-  const paragraphs = forms.locator(".cie-definition p");
-  await expect(paragraphs).toHaveCount(2);
-  const first = "Through continual reflection across the capability landscape, experiences, evidence, knowledge, contributions, objectives and relationships are connected to form a holistic understanding of capability. Alaya calls this understanding Capability Intelligence.";
-  const second = "The Capability Intelligence Engine (CIE) is the technology Alaya is building to make that understanding usable and allow it to evolve with the landscape.";
-  await expect(paragraphs.nth(0)).toHaveText(first);
-  await expect(paragraphs.nth(1)).toHaveText(second);
-  // The first paragraph explains the connecting activity before any engine name is used.
-  expect(first).not.toContain("Capability Intelligence Engine");
-  expect(first).not.toContain("CIE");
-  // The second paragraph opens with the proper name, not a generic category.
-  expect(second.startsWith("The Capability Intelligence Engine (CIE)")).toBe(true);
-  const combined = `${first} ${second}`.toLowerCase();
-  expect(combined).toContain("capability intelligence engine");
-  expect(combined).not.toMatch(/\b(a|an|the)\s+intelligence engine\b/); // no generic "an/the intelligence engine" phrasing
-  // The maturity scale beneath the definition is unchanged.
-  await expect(forms.locator(".scale-title")).toHaveText("One landscape. Different scales and ways of understanding it.");
-  await expect(forms.locator(".present h3")).toHaveText("CIE Professional");
-  await expect(forms.locator(".present p").first()).toHaveText("Living expression today");
-  await expect(forms.locator(".present p").nth(1)).toHaveText("A place for a person to begin understanding the capability their work has created.");
-  const futureHeadings = forms.locator(".future h3");
-  await expect(futureHeadings).toHaveText(["Teams", "Organizations", "Collective Intelligence"]);
+  await expect(page.locator("h1")).toHaveCount(1);
+  await expect(page.locator("h1")).toHaveText("Capability, read from the work itself.");
+  await expect(page.locator(".idea-body h2")).toHaveText([
+    "The hardest thing to see is what people can already do.",
+    "Capability is cultivated, not counted.",
+    "How Alaya sees capability.",
+    "The problem is documented. The market is aimed somewhere else.",
+    "The difference is not speed. It is where the instrument points.",
+    "The flood is the reason, not the obstacle.",
+    "CIE — the Capability Intelligence Engine.",
+  ]);
+  // The engine is the last idea section; the closing sections follow it unnumbered.
+  await expect(page.locator("main > .idea-body + .section.epilogue + .section.paths")).toHaveCount(1);
+  await expect(page.locator(".epilogue .eyebrow")).toHaveText("Epilogue");
+  await expect(page.locator(".paths .eyebrow")).toHaveText("Open paths");
+  await expect(page.locator("main")).not.toContainText("Everything starts with curiosity");
 });
 
-test("Section 07 presents the approved horizon artwork, proportionally cropped, without fabricated product UI", async ({ page }) => {
+test("the living-field graphic sits between the cultivation quote and the practices and dimensions heading", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/");
-  const mountainContainer = page.locator(".product-mountain");
-  const mountain = mountainContainer.locator("img.mountain-scene");
-  await expect(mountain).toHaveCount(1);
-  await expect(mountain).toHaveAttribute("aria-hidden", "true");
-  await expect(mountain).toHaveAttribute("src", /alaya-07-horizon\.svg$/);
-  // No legacy inline ridge/detail hooks remain from the hand-authored SVG this replaces.
-  await expect(page.locator(".mountain-ridge-far, .mountain-ridge-mid, .mountain-ridge-near, .mountain-detail, .mountain-glow")).toHaveCount(0);
-  // The asset's own intrinsic 600x250 (2.4:1) size is preserved, so the container's
-  // differently-proportioned box relies on the file's embedded xMidYMid slice cropping
-  // rather than CSS stretching it.
-  const naturalSize = await mountain.evaluate((el) => ({ w: el.naturalWidth, h: el.naturalHeight }));
-  expect(naturalSize).toEqual({ w: 600, h: 250 });
-  const objectFit = await mountain.evaluate((el) => getComputedStyle(el).objectFit);
-  expect(objectFit).toBe("fill"); // default: no CSS-level fit override competes with the file's own preserveAspectRatio
-  const containerBox = await mountainContainer.boundingBox();
-  const mountainBox = await mountain.boundingBox();
-  expect(Math.abs(mountainBox.width - containerBox.width)).toBeLessThanOrEqual(2);
-  expect(Math.abs(mountainBox.height - containerBox.height)).toBeLessThanOrEqual(2);
-  // Exact approved copy is unchanged and not obscured by the graphic.
-  await expect(page.locator(".product-glimpse p").first()).toHaveText("Your understanding");
-  await expect(page.locator(".product-glimpse blockquote")).toHaveText("A recurring theme is beginning to emerge from the work you’ve brought into view.");
-  // No fabricated product interface: no controls, metrics, or progress affordances.
-  await expect(page.locator(".product-glimpse button, .product-glimpse input, .product-glimpse progress, .product-glimpse meter, .product-glimpse [role=\"progressbar\"]")).toHaveCount(0);
+  const order = await page.evaluate(() => {
+    const y = (sel) => document.querySelector(sel)?.getBoundingClientRect().top ?? -1;
+    const quote = [...document.querySelectorAll(".pull p")].find((p) => p.textContent.includes("visibility to cultivate"));
+    return { quote: quote.getBoundingClientRect().top, field: y(".landscape"), heading: y("h2.sub") };
+  });
+  expect(order.quote).toBeLessThan(order.field);
+  expect(order.field).toBeLessThan(order.heading);
+  await expect(page.locator("h2.sub")).toHaveText("How Alaya sees capability.");
+  await expect(page.locator(".axc").first().locator(".row")).toHaveCount(7);
+});
+
+test("approved copy corrections are present and retired wording is gone", async ({ page }) => {
+  await page.goto("/");
+  const text = await page.locator("main").innerText();
+  for (const gone of ["74 countries", "known absent", "nobody has looked", "Refuses to", "The refusals are the product", "visibility gap is not closing", "Hundreds of funded", "Everything below is a way", "no training at all"]) {
+    expect(text).not.toContain(gone);
+  }
+  for (const present of ["72 countries", "A statement someone is a strong communicator.", "75% of executives", "43% of individual contributors agree.", "CIE is the engine that allows this to be possible at scale", "Many funded companies claim to help fix this problem"]) {
+    expect(text).toContain(present);
+  }
+  await expect(page.locator(".stats .sx .v").nth(4)).toHaveText("75/43");
+  await expect(page.locator(".src a", { hasText: "State of Learning and Development" })).toHaveAttribute("href", /perceptyx\.com\/state-of-learning-and-development-2026/);
+});
+
+test("homepage has no horizontal overflow at 390, 1024 and 1440px", async ({ page }) => {
+  for (const width of [390, 1024, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/");
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width);
+  }
 });
 
 test("every generated route emits exactly one favicon link that resolves under the current base path", async ({ page, request }) => {
