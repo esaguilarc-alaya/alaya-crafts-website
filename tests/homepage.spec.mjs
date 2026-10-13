@@ -177,7 +177,7 @@ test("approved copy corrections are present and retired wording is gone", async 
   for (const gone of ["74 countries", "known absent", "nobody has looked", "Refuses to", "The refusals are the product", "visibility gap is not closing", "Hundreds of funded", "Everything below is a way", "no training at all"]) {
     expect(text).not.toContain(gone);
   }
-  for (const present of ["72 countries", "A statement someone is a strong communicator.", "75% of executives", "43% of individual contributors agree.", "CIE is the engine that allows this to be possible at scale", "Many funded companies claim to help fix this problem"]) {
+  for (const present of ["72 countries", "A statement someone is a strong communicator.", "75% of executives", "Only 43% of individual contributors agree.", "almost no one ever does", "A record built with the professionals, which they keep and maintain.", "recognizes the capability", "CIE is the engine that allows this to be possible at scale", "Many funded companies claim to help fix this problem"]) {
     expect(text).toContain(present);
   }
   await expect(page.locator(".stats .sx .v").nth(4)).toHaveText("75/43");

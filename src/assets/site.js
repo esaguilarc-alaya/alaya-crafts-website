@@ -6,7 +6,7 @@ const nav = document.querySelector("#site-nav");
 function setMenu(open) {
   header?.classList.toggle("nav-open", open);
   toggle?.setAttribute("aria-expanded", String(open));
-  if (label) label.textContent = open ? "Close" : "Explore";
+  if (label) label.textContent = open ? (toggle?.dataset.labelClose ?? "Close") : (toggle?.dataset.labelOpen ?? "Explore");
 }
 
 toggle?.addEventListener("click", () => setMenu(toggle.getAttribute("aria-expanded") !== "true"));

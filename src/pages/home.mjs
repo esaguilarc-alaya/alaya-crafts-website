@@ -13,7 +13,7 @@ const body = (basePath) => `
   <section id="what">
     <p class="eb">The problem nobody is solving</p>
     <h2>The hardest thing to see is what people can already do.</h2>
-    <p>Ask a capable professional what they are good at and you will get job titles and adjectives. Not because they are hiding anything &mdash; because the moment that would tell them, the one where they say <i>I had not thought of that as something I did</i>, only happens when somebody asks properly, and almost nobody ever does.</p>
+    <p>Ask a capable professional what they are good at and you will get job titles and adjectives. Not because they are hiding anything &mdash; because the moment that would tell them, the one where they say <i>I had not thought of that as something I did</i>, only happens when somebody asks properly and with genuine interest, and almost no one ever does.</p>
     <p>Ask an organization what it can do and you get an org chart and an inventory of declared departments and skills. The same gap, one floor up, with a larger budget behind it.</p>
 
     <div class="pull">
@@ -96,7 +96,7 @@ const body = (basePath) => `
       </div>
       <div class="sx">
         <div class="v"><span class="nu">75</span><em>/</em><span class="de">43</span></div>
-        <p><b>75% of executives</b> say their organization has a clear learning strategy for the next one to two years. <b>43%</b> of individual contributors agree.</p>
+        <p><b>75% of executives</b> say their organization has a clear learning strategy for the next one to two years. Only <b>43%</b> of individual contributors agree.</p>
       </div>
       <div class="sx">
         <div class="v">26<em>%</em></div>
@@ -125,7 +125,7 @@ const body = (basePath) => `
       <div class="c b">Shows <b>four times they moved someone who started out against them</b>, and what each of those people wanted instead.</div>
 
       <div class="c">A framework the company owns, which the person is rarely shown.</div>
-      <div class="c b"><b>A record the professionals build, keep and maintain.</b></div>
+      <div class="c b"><b>A record built with the professionals, which they keep and maintain.</b></div>
 
       <div class="c">A complete-looking grid, where a blank cell means nothing in particular.</div>
       <div class="c b">Separates <b>established</b>, <b>emerging</b>, and <b>unknown</b>. Most of an honest profile is the third.</div>
@@ -144,7 +144,7 @@ const body = (basePath) => `
     <p><b>Applying intelligence to a thin representation returns a thin answer faster.</b> The representation was the problem.</p>
 
     <p><b>When a signal becomes free to produce, it stops being a signal.</b> The only thing that recovers is something more expensive to fake. Constructing a whole situation &mdash; what it was like before, who objected, what it cost &mdash; is not something anyone does by accident.</p>
-    <p><b>And the inward problem is larger than the hiring one and much less served.</b> Organizations are building internal skills inventories at a serious rate, and the research behind that trend reports more libraries and more mapped jobs. It does not show the visibility gap closing: mapping to individuals still rests mostly on job roles (73%) and manager-validated self-assessment (71%), and 53% of organizations don&rsquo;t manage proficiency at all. Cataloguing declared skills faster does not tell a company who can actually do the work. It is the r&eacute;sum&eacute; problem again, indoors, with a bigger budget behind it.</p>
+    <p><b>And the inward problem is larger than the hiring one and much less served.</b> Organizations are building internal skills inventories at a serious rate, and the research behind that trend reports more libraries and more mapped jobs. It does not show the visibility gap closing: mapping to individuals still rests mostly on job roles (73%) and manager-validated self-assessment (71%), and 53% of organizations don&rsquo;t manage proficiency at all. Cataloging declared skills faster does not tell a company who can actually do the work. It is the r&eacute;sum&eacute; problem again, indoors, with a bigger budget behind it.</p>
     <p>Meanwhile the question <i>do we already have someone who can do this</i> has become expensive to get wrong. Hiring externally for capability that already exists inside is a cost nobody can see, because the thing that would make it visible has never existed.</p>
     </section>
 
@@ -152,7 +152,7 @@ const body = (basePath) => `
   <section id="services">
     <p class="eb">The engine</p>
     <h2>CIE &mdash; the Capability Intelligence Engine.</h2>
-    <p>CIE is the engine that allows this to be possible at scale, in the hands of an organization or a professional: it gathers accounts of work that was actually done, then recognises the capability in them. It has two parts, shown below, and the line between them is the whole design.</p>
+    <p>CIE is the engine that allows this to be possible at scale, in the hands of an organization or a professional: it gathers accounts of work that was actually done, then recognizes the capability in them. It has two parts, shown below, and the line between them is the whole design.</p>
 
     <div class="eng">
       <div class="ec">
@@ -163,7 +163,7 @@ const body = (basePath) => `
       </div>
       <div class="ec">
         <div class="n">Two &middot; the reading</div>
-        <h3>A backend that recognises a landscape</h3>
+        <h3>A backend that recognizes a landscape</h3>
         <p>What comes out of the conversation is read against a capability landscape Alaya built: <b>practices</b>, which describe where capability is exercised, and <b>dimensions</b>, which describe how it shows when it is.</p>
         <p>Every reading is anchored to a quoted sentence from the account, or it returns nothing. Nothing is inferred about a person that cannot be pointed at.</p>
         <p>The conversation only gathers and never asks anyone to agree. What comes out of the reading is shown to the person afterward, and only what they confirm joins their record.</p>
@@ -180,5 +180,5 @@ const body = (basePath) => `
 
 export const homePage = {
   outputPath: "/",
-  render: (basePath) => renderLayout({ title: "Alaya Crafts — Capability is the enduring asset", description: "Alaya Crafts cultivates lasting capability through crafts, knowledge, and technology.", activeRoute: "home", body: body(basePath), pageClass: "home-page", pageStyles: "/assets/home.css", basePath }),
+  render: (basePath) => renderLayout({ title: "Alaya Crafts — Capability is the enduring asset", description: "Alaya Crafts cultivates lasting capability through crafts, knowledge, and technology.", activeRoute: "home", body: body(basePath), pageClass: "home-page", pageStyles: "/assets/home.css", basePath, pagePath: "/" }),
 };

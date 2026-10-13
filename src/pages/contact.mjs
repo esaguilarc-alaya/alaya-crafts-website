@@ -9,5 +9,5 @@ const body = `
 
 export const contactPage = {
   outputPath: "contact",
-  render: (basePath) => renderLayout({ title: "Contact — Alaya Crafts", description: "Write to Alaya directly. Your message will be read and answered by a person.", activeRoute: "contact", body, pageClass: "contact-page", pageStyles: "/assets/contact.css", basePath }),
+  render: (basePath) => renderLayout({ title: "Contact — Alaya Crafts", description: "Write to Alaya directly. Your message will be read and answered by a person.", activeRoute: "contact", body, pageClass: "contact-page", pageStyles: "/assets/contact.css", basePath, pagePath: "/contact/" }),
 };

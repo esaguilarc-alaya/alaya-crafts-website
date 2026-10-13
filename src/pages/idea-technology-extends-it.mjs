@@ -8,7 +8,7 @@ const body = `
 <p>That's worth being precise about, because it's the exact same move underneath a different problem. A process that already gives weak signals about capability doesn't get fixed by making the weak signal faster to produce. It gets fixed by changing what the signal is actually made of. Most tools bolt automation onto the old process.</p>
 <p>CIE is built to be a different process, not a faster version of the same one — and the difference shows up specifically in what the technology is and isn't allowed to do.</p>
 <h2>A quick window into how that's actually built</h2>
-<p>CIE doesn't start from a document. It starts from a conversation — targeted questioning designed to surface capability that's real but has gone unrecorded, underused, or simply forgotten under the compression of a résumé. That's the raw material: not a form filled out once, but evidence gathered from the actual texture of someone's work.</p>
+<p>CIE doesn't build your profile from a document. It builds from a conversation — targeted questioning designed to surface capability that's real but has gone unrecorded, underused, or simply forgotten under the compression of a résumé. That's the raw material: not a form filled out once, but evidence gathered from the actual texture of someone's work.</p>
 <p>What happens to that evidence next is where the architecture does its real work, and it's stricter than it might sound. CIE's reasoning can propose a connection, a pattern, an interpretation of what the evidence might mean. It cannot quietly decide that proposal is true and file it away as a settled fact about you or your organization. Every insight the system produces stays a proposal until a person looks at it and confirms, corrects, or rejects it. Nothing about your capabilities becomes part of your record because a model produced it. It becomes part of your record because you recognized it as real.</p>
 <p>That's not a caveat bolted onto the architecture after the fact. It's the central design constraint everything else is built around — the same discipline of evidence before inference, applied to how the system is allowed to treat you.</p>
 <h2>Why that constraint is the whole point</h2>
@@ -24,5 +24,5 @@ const body = `
 
 export const ideaTechnologyExtendsItPage = {
   outputPath: "ideas/what-technology-extends-it-actually-means",
-  render: (basePath) => renderLayout({ title: 'What "technology extends it" actually means — Alaya Crafts Ideas', description: "An essay on technology that extends human capability by improving understanding rather than substituting polished answers for a person's judgment.", activeRoute: "ideas", body, pageClass: "ideas-page", pageStyles: "/assets/ideas.css", basePath }),
+  render: (basePath) => renderLayout({ title: 'What "technology extends it" actually means — Alaya Crafts Ideas', description: "An essay on technology that extends human capability by improving understanding rather than substituting polished answers for a person's judgment.", activeRoute: "ideas", body, pageClass: "ideas-page", pageStyles: "/assets/ideas.css", basePath, pagePath: "/ideas/what-technology-extends-it-actually-means/" }),
 };

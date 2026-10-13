@@ -13,5 +13,5 @@ const body = `
 
 export const ideasPage = {
   outputPath: "ideas",
-  render: (basePath) => renderLayout({ title: "Ideas — Alaya Crafts", description: "An evolving body of thought from Alaya Crafts, explored through essays, notes, and field work.", activeRoute: "ideas", body, pageClass: "ideas-page", pageStyles: "/assets/ideas.css", basePath }),
+  render: (basePath) => renderLayout({ title: "Ideas — Alaya Crafts", description: "An evolving body of thought from Alaya Crafts, explored through essays, notes, and field work.", activeRoute: "ideas", body, pageClass: "ideas-page", pageStyles: "/assets/ideas.css", basePath, pagePath: "/ideas/" }),
 };

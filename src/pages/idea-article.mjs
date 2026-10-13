@@ -25,5 +25,5 @@ const body = `
 
 export const ideaArticlePage = {
   outputPath: "ideas/the-rule-we-had-to-keep-re-learning-while-building-cie",
-  render: (basePath) => renderLayout({ title: "The rule we had to keep re-learning while building CIE — Alaya Crafts Ideas", description: "A field-work piece on holding the CIE engineering team's own work to the same evidence-before-inference standard the product holds for its users.", activeRoute: "ideas", body, pageClass: "ideas-page", pageStyles: "/assets/ideas.css", basePath }),
+  render: (basePath) => renderLayout({ title: "The rule we had to keep re-learning while building CIE — Alaya Crafts Ideas", description: "A field-work piece on holding the CIE engineering team's own work to the same evidence-before-inference standard the product holds for its users.", activeRoute: "ideas", body, pageClass: "ideas-page", pageStyles: "/assets/ideas.css", basePath, pagePath: "/ideas/the-rule-we-had-to-keep-re-learning-while-building-cie/" }),
 };
