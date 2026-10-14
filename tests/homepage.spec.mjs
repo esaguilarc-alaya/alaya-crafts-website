@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { expect, test } from "@playwright/test";
 
-const labels = ["The Alaya Idea", "CIE Professional", "For Organizations", "Ideas", "Contact"];
+const labels = ["The Alaya Idea", "How it works", "CIE Professional", "For Organizations", "Ideas", "Contact"];
 
 const assetsDir = fileURLToPath(new URL("../src/assets/", import.meta.url));
 const routePaths = ["/", "/cie-professional/", "/for-organizations/", "/ideas/", "/ideas/the-rule-we-had-to-keep-re-learning-while-building-cie/", "/contact/"];
@@ -153,7 +153,8 @@ test("homepage is the Alaya Idea page: one h1, the approved section order, and n
   // The engine is the last idea section; the closing sections follow it unnumbered.
   await expect(page.locator("main > .idea-body + .section.epilogue + .section.paths")).toHaveCount(1);
   await expect(page.locator(".epilogue .eyebrow")).toHaveText("Epilogue");
-  await expect(page.locator(".paths .eyebrow")).toHaveText("Open paths");
+  await expect(page.locator(".paths .eyebrow")).toHaveCount(0);
+  await expect(page.locator(".open-paths")).toHaveCount(0);
   await expect(page.locator("main")).not.toContainText("Everything starts with curiosity");
 });
 
@@ -180,7 +181,10 @@ test("approved copy corrections are present and retired wording is gone", async 
   for (const present of ["72 countries", "A statement someone is a strong communicator.", "75% of executives", "Only 43% of individual contributors agree.", "almost no one ever does", "A record built with the professionals, which they keep and maintain.", "recognizes the capability", "CIE is the engine that allows this to be possible at scale", "Many funded companies claim to help fix this problem"]) {
     expect(text).toContain(present);
   }
-  await expect(page.locator(".stats .sx .v").nth(4)).toHaveText("75/43");
+  await expect(page.locator(".stats .sx .v").nth(2)).toHaveText("75/43");
+  await expect(page.locator(".stats .sx")).toHaveCount(3);
+  await expect(page.locator(".hero-cta .btn")).toHaveText("Get started");
+  await expect(page.locator(".hero-cta .btn")).toHaveAttribute("href", /\/how-it-works\/$/);
   await expect(page.locator(".src a", { hasText: "State of Learning and Development" })).toHaveAttribute("href", /perceptyx\.com\/state-of-learning-and-development-2026/);
 });
 

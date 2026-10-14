@@ -4,10 +4,10 @@ import { dirname, join } from "node:path";
 import { expect, test } from "@playwright/test";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const esLabels = ["La idea de Alaya", "CIE Professional", "Para Organizaciones", "Ideas", "Contacto"];
+const esLabels = ["La idea de Alaya", "Cómo funciona", "CIE Professional", "Para Organizaciones", "Ideas", "Contacto"];
 const basePath = (process.env.BASE_PATH ?? "").trim().replace(/\/+$/, "");
 const unbase = (pathname) => (basePath && pathname.startsWith(basePath) ? pathname.slice(basePath.length) : pathname) || "/";
-const enLabels = ["The Alaya Idea", "CIE Professional", "For Organizations", "Ideas", "Contact"];
+const enLabels = ["The Alaya Idea", "How it works", "CIE Professional", "For Organizations", "Ideas", "Contact"];
 
 // [english path, spanish path, spanish h1]
 const pages = [
@@ -97,7 +97,9 @@ test("approved Spanish terminology is used and the retired terms are gone", asyn
     expect(text).not.toContain(gone);
   }
   await expect(page.locator(".eb").first()).toHaveText("Capability intelligence");
-  await expect(page.locator(".stats .sx .v").nth(4)).toHaveText("75/43");
+  await expect(page.locator(".stats .sx .v").nth(2)).toHaveText("75/43");
+  await expect(page.locator(".stats .sx")).toHaveCount(3);
+  await expect(page.locator(".hero-cta .btn")).toHaveText("Comenzar");
   await expect(page.locator("main")).not.toContainText("tú ");
 });
 
@@ -113,8 +115,8 @@ test("Spanish contact keeps the exact email address and single mailto link", asy
 
 test("Spanish pages link onward inside /es/ and carry hreflang alternates", async ({ page }) => {
   await page.goto("/es/");
-  const hrefs = await page.locator(".open-paths a, .contact-invitation a").evaluateAll((links) => links.map((a) => new URL(a.href).pathname));
-  expect(hrefs.length).toBe(4);
+  const hrefs = await page.locator(".hero-cta a, .contact-invitation a").evaluateAll((links) => links.map((a) => new URL(a.href).pathname));
+  expect(hrefs.length).toBe(2);
   for (const href of hrefs) expect(unbase(href)).toMatch(/^\/es\//);
   const base = (process.env.BASE_PATH ?? "").trim();
   if (!base) {

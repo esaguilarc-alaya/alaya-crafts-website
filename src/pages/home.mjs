@@ -7,6 +7,7 @@ const body = (basePath) => `
     <p class="eb">Capability intelligence</p>
     <h1>Capability, read from the work itself.</h1>
     <p>Capability is the hardest thing in any organization to see, and the easiest thing to claim. Alaya reads it from accounts of work that was actually done — in a person and in an organization — <b>so that it can be seen, cultivated and given a direction.</b></p>
+    <div class="hero-cta"><a class="btn" href="${hrefFor("/how-it-works/", basePath)}">Get started</a></div>
   </div>
 
   <!-- PROBLEM -->
@@ -87,23 +88,11 @@ const body = (basePath) => `
         <p>of organizations across <b>72 countries</b> maintain <b>a single enterprise-wide skills library</b>. The other 62% cannot answer what they have in one place.</p>
       </div>
       <div class="sx">
-        <div class="v">11<em>%</em></div>
-        <p>of <b>organizations</b> take <b>a long-term view of workforce planning</b>. Capability is a long-horizon asset being managed on a short horizon.</p>
-      </div>
-      <div class="sx hl">
-        <div class="v">66<em>/</em>7</div>
-        <p><b>66% of C-suite leaders</b> say their traditional functions must fundamentally change to stay competitive. <b>7%</b> report meaningful progress. Across 9,000+ leaders in 89 countries.</p>
-      </div>
-      <div class="sx">
         <div class="v"><span class="nu">75</span><em>/</em><span class="de">43</span></div>
         <p><b>75% of executives</b> say their organization has a clear learning strategy for the next one to two years. Only <b>43%</b> of individual contributors agree.</p>
       </div>
-      <div class="sx">
-        <div class="v">26<em>%</em></div>
-        <p>of applicants <b>trust that AI will evaluate them fairly</b>, while 52% believe it is already screening them. The instrument is losing the room.</p>
-      </div>
     </div>
-    <p class="src">Sources: <a href="https://www.greenhouse.com/recruiting-benchmarks">Greenhouse, The Hire Standard: Hiring Benchmarks 2026</a> &middot; <a href="https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/">Mercer, Skills Snapshot Survey 2025/26</a> (72 countries) &middot; <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/hr-monitor">McKinsey, HR Monitor 2026</a> &middot; <a href="https://action.deloitte.com/insight/5005/2026-talent-acquisition-technology-trends-the-new-imperative">Deloitte, 2026 Human Capital &amp; TA Technology Trends</a> &middot; <a href="https://go.perceptyx.com/state-of-learning-and-development-2026-web-report#executive-summary">&ldquo;The State of Learning and Development&rdquo; First Annual 2026</a> &middot; <a href="https://www.gartner.com/en/newsroom/press-releases/2025-07-31-gartner-survey-shows-just-26-percent-of-job-applicants-trust-ai-will-fairly-evaluate-them">Gartner applicant trust survey</a> (n=2,918).</p>
+    <p class="src">Sources: <a href="https://www.greenhouse.com/recruiting-benchmarks">Greenhouse, The Hire Standard: Hiring Benchmarks 2026</a> &middot; <a href="https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/">Mercer, Skills Snapshot Survey 2025/26</a> (72 countries) &middot; <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/hr-monitor">McKinsey, HR Monitor 2026</a> &middot; <a href="https://action.deloitte.com/insight/5005/2026-talent-acquisition-technology-trends-the-new-imperative">Deloitte, 2026 Human Capital &amp; TA Technology Trends</a> &middot; <a href="https://go.perceptyx.com/state-of-learning-and-development-2026-web-report#executive-summary">&ldquo;The State of Learning and Development&rdquo; First Annual 2026</a></p>
 
     
 
@@ -141,7 +130,6 @@ const body = (basePath) => `
     <p>Many funded companies claim to help fix this problem, for organizations and professionals both &mdash; automating the writing of r&eacute;sum&eacute;s on one side, automating the parsing of them on the other, and matching skills matrices to job descriptions in between.</p>
     <p>What almost none of them touch is <b>the thing being written and parsed</b>. AI is being applied, very fast and very well, to a faulty process and to three unusually thin representations: <b>the r&eacute;sum&eacute;, the job description, and the skills matrix</b>. Not one of those was ever a decent description of what a person can do. Automating them in both directions does not make them one &mdash; it makes the same thin thing arrive sooner, in greater quantity, from both sides at once.</p>
 
-    <p><b>Applying intelligence to a thin representation returns a thin answer faster.</b> The representation was the problem.</p>
 
     <p><b>When a signal becomes free to produce, it stops being a signal.</b> The only thing that recovers is something more expensive to fake. Constructing a whole situation &mdash; what it was like before, who objected, what it cost &mdash; is not something anyone does by accident.</p>
     <p><b>And the inward problem is larger than the hiring one and much less served.</b> Organizations are building internal skills inventories at a serious rate, and the research behind that trend reports more libraries and more mapped jobs. It does not show the visibility gap closing: mapping to individuals still rests mostly on job roles (73%) and manager-validated self-assessment (71%), and 53% of organizations don&rsquo;t manage proficiency at all. Cataloging declared skills faster does not tell a company who can actually do the work. It is the r&eacute;sum&eacute; problem again, indoors, with a bigger budget behind it.</p>
@@ -175,7 +163,7 @@ const body = (basePath) => `
 
 </div></div>
 <section class="section epilogue"><div class="section-inner"><p class="eyebrow">Epilogue</p><p class="craft-words">Curiosity. <span>Understanding.</span> Learning. <span>Contribution.</span> Reflection.</p><p>These are the crafts.</p><h2>Technology evolves. Crafts endure.</h2></div></section>
-<section class="section paths"><div class="section-inner"><p class="eyebrow">Open paths</p><div class="contact-invitation"><p>If something here connects with a question you’re exploring, start a conversation.</p><a href="./contact/">Write to Alaya</a></div><nav class="open-paths" aria-label="Continue exploring"><a href="./cie-professional/">Explore CIE Professional</a><a href="./for-organizations/">For Organizations</a><a href="./ideas/">Follow the Ideas</a></nav></div></section>
+<section class="section paths"><div class="section-inner"><div class="contact-invitation"><p>If something here connects with a question you’re exploring, start a conversation.</p><a href="./contact/">Write to Alaya</a></div></div></section>
 `;
 
 export const homePage = {

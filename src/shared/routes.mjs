@@ -3,6 +3,7 @@ export const defaultLanguage = "en";
 
 const routeDefinitions = [
   { id: "home", path: "/", label: { en: "The Alaya Idea", es: "La idea de Alaya" } },
+  { id: "how", path: "/how-it-works/", label: { en: "How it works", es: "Cómo funciona" } },
   { id: "cie", path: "/cie-professional/", label: { en: "CIE Professional", es: "CIE Professional" } },
   { id: "organizations", path: "/for-organizations/", label: { en: "For Organizations", es: "Para Organizaciones" } },
   { id: "ideas", path: "/ideas/", label: { en: "Ideas", es: "Ideas" } },

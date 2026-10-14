@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import { join, dirname } from "node:path";
 import { expect, test } from "@playwright/test";
 
-const labels = ["The Alaya Idea", "CIE Professional", "For Organizations", "Ideas", "Contact"];
+const labels = ["The Alaya Idea", "How it works", "CIE Professional", "For Organizations", "Ideas", "Contact"];
 const FIELD_WORK_SLUG = "the-rule-we-had-to-keep-re-learning-while-building-cie";
 const TECHNOLOGY_SLUG = "what-technology-extends-it-actually-means";
 const root = dirname(dirname(fileURLToPath(import.meta.url)));

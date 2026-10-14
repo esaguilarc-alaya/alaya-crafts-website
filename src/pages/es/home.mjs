@@ -7,6 +7,7 @@ const body = (basePath) => `
     <p class="eb">Capability intelligence</p>
     <h1>La capacidad, leída desde el trabajo mismo.</h1>
     <p>La capacidad es lo más difícil de ver para cualquier organización y sin embargo lo más fácil de reivindicar. Alaya lee la capacidad a partir de relatos profesionales vinculados a una contribución completada y verificable —en una persona y en una organización— <b>para poder visibilizarla, cultivarla y darle una dirección.</b></p>
+    <div class="hero-cta"><a class="btn" href="${hrefFor("/es/how-it-works/", basePath)}">Comenzar</a></div>
   </div>
 
   <!-- PROBLEM -->
@@ -87,23 +88,11 @@ const body = (basePath) => `
         <p>de las organizaciones en <b>72 países</b> mantienen <b>una única biblioteca de habilidades para toda la empresa</b>. El otro 62% no puede decir en un solo lugar lo que tiene.</p>
       </div>
       <div class="sx">
-        <div class="v">11<em>%</em></div>
-        <p>de las <b>organizaciones</b> adoptan <b>una visión de largo plazo de la planificación de la fuerza laboral</b>. La capacidad es un activo de largo horizonte que se gestiona con un horizonte corto.</p>
-      </div>
-      <div class="sx hl">
-        <div class="v">66<em>/</em>7</div>
-        <p><b>66% de los líderes de la alta dirección</b> dicen que sus funciones tradicionales deben cambiar de raíz para seguir siendo competitivas. <b>7%</b> reporta un avance significativo. Datos de más de 9000 líderes en 89 países.</p>
-      </div>
-      <div class="sx">
         <div class="v"><span class="nu">75</span><em>/</em><span class="de">43</span></div>
         <p><b>75% de los ejecutivos</b> dicen que su organización tiene una estrategia de aprendizaje clara para el próximo año o dos. Solo <b>43%</b> de los colaboradores individuales coinciden.</p>
       </div>
-      <div class="sx">
-        <div class="v">26<em>%</em></div>
-        <p>de los candidatos <b>confían en que la IA los evaluará de forma justa</b>, mientras que 52% cree que ya los está filtrando. El instrumento está perdiendo la confianza.</p>
-      </div>
     </div>
-    <p class="src">Fuentes: <a href="https://www.greenhouse.com/recruiting-benchmarks">Greenhouse, The Hire Standard: Hiring Benchmarks 2026</a> &middot; <a href="https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/">Mercer, Skills Snapshot Survey 2025/26</a> (72 países) &middot; <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/hr-monitor">McKinsey, HR Monitor 2026</a> &middot; <a href="https://action.deloitte.com/insight/5005/2026-talent-acquisition-technology-trends-the-new-imperative">Deloitte, 2026 Human Capital &amp; TA Technology Trends</a> &middot; <a href="https://go.perceptyx.com/state-of-learning-and-development-2026-web-report#executive-summary">&ldquo;The State of Learning and Development&rdquo; First Annual 2026</a> &middot; <a href="https://www.gartner.com/en/newsroom/press-releases/2025-07-31-gartner-survey-shows-just-26-percent-of-job-applicants-trust-ai-will-fairly-evaluate-them">Encuesta de Gartner sobre la confianza de los candidatos</a> (n = 2918).</p>
+    <p class="src">Fuentes: <a href="https://www.greenhouse.com/recruiting-benchmarks">Greenhouse, The Hire Standard: Hiring Benchmarks 2026</a> &middot; <a href="https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/">Mercer, Skills Snapshot Survey 2025/26</a> (72 países) &middot; <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/hr-monitor">McKinsey, HR Monitor 2026</a> &middot; <a href="https://action.deloitte.com/insight/5005/2026-talent-acquisition-technology-trends-the-new-imperative">Deloitte, 2026 Human Capital &amp; TA Technology Trends</a> &middot; <a href="https://go.perceptyx.com/state-of-learning-and-development-2026-web-report#executive-summary">&ldquo;The State of Learning and Development&rdquo; First Annual 2026</a></p>
 
     
 
@@ -141,7 +130,6 @@ const body = (basePath) => `
     <p>Muchas empresas afirman ayudar a resolver este problema, tanto para organizaciones como para profesionales: automatizan la redacción de currículums por un lado, su análisis por el otro, y en el medio emparejan matrices de habilidades con descripciones de puesto.</p>
     <p>Lo que casi ninguna toca son <b>los artefactos que se están escribiendo y analizando</b>. La IA se aplica, muy rápido y muy bien, a un proceso defectuoso y a tres representaciones inusualmente pobres: <b>el currículum, la descripción de puesto y la matriz de habilidades</b>. Ninguna de ellas fue nunca una descripción decente de lo que una persona puede hacer. Automatizarlas en ambas direcciones no las convierte en una: hace que el mismo resultado deficiente llegue antes, en mayor cantidad, desde ambos lados a la vez.</p>
 
-    <p><b>Aplicar inteligencia a una representación limitada devuelve una respuesta limitada, más rápido.</b> El problema era el artefacto usado para la representación.</p>
 
     <p><b>Cuando una señal se vuelve gratis de producir, deja de ser una señal.</b> Lo único que se recupera es algo más caro de falsificar. Construir una situación completa —cómo era antes, quién objetó, cuánto costó— no es algo que nadie haga por accidente.</p>
     <p><b>Y el problema hacia adentro es mayor que el de la contratación y está mucho menos atendido.</b> Las organizaciones están construyendo inventarios internos de habilidades a un ritmo considerable, y la investigación detrás de esa tendencia reporta más bibliotecas y más puestos mapeados. No muestra que la brecha de visibilidad se esté cerrando: el mapeo a nivel individual sigue apoyándose sobre todo en los puestos de trabajo (73%) y en la autoevaluación validada por jefaturas (71%), y 53% de las organizaciones no gestiona la competencia en absoluto. Catalogar habilidades declaradas más rápido no le dice a una empresa quién puede realmente hacer el trabajo. Es el problema del currículum otra vez, puertas adentro, con un presupuesto mayor detrás.</p>
@@ -175,7 +163,7 @@ const body = (basePath) => `
 
 </div></div>
 <section class="section epilogue"><div class="section-inner"><p class="eyebrow">Epílogo</p><p class="craft-words">Curiosidad. <span>Comprensión.</span> Aprendizaje. <span>Contribución.</span> Reflexión.</p><p>Estos son los oficios.</p><h2>La tecnología evoluciona. Los oficios perduran.</h2></div></section>
-<section class="section paths"><div class="section-inner"><p class="eyebrow">Caminos abiertos</p><div class="contact-invitation"><p>Si algo de lo que aquí se dice se conecta con una pregunta que usted está explorando, inicie una conversación.</p><a href="./contact/">Escríbale a Alaya</a></div><nav class="open-paths" aria-label="Siga explorando"><a href="./cie-professional/">Explore CIE Professional</a><a href="./for-organizations/">Para Organizaciones</a><a href="./ideas/">Siga las Ideas</a></nav></div></section>
+<section class="section paths"><div class="section-inner"><div class="contact-invitation"><p>Si algo de lo que aquí se dice se conecta con una pregunta que usted está explorando, inicie una conversación.</p><a href="./contact/">Escríbale a Alaya</a></div></div></section>
 `;
 
 export const homePageEs = {

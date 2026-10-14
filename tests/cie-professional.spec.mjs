@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const labels = ["The Alaya Idea", "CIE Professional", "For Organizations", "Ideas", "Contact"];
+const labels = ["The Alaya Idea", "How it works", "CIE Professional", "For Organizations", "Ideas", "Contact"];
 
 test("CIE Professional uses the shared shell without flattening its composition", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
