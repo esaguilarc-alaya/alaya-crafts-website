@@ -7,7 +7,7 @@ const body = (basePath) => `
     <p class="eb">Capability intelligence</p>
     <h1>La capacidad, leída desde el trabajo mismo.</h1>
     <p>La capacidad es lo más difícil de ver para cualquier organización y sin embargo lo más fácil de reivindicar. Alaya lee la capacidad a partir de relatos profesionales vinculados a una contribución completada y verificable —en una persona y en una organización— <b>para poder visibilizarla, cultivarla y darle una dirección.</b></p>
-    <div class="hero-cta"><a class="btn" href="${hrefFor("/es/how-it-works/", basePath)}">Comenzar</a></div>
+    <div class="hero-cta"><a class="btn" href="${hrefFor("/es/how-it-works/", basePath)}">Comenzar con CIE</a></div>
   </div>
 
   <!-- PROBLEM -->

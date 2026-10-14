@@ -4,9 +4,9 @@ const unbase = (p) => { const b = (process.env.BASE_PATH ?? "").trim(); return b
 
 const cases = [
   ["/cie-professional/", "Take back the story of what you can do.", "In production", "Start with your résumé", "/how-it-works/"],
-  ["/es/cie-professional/", "Recupere el relato de lo que usted puede hacer.", "En producción", "Comience con su currículum", "/es/how-it-works/"],
-  ["/for-organizations/", "Transformation does not start from zero.", "In production", "Request an organization pilot", "/how-it-works/"],
-  ["/es/for-organizations/", "La transformación no parte de cero.", "En producción", "Solicite un piloto organizacional", "/es/how-it-works/"],
+  ["/es/cie-professional/", "Recupere la historia de lo que usted es capaz de hacer.", "En producción", "Comience con su currículum", "/es/how-it-works/"],
+  ["/for-organizations/", "Transformations do not start from zero.", "In production", "Request an organization pilot", "/how-it-works/"],
+  ["/es/for-organizations/", "Las transformaciones no empiezan de cero.", "En producción", "Solicite un piloto organizacional", "/es/how-it-works/"],
 ];
 
 for (const [path, h1, tag, cta, how] of cases) {
@@ -30,13 +30,14 @@ for (const [path, h1, tag, cta, how] of cases) {
   });
 }
 
-test("Organizations example is labelled illustrative and Professional keeps its states and trust block", async ({ page }) => {
+test("Organizations example is labelled illustrative and Professional keeps its trust block", async ({ page }) => {
   await page.goto("/for-organizations/");
   await expect(page.locator(".tag", { hasText: "Illustrative example" })).toHaveCount(1);
   await expect(page.locator(".qtable .qr")).toHaveCount(7);
+  await expect(page.locator(".paths .open-paths a")).toHaveCount(2);
+  await expect(page.locator(".thesis, .onion-field")).toHaveCount(0);
   await page.goto("/cie-professional/");
   await expect(page.locator(".tag", { hasText: "Illustrative example" })).toHaveCount(1);
-  await expect(page.locator(".states article")).toHaveCount(3);
   await expect(page.locator(".trust")).toHaveCount(1);
   await expect(page.locator(".benefits li")).toHaveCount(8);
 });

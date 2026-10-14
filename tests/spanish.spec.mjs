@@ -12,8 +12,8 @@ const enLabels = ["The Alaya Idea", "How it works", "CIE Professional", "For Org
 // [english path, spanish path, spanish h1]
 const pages = [
   ["/", "/es/", "La capacidad, leída desde el trabajo mismo."],
-  ["/cie-professional/", "/es/cie-professional/", "Recupere el relato de lo que usted puede hacer."],
-  ["/for-organizations/", "/es/for-organizations/", "La transformación no parte de cero."],
+  ["/cie-professional/", "/es/cie-professional/", "Recupere la historia de lo que usted es capaz de hacer."],
+  ["/for-organizations/", "/es/for-organizations/", "Las transformaciones no empiezan de cero."],
   ["/ideas/", "/es/ideas/", "Un cuerpo de pensamiento en evolución."],
   ["/ideas/the-rule-we-had-to-keep-re-learning-while-building-cie/", "/es/ideas/the-rule-we-had-to-keep-re-learning-while-building-cie/", "La regla que tuvimos que seguir reaprendiendo mientras construíamos CIE"],
   ["/ideas/what-technology-extends-it-actually-means/", "/es/ideas/what-technology-extends-it-actually-means/", "Lo que realmente significa “la tecnología lo extiende”"],
@@ -99,7 +99,7 @@ test("approved Spanish terminology is used and the retired terms are gone", asyn
   await expect(page.locator(".eb").first()).toHaveText("Capability intelligence");
   await expect(page.locator(".stats .sx .v").nth(2)).toHaveText("75/43");
   await expect(page.locator(".stats .sx")).toHaveCount(3);
-  await expect(page.locator(".hero-cta .btn")).toHaveText("Comenzar");
+  await expect(page.locator(".hero-cta .btn")).toHaveText("Comenzar con CIE");
   await expect(page.locator("main")).not.toContainText("tú ");
 });
 

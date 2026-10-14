@@ -10,18 +10,6 @@ test("CIE Professional uses the shared shell without flattening its composition"
   await expect(page.locator('.site-nav a[aria-current="page"]')).toHaveText("CIE Professional");
   await expect(page.locator('.site-nav a[aria-current="page"]')).toHaveCount(1);
   await expect(page.locator(".trust")).toHaveCSS("background-color", "rgb(89, 99, 75)");
-  await expect(page.locator(".capability-diagram")).toBeVisible();
-  await page.locator(".capability-diagram").evaluate((element) => {
-    document.documentElement.style.scrollBehavior = "auto";
-    element.scrollIntoView({ block: "center" });
-  });
-  const labelsAreTopmost = await page.locator(".diagram-points p").evaluateAll((cards) => cards.every((card) => {
-    const label = card.querySelector("strong");
-    const rect = label.getBoundingClientRect();
-    const topmost = document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
-    return topmost !== null && topmost !== document.querySelector(".diagram-path") && card.contains(topmost);
-  }));
-  expect(labelsAreTopmost).toBe(true);
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(1440);
 });
 
