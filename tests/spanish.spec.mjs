@@ -12,8 +12,8 @@ const enLabels = ["The Alaya Idea", "How it works", "CIE Professional", "For Org
 // [english path, spanish path, spanish h1]
 const pages = [
   ["/", "/es/", "La capacidad, leída desde el trabajo mismo."],
-  ["/cie-professional/", "/es/cie-professional/", "Su carrera es más grande que su currículum."],
-  ["/for-organizations/", "/es/for-organizations/", "Lo que CIE Professional comienza con una persona, Alaya está aprendiendo a comprenderlo a escala organizacional."],
+  ["/cie-professional/", "/es/cie-professional/", "Recupere el relato de lo que usted puede hacer."],
+  ["/for-organizations/", "/es/for-organizations/", "La transformación no parte de cero."],
   ["/ideas/", "/es/ideas/", "Un cuerpo de pensamiento en evolución."],
   ["/ideas/the-rule-we-had-to-keep-re-learning-while-building-cie/", "/es/ideas/the-rule-we-had-to-keep-re-learning-while-building-cie/", "La regla que tuvimos que seguir reaprendiendo mientras construíamos CIE"],
   ["/ideas/what-technology-extends-it-actually-means/", "/es/ideas/what-technology-extends-it-actually-means/", "Lo que realmente significa “la tecnología lo extiende”"],
