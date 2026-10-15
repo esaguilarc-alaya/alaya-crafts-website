@@ -5,8 +5,8 @@ const unbase = (p) => { const b = (process.env.BASE_PATH ?? "").trim(); return b
 const cases = [
   ["/cie-professional/", "Take back the story of what you can do.", "In production", "Start with your résumé", "/how-it-works/"],
   ["/es/cie-professional/", "Recupere la historia de lo que usted es capaz de hacer.", "En producción", "Comience con su currículum", "/es/how-it-works/"],
-  ["/for-organizations/", "Transformations do not start from zero.", "In production", "Request an organization pilot", "/how-it-works/"],
-  ["/es/for-organizations/", "Las transformaciones no empiezan de cero.", "En producción", "Solicite un piloto organizacional", "/es/how-it-works/"],
+  ["/for-organizations/", "Transformations do not start from zero.", "In production", "Join the waiting list", null],
+  ["/es/for-organizations/", "Las transformaciones no empiezan de cero.", "En producción", "Únase a la lista de espera", null],
 ];
 
 for (const [path, h1, tag, cta, how] of cases) {
@@ -16,9 +16,17 @@ for (const [path, h1, tag, cta, how] of cases) {
     await expect(page.locator("h1")).toHaveText(h1);
     await expect(page.locator(".tag").first()).toHaveText(tag);
     await expect(page.locator(".cta", { hasText: cta }).first()).toBeVisible();
-    const hows = await page.locator('a[href$="how-it-works/"]').evaluateAll((l) => l.map((a) => new URL(a.href).pathname));
-    expect(hows.length).toBeGreaterThan(0);
-    for (const h of hows) expect(unbase(h)).toBe(how);
+    const hows = await page.locator('main a[href$="how-it-works/"]').evaluateAll((l) => l.map((a) => new URL(a.href).pathname));
+    if (how) {
+      expect(hows.length).toBeGreaterThan(0);
+      for (const h of hows) expect(unbase(h)).toBe(how);
+    } else {
+      // Organizations offers only two actions: join the waiting list, start a conversation.
+      expect(hows.length).toBe(0);
+      const labels = new Set(await page.locator("a.cta, .open-paths a").allInnerTexts());
+      expect(labels.size).toBe(2);
+      await expect(page.locator(".tag").first()).toHaveText(tag);
+    }
     const mails = await page.locator('a.cta[href^="mailto:"]').evaluateAll((l) => l.map((a) => a.getAttribute("href")));
     for (const m of mails) expect(m).toMatch(/^mailto:curious@alayacrafts\.com\?subject=/);
     // existing sections are still present below the new opening
