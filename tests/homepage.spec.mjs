@@ -49,7 +49,7 @@ test("production artifact excludes study scaffolding", async ({ request }) => {
 const landscapeLabels = [
   ["capability", "Capability The living terrain."],
   ["experience", "Experience Where capability is developed and exercised."],
-  ["practice", "Practice How capability is cultivated and renewed."],
+  ["practice", "Cultivation How capability is cultivated and renewed."],
   ["contribution", "Contribution Capability expressed through work that creates value."],
   ["knowledge", "Knowledge Preserves and carries forward what is learned."],
   ["curiosity", "Curiosity Keeps the field developing."],

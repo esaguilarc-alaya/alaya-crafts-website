@@ -21,8 +21,8 @@ const body = (basePath) => `
       <p>Both sides are guessing about the same thing from opposite ends, and neither has an instrument.</p>
     </div>
 
-    <p><b>The cost of that is quiet, which is why it survives.</b> Development budget aimed at capability that was already there. People hired from outside for work somebody inside had done twice. Projects not attempted because nobody knew the company could do them. Projects launched that do not move forward as expected. The explanation and possible fixes don&rsquo;t seem to show anywhere, because the thing that would have made them visible has never existed.</p>
-    <p>The evidence exists &mdash; it is in what people did last quarter and the quarter before. It has simply never been captured consistently, so it could become an instrument that gives the guidance needed to match the intended direction, for professionals and organizations alike.</p>
+    <p><b>The cost of that is quiet, which is why it survives.</b> Development budget aimed at capability that was already there. People hired from outside for work somebody inside had done twice. Projects not attempted because nobody knew the company could do them. Projects launched that do not move forward as expected, and nobody can say why. Neither the cause nor the fix shows up anywhere, because the thing that would have made them visible has never existed.</p>
+    <p>The evidence exists &mdash; it is in what people did last quarter and the quarter before. It has simply never been captured consistently. Captured, it becomes an instrument that shows professionals and organizations where they stand and helps them move toward where they intend to go.</p>
   </section>
 
   <!-- WHAT IT DOES -->
@@ -35,7 +35,7 @@ const body = (basePath) => `
       <p>But understanding the landscape provides you the visibility to cultivate, grow and direct capability towards your objectives.</p>
     </div>
 
-    <div class="landscape" aria-label="The living capability landscape"><picture><source srcset="${hrefFor("/assets/alaya-05-living-field-mobile.svg", basePath)}" media="(max-width: 820px)"><img class="field-svg" src="${hrefFor("/assets/alaya-05-living-field-desktop.svg", basePath)}" alt="" aria-hidden="true"></picture><p class="field-label capability">Capability <small>The living terrain.</small></p><p class="field-label experience">Experience <small>Where capability is developed and exercised.</small></p><p class="field-label practice">Practice <small>How capability is cultivated and renewed.</small></p><p class="field-label contribution">Contribution <small>Capability expressed through work that creates value.</small></p><p class="field-label knowledge">Knowledge <small>Preserves and carries forward what is learned.</small></p><p class="field-label curiosity">Curiosity <small>Keeps the field developing.</small></p></div>
+    <div class="landscape" aria-label="The living capability landscape"><picture><source srcset="${hrefFor("/assets/alaya-05-living-field-mobile.svg", basePath)}" media="(max-width: 820px)"><img class="field-svg" src="${hrefFor("/assets/alaya-05-living-field-desktop.svg", basePath)}" alt="" aria-hidden="true"></picture><p class="field-label capability">Capability <small>The living terrain.</small></p><p class="field-label experience">Experience <small>Where capability is developed and exercised.</small></p><p class="field-label practice">Cultivation <small>How capability is cultivated and renewed.</small></p><p class="field-label contribution">Contribution <small>Capability expressed through work that creates value.</small></p><p class="field-label knowledge">Knowledge <small>Preserves and carries forward what is learned.</small></p><p class="field-label curiosity">Curiosity <small>Keeps the field developing.</small></p></div>
 
     <h2 class="sub">How Alaya sees capability.</h2>
     <p>So Alaya reads accounts of work that was actually done, <b>on two axes at once</b>.</p>
@@ -92,7 +92,7 @@ const body = (basePath) => `
         <p><b>75% of executives</b> say their organization has a clear learning strategy for the next one to two years. Only <b>43%</b> of individual contributors agree.</p>
       </div>
     </div>
-    <p class="src">Sources: <a href="https://www.greenhouse.com/recruiting-benchmarks">Greenhouse, The Hire Standard: Hiring Benchmarks 2026</a> &middot; <a href="https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/">Mercer, Skills Snapshot Survey 2025/26</a> (72 countries) &middot; <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/hr-monitor">McKinsey, HR Monitor 2026</a> &middot; <a href="https://action.deloitte.com/insight/5005/2026-talent-acquisition-technology-trends-the-new-imperative">Deloitte, 2026 Human Capital &amp; TA Technology Trends</a> &middot; <a href="https://go.perceptyx.com/state-of-learning-and-development-2026-web-report#executive-summary">&ldquo;The State of Learning and Development&rdquo; First Annual 2026</a></p>
+    <p class="src">Sources: <a href="https://www.greenhouse.com/recruiting-benchmarks">Greenhouse, The Hire Standard: Hiring Benchmarks 2026</a> &middot; <a href="https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/">Mercer, Skills Snapshot Survey 2025/26</a> (72 countries) &middot; <a href="https://go.perceptyx.com/state-of-learning-and-development-2026-web-report#executive-summary">Perceptyx, The State of Learning and Development 2026</a></p>
 
     
 
@@ -108,7 +108,7 @@ const body = (basePath) => `
       <div class="c b">Reads <b>an account of one bounded piece of work that was actually done</b>.</div>
 
       <div class="c">A rating. Advanced, Level 4, seven out of ten.</div>
-      <div class="c b">Evidence <b>with the action attached</b>, mounting evidence provides the insight.</div>
+      <div class="c b">Evidence, <b>with the sentence attached</b>. As it builds, it shows where to go next.</div>
 
       <div class="c">A statement someone is a strong communicator.</div>
       <div class="c b">Shows <b>four times they moved someone who started out against them</b>, and what each of those people wanted instead.</div>

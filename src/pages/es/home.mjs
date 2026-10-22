@@ -21,8 +21,8 @@ const body = (basePath) => `
       <p>Ambas partes adivinan lo mismo desde extremos opuestos, y ninguna tiene un instrumento adecuado.</p>
     </div>
 
-    <p><b>El costo de eso es silencioso, y por eso persiste.</b> Presupuesto de desarrollo dirigido a una capacidad que ya existía. Personas contratadas afuera para un trabajo que alguien adentro ya había hecho dos veces. Proyectos que no se intentaron porque nadie sabía que la empresa podía hacerlos. Proyectos lanzados que no avanzan como se esperaba. La explicación y las posibles soluciones parecen no aparecer en ningún lado, porque lo que las habría hecho visibles nunca ha existido.</p>
-    <p>La evidencia existe: está en lo que las personas hicieron el trimestre pasado y el anterior. Simplemente nunca se ha capturado de forma consistente, de modo que pudiera convertirse en un instrumento que dé la orientación necesaria para ir en la dirección deseada, tanto a profesionales como a organizaciones.</p>
+    <p><b>El costo de eso es silencioso, y por eso persiste.</b> Presupuesto de desarrollo dirigido a una capacidad que ya existía. Personas contratadas afuera para un trabajo que alguien adentro ya había hecho dos veces. Proyectos que no se intentaron porque nadie sabía que la empresa podía hacerlos. Proyectos lanzados que no avanzan como se esperaba, y nadie sabe explicar por qué. Ni la causa ni la solución aparecen en ningún lado, porque lo que las habría hecho visibles nunca ha existido.</p>
+    <p>La evidencia existe: está en lo que las personas hicieron el trimestre pasado y el anterior. Simplemente nunca se ha capturado de forma consistente. Capturada, se convierte en un instrumento que muestra a profesionales y organizaciones dónde están y les ayuda a avanzar hacia donde quieren llegar.</p>
   </section>
 
   <!-- WHAT IT DOES -->
@@ -35,7 +35,7 @@ const body = (basePath) => `
       <p>Pero comprender el panorama provee la visibilidad para cultivar, hacer crecer y dirigir la capacidad hacia los objetivos deseados.</p>
     </div>
 
-    <div class="landscape" aria-label="El panorama vivo de la capacidad"><picture><source srcset="${hrefFor("/assets/alaya-05-living-field-mobile.svg", basePath)}" media="(max-width: 820px)"><img class="field-svg" src="${hrefFor("/assets/alaya-05-living-field-desktop.svg", basePath)}" alt="" aria-hidden="true"></picture><p class="field-label capability">Capacidad <small>El terreno vivo.</small></p><p class="field-label experience">Experiencia <small>Donde la capacidad se desarrolla y se ejerce.</small></p><p class="field-label practice">Práctica <small>Cómo se cultiva y se renueva la capacidad.</small></p><p class="field-label contribution">Contribución <small>La capacidad expresada en trabajo que crea valor.</small></p><p class="field-label knowledge">Conocimiento <small>Conserva y lleva adelante lo aprendido.</small></p><p class="field-label curiosity">Curiosidad <small>Mantiene vivo el desarrollo del campo.</small></p></div>
+    <div class="landscape" aria-label="El panorama vivo de la capacidad"><picture><source srcset="${hrefFor("/assets/alaya-05-living-field-mobile.svg", basePath)}" media="(max-width: 820px)"><img class="field-svg" src="${hrefFor("/assets/alaya-05-living-field-desktop.svg", basePath)}" alt="" aria-hidden="true"></picture><p class="field-label capability">Capacidad <small>El terreno vivo.</small></p><p class="field-label experience">Experiencia <small>Donde la capacidad se desarrolla y se ejerce.</small></p><p class="field-label practice">Cultivar <small>Cómo se cultiva y se renueva la capacidad.</small></p><p class="field-label contribution">Contribución <small>La capacidad expresada en trabajo que crea valor.</small></p><p class="field-label knowledge">Conocimiento <small>Conserva y lleva adelante lo aprendido.</small></p><p class="field-label curiosity">Curiosidad <small>Mantiene vivo el desarrollo del campo.</small></p></div>
 
     <h2 class="sub">Cómo ve Alaya la capacidad.</h2>
     <p>Por eso Alaya lee relatos profesionales de lo que realmente se hizo, <b>en dos ejes a la vez</b>.</p>
@@ -92,7 +92,7 @@ const body = (basePath) => `
         <p><b>75% de los ejecutivos</b> dicen que su organización tiene una estrategia de aprendizaje clara para el próximo año o dos. Solo <b>43%</b> de los colaboradores individuales coinciden.</p>
       </div>
     </div>
-    <p class="src">Fuentes: <a href="https://www.greenhouse.com/recruiting-benchmarks">Greenhouse, The Hire Standard: Hiring Benchmarks 2026</a> &middot; <a href="https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/">Mercer, Skills Snapshot Survey 2025/26</a> (72 países) &middot; <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/hr-monitor">McKinsey, HR Monitor 2026</a> &middot; <a href="https://action.deloitte.com/insight/5005/2026-talent-acquisition-technology-trends-the-new-imperative">Deloitte, 2026 Human Capital &amp; TA Technology Trends</a> &middot; <a href="https://go.perceptyx.com/state-of-learning-and-development-2026-web-report#executive-summary">&ldquo;The State of Learning and Development&rdquo; First Annual 2026</a></p>
+    <p class="src">Fuentes: <a href="https://www.greenhouse.com/recruiting-benchmarks">Greenhouse, The Hire Standard: Hiring Benchmarks 2026</a> &middot; <a href="https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/">Mercer, Skills Snapshot Survey 2025/26</a> (72 países) &middot; <a href="https://go.perceptyx.com/state-of-learning-and-development-2026-web-report#executive-summary">Perceptyx, The State of Learning and Development 2026</a></p>
 
     
 
@@ -108,7 +108,7 @@ const body = (basePath) => `
       <div class="c b">Lee <b>el relato de una pieza de trabajo acotada que realmente se hizo</b>.</div>
 
       <div class="c">Una calificación. Avanzado, Nivel 4, siete de diez.</div>
-      <div class="c b">Evidencia <b>con la acción adjunta</b>; la evidencia acumulada aporta la comprensión.</div>
+      <div class="c b">Evidencia, <b>con la oración adjunta</b>. A medida que se acumula, muestra hacia dónde ir a continuación.</div>
 
       <div class="c">Una afirmación de que alguien es un buen comunicador.</div>
       <div class="c b">Muestra <b>cuatro ocasiones en que logró mover a alguien que empezó en su contra</b>, y lo que cada una de esas personas quería inicialmente.</div>
