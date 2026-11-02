@@ -41,24 +41,24 @@ const body = (basePath) => `
     <p>So Alaya reads accounts of work that was actually done, <b>on two axes at once</b>.</p>
     <div class="ax2">
       <div class="axc">
-        <div class="t">Where &mdash; seven practices</div>
-        <h3>What the act changed</h3>
-        <div class="row"><b>Inquiry</b><span>What is known.<span class="d">Finding out what was not yet known: a cause traced, a question answered, a possibility tested.</span></span></div>
-        <div class="row"><b>Direction</b><span>What is settled.<span class="d">Turning an open question into a decision others can build on: a choice made, a priority set, a path agreed.</span></span></div>
-        <div class="row"><b>Creation</b><span>What exists.<span class="d">Bringing into being something that was not there: a system built, a process designed, a document written.</span></span></div>
-        <div class="row"><b>Transition</b><span>An arrangement.<span class="d">Moving something from one arrangement to another: a migration, a handover, a rollout, a restructure.</span></span></div>
-        <div class="row"><b>Assurance</b><span>What is accepted.<span class="d">Establishing that something can be relied on: a test passed, a risk examined, a result verified.</span></span></div>
-        <div class="row"><b>Stewardship</b><span>A person's capability.<span class="d">Leaving another person able to do what they could not: teaching, coaching, handing over a skill.</span></span></div>
-        <div class="row odd"><b>Operation</b><span>Nothing &mdash; it holds a state against pressure.<span class="d">Keeping something running or intact while forces push against it: an incident held, a service kept up under strain.</span></span></div>
+        <div class="t">Seven practices</div>
+        <h3>What the work changed</h3>
+        <div class="row"><b>Inquiry</b><span>What became known.<span class="d">Investigated something unclear and established what was happening.</span></span></div>
+        <div class="row"><b>Direction</b><span>What course others could take up.<span class="d">Settled an open course that others adopted, applied or built on.</span></span></div>
+        <div class="row"><b>Creation</b><span>What came into existence.<span class="d">Built something new and brought it to a working state.</span></span></div>
+        <div class="row"><b>Transition</b><span>What arrangement replaced another.<span class="d">Replaced how something was done with an arrangement that stayed in use.</span></span></div>
+        <div class="row"><b>Assurance</b><span>What a check established.<span class="d">Checked something against what it should be and established what it found.</span></span></div>
+        <div class="row"><b>Stewardship</b><span>What another person became able to do.<span class="d">Helped someone become able to do something on their own.</span></span></div>
+        <div class="row odd"><b>Operation</b><span>What remained possible under threat.<span class="d">Kept, restored or delivered something important while it was under threat.</span></span></div>
       </div>
       <div class="axc">
-        <div class="t">How &mdash; five dimensions</div>
-        <h3>The way it showed</h3>
-        <div class="row"><b>Reasoning</b><span>What they worked out that did not follow from what was in front of them.</span></div>
-        <div class="row"><b>Perception</b><span>What they noticed that was there for anyone and attended to by no one.</span></div>
-        <div class="row"><b>Relational</b><span>How they got the agreement, decision or effort of someone they could not direct.</span></div>
-        <div class="row"><b>Steadying</b><span>How they kept another person able to carry on.</span></div>
-        <div class="row"><b>Execution</b><span>What they actually pulled off, where it could have failed.</span></div>
+        <div class="t">Five dimensions</div>
+        <h3>How the work happened</h3>
+        <div class="row"><b>Reasoning</b><span>What was worked out.<span class="d">Combined information to reach a conclusion.</span></span></div>
+        <div class="row"><b>Perception</b><span>What was noticed and acted upon.<span class="d">Noticed a specific cue and acted because of it.</span></span></div>
+        <div class="row"><b>Influence</b><span>How another party was moved to act.<span class="d">Another party decided or acted because of the work.</span></span></div>
+        <div class="row"><b>Relational</b><span>How another person was helped through difficulty.<span class="d">Helped someone keep going through a difficult moment.</span></span></div>
+        <div class="row"><b>Execution</b><span>What was completed through difficulty.<span class="d">Got something done through a concrete obstacle.</span></span></div>
       </div>
     </div>
 

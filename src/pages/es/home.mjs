@@ -41,24 +41,24 @@ const body = (basePath) => `
     <p>Por eso Alaya lee relatos profesionales de lo que realmente se hizo, <b>en dos ejes a la vez</b>.</p>
     <div class="ax2">
       <div class="axc">
-        <div class="t">Dónde: siete prácticas</div>
-        <h3>Lo que el acto cambió</h3>
-        <div class="row"><b>Indagación</b><span>Lo que se sabe.<span class="d">Descubrir lo que aún no se sabía: una causa rastreada, una pregunta contestada, una posibilidad puesta a prueba.</span></span></div>
-        <div class="row"><b>Dirección</b><span>Lo que queda decidido.<span class="d">Convertir una pregunta abierta en una decisión sobre la que otros pueden construir: una elección hecha, una prioridad fijada, un camino acordado.</span></span></div>
-        <div class="row"><b>Creación</b><span>Lo que existe.<span class="d">Dar existencia a algo que no estaba: un sistema construido, un proceso diseñado, un documento escrito.</span></span></div>
-        <div class="row"><b>Transición</b><span>Una disposición.<span class="d">Pasar algo de una disposición a otra: una migración, un traspaso, un despliegue, una reestructuración.</span></span></div>
-        <div class="row"><b>Validación</b><span>Lo que se acepta.<span class="d">Establecer que algo es confiable: una prueba superada, un riesgo examinado, un resultado verificado.</span></span></div>
-        <div class="row"><b>Formación</b><span>La capacidad de una persona.<span class="d">Dejar a otra persona en condiciones de hacer lo que antes no podía: enseñar, acompañar, transmitir una habilidad.</span></span></div>
-        <div class="row odd"><b>Operación</b><span>Nada: mantiene un estado frente a la presión.<span class="d">Mantener algo funcionando o íntegro mientras ambientes impredecibles lo empujan en contra: un incidente contenido, un servicio sostenido bajo tensión.</span></span></div>
+        <div class="t">Siete prácticas</div>
+        <h3>Lo que el trabajo cambió</h3>
+        <div class="row"><b>Indagación</b><span>Lo que pasó a saberse.<span class="d">Investigó algo poco claro y estableció qué estaba ocurriendo.</span></span></div>
+        <div class="row"><b>Dirección</b><span>Qué rumbo pudieron tomar otros.<span class="d">Dejó definido un rumbo abierto que otros adoptaron, aplicaron o sobre el cual construyeron.</span></span></div>
+        <div class="row"><b>Creación</b><span>Lo que pasó a existir.<span class="d">Construyó algo nuevo y lo llevó a un estado funcional.</span></span></div>
+        <div class="row"><b>Transición</b><span>Qué disposición reemplazó a otra.<span class="d">Sustituyó la forma de hacer algo por una disposición que siguió en uso.</span></span></div>
+        <div class="row"><b>Validación</b><span>Lo que una verificación estableció.<span class="d">Contrastó algo con lo que debía ser y estableció lo que encontró.</span></span></div>
+        <div class="row"><b>Formación</b><span>Lo que otra persona pasó a poder hacer.<span class="d">Ayudó a alguien a poder hacer algo por su cuenta.</span></span></div>
+        <div class="row odd"><b>Operación</b><span>Lo que siguió siendo posible bajo amenaza.<span class="d">Mantuvo, restableció o entregó algo importante mientras estaba bajo amenaza.</span></span></div>
       </div>
       <div class="axc">
-        <div class="t">Cómo: cinco dimensiones</div>
-        <h3>La forma en que se manifestó</h3>
-        <div class="row"><b>Razonamiento</b><span>Lo que dedujeron sin que se desprendiera de lo que tenían enfrente.</span></div>
-        <div class="row"><b>Percepción</b><span>Lo que notaron, que estaba a la vista de cualquiera y que nadie atendía.</span></div>
-        <div class="row"><b>Relacional</b><span>Cómo lograron el acuerdo, la decisión o el esfuerzo de alguien a quien no podían dirigir.</span></div>
-        <div class="row"><b>Respaldo</b><span>Cómo mantuvieron a otra persona en condiciones de seguir adelante.</span></div>
-        <div class="row"><b>Ejecución</b><span>Lo que realmente lograron, donde pudo haber fallado.</span></div>
+        <div class="t">Cinco dimensiones</div>
+        <h3>Cómo ocurrió el trabajo</h3>
+        <div class="row"><b>Razonamiento</b><span>Lo que se dedujo.<span class="d">Combinó información para llegar a una conclusión.</span></span></div>
+        <div class="row"><b>Percepción</b><span>Lo que se notó y se atendió.<span class="d">Notó una señal específica y actuó a raíz de ella.</span></span></div>
+        <div class="row"><b>Influencia</b><span>Cómo se movió a otra parte a actuar.<span class="d">Otra parte decidió o actuó a raíz del trabajo.</span></span></div>
+        <div class="row"><b>Relacional</b><span>Cómo se ayudó a otra persona en una dificultad.<span class="d">Ayudó a alguien a seguir adelante en un momento difícil.</span></span></div>
+        <div class="row"><b>Ejecución</b><span>Lo que se completó pese a la dificultad.<span class="d">Logró sacar algo adelante frente a un obstáculo concreto.</span></span></div>
       </div>
     </div>
 
