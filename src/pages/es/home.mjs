@@ -113,13 +113,22 @@ const body = (basePath) => `
       <div class="c b">Evidencia, <b>con la oración adjunta</b>. A medida que se acumula, muestra hacia dónde ir a continuación.</div>
 
       <div class="c">Una afirmación de que alguien es un buen comunicador.</div>
-      <div class="c b">Muestra <b>cuatro ocasiones en que logró mover a alguien que empezó en su contra</b>, y lo que cada una de esas personas quería inicialmente.</div>
+      <div class="c b">Muestra <b>los relatos en que otra persona cambió de rumbo por el trabajo de alguien</b>, cada uno con la oración que lo dice.</div>
 
       <div class="c">Un marco que pertenece a la empresa y que a la persona rara vez se le muestra.</div>
       <div class="c b"><b>Un registro que se construye con los profesionales y que ellos mismos conservan y mantienen.</b></div>
 
+      <div class="c">Etiquetas como “líder fuerte” o “Nivel 4”, que significan lo que el lector suponga.</div>
+      <div class="c b"><b>Capacidades en los términos propios del mercado</b>, cada una con el mismo significado cada vez, y cada una abriéndose hacia el trabajo que la respalda.</div>
+
+      <div class="c">Un perfil que alguien redactó, o que una IA infirió.</div>
+      <div class="c b"><b>Las propias palabras del profesional, confirmadas por él o ella.</b> Nada generado, nada inferido.</div>
+
+      <div class="c">Personas clasificadas y ordenadas unas frente a otras.</div>
+      <div class="c b"><b>Sin puntuaciones ni clasificaciones.</b> Se muestra la evidencia; las personas emiten el juicio.</div>
+
       <div class="c">Una tabla completa, donde una celda en blanco no significa nada en particular.</div>
-      <div class="c b">Distingue entre lo <b>establecido</b>, lo <b>emergente</b> y lo <b>desconocido</b>. La mayor parte de un perfil honesto es lo desconocido.</div>
+      <div class="c b">Distingue entre lo <b>establecido</b>, lo <b>emergente</b> y lo <b>que falta un detalle</b>, y no finge saber el resto. La mayor parte de un perfil honesto todavía no está escrita.</div>
     </div>
 
     <p style="margin-top:26px">Sin puntajes, sin clasificaciones, sin juicios de personalidad, sin recomendaciones sobre un ser humano. Cada una de estas decisiones cuesta algo evidente y compra algo menos evidente: un sistema que no puede usarse en contra de quienes lo alimentan es un sistema al que las personas le dirán la verdad. Todo lo demás depende de eso.</p>

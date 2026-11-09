@@ -113,13 +113,22 @@ const body = (basePath) => `
       <div class="c b">Evidence, <b>with the sentence attached</b>. As it builds, it shows where to go next.</div>
 
       <div class="c">A statement someone is a strong communicator.</div>
-      <div class="c b">Shows <b>four times they moved someone who started out against them</b>, and what each of those people wanted instead.</div>
+      <div class="c b">Shows <b>the stories where someone else changed course because of their work</b> &mdash; each with the sentence that says so.</div>
 
       <div class="c">A framework the company owns, which the person is rarely shown.</div>
       <div class="c b"><b>A record built with the professionals, which they keep and maintain.</b></div>
 
+      <div class="c">Labels like &ldquo;strong leader&rdquo; or &ldquo;Level 4,&rdquo; which mean whatever the reader assumes.</div>
+      <div class="c b"><b>Capabilities in the market&rsquo;s own terms</b>, each meaning the same thing every time, each opening to the work behind it.</div>
+
+      <div class="c">A profile someone wrote, or an AI inferred.</div>
+      <div class="c b"><b>The professional&rsquo;s own words, confirmed by them.</b> Nothing generated, nothing inferred.</div>
+
+      <div class="c">People sorted and ranked against each other.</div>
+      <div class="c b"><b>No scores and no rankings.</b> Evidence is shown; people make the judgment.</div>
+
       <div class="c">A complete-looking grid, where a blank cell means nothing in particular.</div>
-      <div class="c b">Separates <b>established</b>, <b>emerging</b>, and <b>unknown</b>. Most of an honest profile is the third.</div>
+      <div class="c b">Separates <b>established</b>, <b>emerging</b>, and <b>one detail away</b> &mdash; and doesn&rsquo;t pretend to know the rest. Most of an honest profile is still unwritten.</div>
     </div>
 
     <p style="margin-top:26px">No scores, no rankings, no personality words, no recommendation about a human being. Each one costs something obvious and buys something less obvious: a system that cannot be used against the people feeding it is a system people will tell the truth to. Everything downstream depends on that.</p>

@@ -90,7 +90,7 @@ test("English shell is unchanged by the language support", async ({ page }) => {
 test("approved Spanish terminology is used and the retired terms are gone", async ({ page }) => {
   await page.goto("/es/");
   const text = await page.locator("main").innerText();
-  for (const present of ["Validación", "Formación", "Influencia", "relatos profesionales", "Indagación", "establecido", "emergente", "desconocido", "currículum"]) {
+  for (const present of ["Validación", "Formación", "Influencia", "relatos profesionales", "Indagación", "establecido", "emergente", "currículum"]) {
     expect(text).toContain(present);
   }
   for (const gone of ["Aseguramiento", "Acompañamiento", "Sostén", "relatos del trabajo", "reinvindicar", "Stewardship", "Steadying", "Assurance"]) {
