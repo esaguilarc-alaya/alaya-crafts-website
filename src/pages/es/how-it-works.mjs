@@ -13,11 +13,13 @@ const body = (basePath) => `
   <section>
     <p class="eb">Un aporte profesional, leído</p>
     <h2>Un ejemplo, del relato a la lectura.</h2>
-    <p>Este ejemplo es ilustrativo. Muestra la forma de lo que CIE interpreta de una conversación, no el registro de una persona real.</p>
+    <p>Este ejemplo es ilustrativo. Muestra la forma de una lectura, no el registro de una persona real.</p>
     <div class="ex">
-      <div class="xr"><div class="xl">El relato</div><div><p><q>Lideré la migración de un servicio de facturación heredado durante un lanzamiento con clientes en vivo. <mark>Coordiné a ingeniería, finanzas y soporte</mark>, mantuve la continuidad de los reportes y <mark>reduje los pagos fallidos después del cambio</mark>.</q></p></div></div>
-      <div class="xr"><div class="xl">La lectura</div><div><p>En la evidencia que usted ha guardado, CIE ve actualmente un patrón de llevar el cambio al uso real, lograr resultados mediante la coordinación con otras personas y cumplir en situaciones en las que el trabajo podía haber fallado. Por ahora, esto respalda Transición, Relacional y Ejecución.</p><p><b>Transición:</b> <q>El trabajo llevó algo de un arreglo a otro.</q></p><p><b>Relacional:</b> <q>Coordiné a ingeniería, finanzas y soporte</q></p><p><b>Ejecución:</b> <q>Reduje los pagos fallidos después del cambio</q></p></div></div>
-      <div class="xr st"><div class="xl">Estado</div><div><p><b>Transición: Emergente.</b> Un relato respalda esta lectura. Merece examinarse; no es un veredicto. Donde el trabajo no muestra nada, la lectura sigue siendo <b>desconocida</b>.</p></div></div>
+      <div class="xr"><div class="xl">El relato</div><div><p><q>Lideré la migración de un servicio de facturación heredado <mark>durante un lanzamiento con clientes en vivo</mark>. Coordiné a ingeniería, finanzas y soporte, <mark>mantuve la continuidad de los reportes</mark> y <mark>reduje los pagos fallidos después del cambio</mark>.</q></p></div></div>
+      <div class="xr"><div class="xl">La lectura</div><div><p><b>Resiliencia operativa</b></p><p>Mantuvo en funcionamiento algo importante mientras estaba bajo amenaza, y lo logró pese a un obstáculo real.</p><p><b>Encaja con:</b> resiliencia operativa &middot; continuidad del servicio</p></div></div>
+      <div class="xr"><div class="xl">Lo que la respalda</div><div><p><b>Lo que tenía que seguir funcionando:</b> <q>mantuve la continuidad de los reportes</q></p><p><b>Lo que lo ponía en riesgo:</b> <q>durante un lanzamiento con clientes en vivo</q></p><p><b>Lo que ocurrió:</b> <q>reduje los pagos fallidos después del cambio</q></p><p>Detrás de esta lectura: lo que el trabajo cambió, <b>Operación</b>, y cómo ocurrió, <b>Ejecución</b>.</p></div></div>
+      <div class="xr"><div class="xl">Un detalle más</div><div><p>Si el nuevo servicio de facturación siguió en uso después del lanzamiento. Con eso, este relato mostraría también que el trabajo reemplazó una disposición por otra.</p></div></div>
+      <div class="xr st"><div class="xl">Estado</div><div><p><b>Emergente.</b> Un relato muestra esto. Se vuelve establecida cuando se repite: en tres relatos de distintos años o puestos. Donde el trabajo no muestra nada, la lectura no dice nada.</p></div></div>
     </div>
   </section>
 

@@ -13,11 +13,13 @@ const body = (basePath) => `
   <section>
     <p class="eb">One piece of work, read</p>
     <h2>An example, from account to reading.</h2>
-    <p>This example is illustrative. It shows the shape of what CIE can interpret from a conversation, not a real person&rsquo;s record.</p>
+    <p>This example is illustrative. It shows the shape of a reading, not a real person&rsquo;s record.</p>
     <div class="ex">
-      <div class="xr"><div class="xl">The account</div><div><p><q>Led the migration of a legacy billing service during a live customer launch. <mark>Coordinated engineering, finance and support</mark>, kept reporting continuous, and <mark>reduced failed payments after cutover</mark>.</q></p></div></div>
-      <div class="xr"><div class="xl">The reading</div><div><p>Across your saved evidence, CIE currently sees a pattern of moving change into real use, reaching outcomes through coordination with others, and delivering in situations where the work could have failed. This currently supports Transition, Relational and Execution.</p><p><b>Transition:</b> <q>The work moved something from one arrangement to another.</q></p><p><b>Relational:</b> <q>Coordinated engineering, finance and support</q></p><p><b>Execution:</b> <q>Reduced failed payments after cutover</q></p></div></div>
-      <div class="xr st"><div class="xl">Status</div><div><p><b>Transition: Emerging.</b> One account supports this reading. It is worth examining, not a verdict. Where the work shows nothing, the reading stays <b>unknown</b>.</p></div></div>
+      <div class="xr"><div class="xl">The account</div><div><p><q>Led the migration of a legacy billing service <mark>during a live customer launch</mark>. Coordinated engineering, finance and support, <mark>kept reporting continuous</mark>, and <mark>reduced failed payments after cutover</mark>.</q></p></div></div>
+      <div class="xr"><div class="xl">The reading</div><div><p><b>Operational resilience</b></p><p>Kept something important running while it was under threat, and got it done despite a real obstacle.</p><p><b>Fits:</b> operational resilience &middot; service continuity</p></div></div>
+      <div class="xr"><div class="xl">What it rests on</div><div><p><b>What had to keep running:</b> <q>kept reporting continuous</q></p><p><b>What put it at risk:</b> <q>during a live customer launch</q></p><p><b>What happened:</b> <q>reduced failed payments after cutover</q></p><p>Behind this reading: what the work changed &mdash; <b>Operation</b> &mdash; and how it happened &mdash; <b>Execution</b>.</p></div></div>
+      <div class="xr"><div class="xl">One detail away</div><div><p>Whether the new billing service stayed in use after the launch. With that, this account would also show the work replacing one arrangement with another.</p></div></div>
+      <div class="xr st"><div class="xl">Status</div><div><p><b>Emerging.</b> One account shows this. It becomes established when it recurs &mdash; in three accounts across different years or roles. Where the work shows nothing, the reading says nothing.</p></div></div>
     </div>
   </section>
 

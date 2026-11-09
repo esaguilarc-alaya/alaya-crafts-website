@@ -6,7 +6,7 @@ test("How it works shows the example, the method, the steps, the FAQ and an earl
   await page.goto("/how-it-works/");
   await expect(page.locator("h1")).toHaveText("See how a reading is made.");
   await expect(page.locator('.site-nav a[aria-current="page"]')).toHaveText("How it works");
-  await expect(page.locator(".ex .xl")).toHaveText(["The account", "The reading", "Status"]);
+  await expect(page.locator(".ex .xl")).toHaveText(["The account", "The reading", "What it rests on", "One detail away", "Status"]);
   await expect(page.locator(".ex .st")).toContainText("Emerging");
   await expect(page.locator(".pull p")).toHaveText("Alaya does not ask you to trust the output. It shows you how it was reached.");
   await expect(page.locator(".steps li")).toHaveCount(3);
