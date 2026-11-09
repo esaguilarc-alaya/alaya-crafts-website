@@ -38,7 +38,7 @@ const body = (basePath) => `
     <div class="landscape" aria-label="El panorama vivo de la capacidad"><picture><source srcset="${hrefFor("/assets/alaya-05-living-field-mobile.svg", basePath)}" media="(max-width: 820px)"><img class="field-svg" src="${hrefFor("/assets/alaya-05-living-field-desktop.svg", basePath)}" alt="" aria-hidden="true"></picture><p class="field-label capability">Capacidad <small>El terreno vivo.</small></p><p class="field-label experience">Experiencia <small>Donde la capacidad se desarrolla y se ejerce.</small></p><p class="field-label practice">Cultivar <small>Cómo se cultiva y se renueva la capacidad.</small></p><p class="field-label contribution">Contribución <small>La capacidad expresada en trabajo que crea valor.</small></p><p class="field-label knowledge">Conocimiento <small>Conserva y lleva adelante lo aprendido.</small></p><p class="field-label curiosity">Curiosidad <small>Mantiene vivo el desarrollo del campo.</small></p></div>
 
     <h2 class="sub">Cómo ve Alaya la capacidad.</h2>
-    <p>Por eso Alaya lee relatos profesionales de lo que realmente se hizo, <b>en dos ejes a la vez</b>.</p>
+    <p>Por eso, detrás de escena, Alaya lee relatos profesionales de lo que realmente se hizo frente a un conjunto pequeño de definiciones exactas: los bloques a partir de los cuales se derivan las capacidades que el mercado nombra.</p>
     <div class="ax2">
       <div class="axc">
         <div class="t">Siete prácticas</div>
@@ -69,6 +69,8 @@ const body = (basePath) => `
     </div>
 
     <p><b>Esa intersección es lo que la hace útil.</b> Un puntaje no señala una dirección. Saber que la fortaleza de alguien se manifiesta en los aspectos de razonamiento y relacionales del trabajo que cambia lo que queda decidido —y que se diluye donde el trabajo consiste en mantener algo estable— le dice a una persona hacia dónde empujar a continuación y le dice a una organización qué desarrollar, dónde desplegar y dónde está expuesta.</p>
+    <p><b>También es donde vive el lenguaje del mercado.</b> Los términos que usa la contratación —toma de decisiones, alineación de partes interesadas, resiliencia operativa, mentoría— no son habilidades separadas que haya que marcar. Cada uno describe un encuentro particular entre lo que el trabajo cambió y cómo ocurrió. Alaya lee primero ese encuentro, en palabras sencillas, y luego muestra qué términos del mercado le corresponden. Una descripción de puesto puede leerse del mismo modo, de manera que los requisitos de un cargo y la evidencia de una trayectoria se encuentren en el mismo terreno, en lugar de en una lista de palabras clave.</p>
+    <p><b>Sin categorías ni puntuaciones.</b> Las historias no son forzadas en una sola categoría ni se califican. Cada una recibe una lectura completa: lo que muestra con mayor claridad, expresado en palabras sencillas, y el resto de lo que toca: lo que muestra en parte y lo que un detalle más dejaría claro. Nada se descarta. A lo largo de muchos relatos, esas lecturas construyen un perfil particular de una persona: lo que se repite entre cargos y años, lo que está emergiendo y dónde el próximo relato diría más.</p>
     <p>Y cada lectura permanece anclada a la oración exacta del relato que la respalda. Sin evidencia, no hay lectura.</p>
   </section>
 

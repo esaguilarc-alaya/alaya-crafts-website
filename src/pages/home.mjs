@@ -38,7 +38,7 @@ const body = (basePath) => `
     <div class="landscape" aria-label="The living capability landscape"><picture><source srcset="${hrefFor("/assets/alaya-05-living-field-mobile.svg", basePath)}" media="(max-width: 820px)"><img class="field-svg" src="${hrefFor("/assets/alaya-05-living-field-desktop.svg", basePath)}" alt="" aria-hidden="true"></picture><p class="field-label capability">Capability <small>The living terrain.</small></p><p class="field-label experience">Experience <small>Where capability is developed and exercised.</small></p><p class="field-label practice">Cultivation <small>How capability is cultivated and renewed.</small></p><p class="field-label contribution">Contribution <small>Capability expressed through work that creates value.</small></p><p class="field-label knowledge">Knowledge <small>Preserves and carries forward what is learned.</small></p><p class="field-label curiosity">Curiosity <small>Keeps the field developing.</small></p></div>
 
     <h2 class="sub">How Alaya sees capability.</h2>
-    <p>So Alaya reads accounts of work that was actually done, <b>on two axes at once</b>.</p>
+    <p>So, behind the scenes, Alaya reads accounts of work that was actually done against a small set of exact definitions &mdash; the building blocks from which the capabilities the market names are derived.</p>
     <div class="ax2">
       <div class="axc">
         <div class="t">Seven practices</div>
@@ -69,6 +69,8 @@ const body = (basePath) => `
     </div>
 
     <p><b>That intersection is what makes it usable.</b> A score gives nobody anything to do. Knowing that someone's strength shows up in the reasoning and relational aspects of work that changes what is settled &mdash; and thins out where the work is about holding something steady &mdash; tells a person where to push next and tells an organization what to develop, where to deploy, and where it is exposed.</p>
+    <p><b>It is also where the market&rsquo;s language lives.</b> The terms hiring uses &mdash; decision making, stakeholder alignment, operational resilience, mentoring &mdash; are not separate skills to tick off. Each one describes a particular meeting of what the work changed and how it happened. Alaya reads that meeting first, in plain words, and then shows which of the market&rsquo;s terms fit it. A job description can be read the same way, so the requirements of a role and the evidence of a career meet on the same ground instead of in a keyword list.</p>
+    <p><b>No buckets, no scores.</b> An account is not sorted into a category and graded. Each one receives a full reading: what it most clearly shows, stated in plain words, and the rest of what it touches &mdash; what it partly shows, and what one more detail would make clear. Nothing is thrown away. Across many accounts, those readings build a profile that is particular to one person: what recurs across roles and years, what is emerging, and where the next story would say the most.</p>
     <p>And every reading stays anchored to the exact sentence in the account that supports it. No sentence, no reading.</p>
   </section>
 
